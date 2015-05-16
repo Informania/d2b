@@ -1,4 +1,3 @@
 # d2b
-D2B web
+Prototype frontend for D2B web
 
-Front end for the D2B webb
