@@ -1,0 +1,259 @@
+/* Typography */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+/* line 5, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* Colors */
+/* text: */
+/* other variables */
+/* line 24, ../sass/screen.scss */
+body {
+  background: #ffffff;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* line 30, ../sass/screen.scss */
+header {
+  text-align: center;
+  width: 100%;
+  border-bottom: 4px solid grey;
+  height: 200px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #2980B9;
+  font-family: 'Open Sans', sans-serif;
+  color: #ECF0F1;
+  line-height: 66.66667px;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 44, ../sass/screen.scss */
+header h1 {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 50, ../sass/screen.scss */
+header h1 .produkter {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+/* line 55, ../sass/screen.scss */
+header a {
+  color: #ECF0F1;
+  font-family: 'Lato', sans-serif;
+}
+/* line 62, ../sass/screen.scss */
+header nav {
+  display: inline;
+  padding-right: 40px;
+  line-height: 100px;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 69, ../sass/screen.scss */
+header nav a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+}
+/* line 78, ../sass/screen.scss */
+header nav a:hover {
+  color: white;
+  border-bottom: 1px dotted white;
+  color: #2980B9;
+  background: white;
+}
+
+/* line 88, ../sass/screen.scss */
+header.shrink, nav.shrink {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  line-height: 50px;
+  height: 100px;
+}
+
+/* line 98, ../sass/screen.scss */
+footer {
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 80px;
+  background: #F25C05;
+  color: #ECF0F1;
+  height: 200px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+}
+/* line 108, ../sass/screen.scss */
+footer a {
+  color: #ECF0F1;
+  text-decoration: none;
+  border-bottom: 1px dotted black;
+}
+/* line 113, ../sass/screen.scss */
+footer h2 {
+  font-family: 'Leto', sans-serif;
+  font-size: 24px;
+}
+
+/* line 119, ../sass/screen.scss */
+.content {
+  background: #ffffff;
+  font-family: 'Merriweather', serif;
+  line-height: 24px;
+  padding-top: 200px;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  /* to center entry images */
+}
+/* line 127, ../sass/screen.scss */
+.content .entry_img {
+  text-align: center;
+}
+/* line 128, ../sass/screen.scss */
+.content img {
+  display: inline;
+  text-align: center;
+  margin-left: auto;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  width: 20%;
+}
+/* line 136, ../sass/screen.scss */
+.content #byline {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+}
+/* line 141, ../sass/screen.scss */
+.content h2, .content h3 {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  margin-top: 55px;
+  margin-bottom: 15px;
+}
+/* line 148, ../sass/screen.scss */
+.content h3 {
+  font-size: 18px;
+}
+/* line 151, ../sass/screen.scss */
+.content p {
+  margin-bottom: 25px;
+}
+/* line 153, ../sass/screen.scss */
+.content .entry {
+  text-align: left;
+}
