@@ -81,7 +81,6 @@ body {
 header {
   text-align: center;
   width: 100%;
-  border-bottom: 4px solid grey;
   height: 200px;
   overflow: hidden;
   position: fixed;
@@ -92,6 +91,9 @@ header {
   font-family: 'Open Sans', sans-serif;
   color: #ECF0F1;
   line-height: 66.66667px;
+  -moz-box-shadow: 0 5px 3px rgba(92, 38, 6, 0.1);
+  -webkit-box-shadow: 0 5px 3px rgba(92, 38, 6, 0.1);
+  box-shadow: 0 5px 3px rgba(92, 38, 6, 0.1);
   -moz-transition-property: height;
   -o-transition-property: height;
   -webkit-transition-property: height;
@@ -105,7 +107,7 @@ header {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 header h1 {
   text-align: center;
   font-size: 48px;
@@ -119,17 +121,17 @@ header h1 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 header h1 .produkter {
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 header a {
   color: #ECF0F1;
   font-family: 'Lato', sans-serif;
 }
-/* line 62, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 header nav {
   display: inline;
   padding-right: 40px;
@@ -147,7 +149,7 @@ header nav {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 header nav a {
   padding: 10px;
   text-decoration: none;
@@ -157,7 +159,7 @@ header nav a {
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
 }
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 header nav a:hover {
   color: white;
   border-bottom: 1px dotted white;
@@ -181,9 +183,18 @@ header.shrink, nav.shrink {
   transition-timing-function: ease-in;
   line-height: 50px;
   height: 100px;
+  background: rgba(41, 128, 185, 0.95);
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+/* line 97, ../sass/screen.scss */
+header.shrink nav.shrink, nav.shrink nav.shrink {
+  background-color: transparent;
+  border-color: transparent;
+  line-height: 55px;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 footer {
   text-transform: uppercase;
   width: 100%;
@@ -195,19 +206,19 @@ footer {
   line-height: 100px;
   font-size: 24px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 footer a {
   color: #ECF0F1;
   text-decoration: none;
   border-bottom: 1px dotted black;
 }
-/* line 113, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 footer h2 {
   font-family: 'Leto', sans-serif;
   font-size: 24px;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .content {
   background: #ffffff;
   font-family: 'Merriweather', serif;
@@ -218,11 +229,11 @@ footer h2 {
   text-align: center;
   /* to center entry images */
 }
-/* line 127, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .content .entry_img {
   text-align: center;
 }
-/* line 128, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .content img {
   display: inline;
   text-align: center;
@@ -231,13 +242,13 @@ footer h2 {
   margin-bottom: 20px;
   width: 20%;
 }
-/* line 136, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .content #byline {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-style: italic;
 }
-/* line 141, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .content h2, .content h3 {
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
@@ -245,15 +256,15 @@ footer h2 {
   margin-top: 55px;
   margin-bottom: 15px;
 }
-/* line 148, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .content h3 {
   font-size: 18px;
 }
-/* line 151, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .content p {
   margin-bottom: 25px;
 }
-/* line 153, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 .content .entry {
   text-align: left;
 }

@@ -30,7 +30,7 @@ body {
 header {
 	text-align: center;
 	width: 100%;
-	border-bottom: 4px solid grey;
+	//border-bottom: 3px solid white;
 	height: $header_height;
 	overflow: hidden;
 	position: fixed;
@@ -41,6 +41,7 @@ header {
 	font-family: 'Open Sans', sans-serif;
 	color: $text_one; 
 	line-height: $header_height / 3;
+	@include box-shadow(0 5px 3px rgba(92, 38, 6, 0.1));
 	h1 {
 		text-align: center;
 		font-size: $font-size-xx-large;
@@ -77,7 +78,6 @@ header {
 		}
 		a:hover {
 			color: white;
-			//border-top: 1px dotted white;
 			border-bottom: 1px dotted white;
 			color: $primary_one;
 			background: white;
@@ -90,9 +90,15 @@ header.shrink, nav.shrink {
 		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-in);
 		line-height: $header_height / 4;
-		height: $header_height / 2;	
-}
-nav.shrink {
+		height: $header_height / 2;
+		background: rgba(41, 128, 185, 0.95);	
+		border-bottom: 1px solid;
+		border-color: rgba(255, 255, 255, 0.8);
+		nav.shrink {	
+			background-color: transparent;	
+			border-color: rgba(0, 0, 0, 0);
+			line-height: 55px;	
+	}
 }
 
 footer {
