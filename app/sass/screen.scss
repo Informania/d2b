@@ -12,9 +12,13 @@ $font-size-xx-large: 48px;
 $primary_one: #2980B9;
 $primary_two: #F25C05;
 $primary_three: #ffffff;
+$one_darker: #065086;
 $two_darker: #C94706;
 /* text: */
 $text_one: #ECF0F1;
+$primary_sans: 'Open Sans', sans-serif;
+$primary_serif: 'Merriweather', serif;
+$header_sans: 'Lato', sans-serif;
 
 /* other variables */
 $header_height: 200px;
@@ -38,32 +42,38 @@ header {
 	left: 0;
 	z-index: 999;
 	background: $primary_one;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $primary_sans;
 	color: $text_one; 
 	line-height: $header_height / 3;
 	@include box-shadow(0 5px 3px rgba(92, 38, 6, 0.1));
-	h1 {
+	#logo {
+		float: left;
 		text-align: center;
 		font-size: $font-size-xx-large;
 		@include text-shadow(0 2px 2px rgba(#000,0.2));
 		@include transition-property(all);
 		@include transition-duration(0.3s);
-		.produkter {
-			font-size: $font-size-large;
-			text-transform: uppercase;
+		img {
+			float:left;
+			height: 98px;
+
+		}
+		p {
+			float: left;
+			margin-left: 10px;
 		}
 	}
+
 	a {
 		color: $text_one;
-		font-family: 'Lato', sans-serif; 	
+		font-family: $header_sans; 	
 	}
 	@include transition-property(height);
 	@include transition-duration(0.3s);
 	@include transition-timing-function(ease-in);
 	nav {
-		display: inline;
-		padding-right: 40px;
-		line-height: $header_height / 2;
+		clear: both;
+		line-height: $header_height / 1.3;
 		@include transition-property(all);
 		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-out);
@@ -74,7 +84,7 @@ header {
 			margin-left: 20px;
 			font-size: $font-size-regular;
 			text-transform: uppercase;
-			font-family: 'Lato', sans-serif;
+			font-family: $header_sans;
 		}
 		a:hover {
 			color: white;
@@ -82,22 +92,22 @@ header {
 			color: $primary_one;
 			background: white;
 		}
-	}	
+	}
 }
 
 header.shrink, nav.shrink {
 		@include transition-property(all);
 		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-in);
-		line-height: $header_height / 4;
-		height: $header_height / 2;
+		line-height: $header_height / 3;
+		height: $header_height / 1.5;
 		background: rgba(41, 128, 185, 0.95);	
 		border-bottom: 1px solid;
 		border-color: rgba(255, 255, 255, 0.8);
 		nav.shrink {	
 			background-color: transparent;	
 			border-color: rgba(0, 0, 0, 0);
-			line-height: 55px;	
+			line-height: 10px;	
 	}
 }
 
@@ -117,14 +127,14 @@ footer {
 		border-bottom: 1px dotted black;
 	}
 	h2 {
-		font-family: 'Leto', sans-serif;
+		font-family: $header_sans;
 		font-size: $font-size-large;
 	}
 }
 
 .content {
 	background: $primary_three;
-	font-family: 'Merriweather', serif;
+	font-family: $primary_serif;
 	line-height: $font-size-large;
 	padding-top: $header_height;
 	margin: auto;
@@ -139,14 +149,14 @@ footer {
 		margin-bottom: 20px;
 		width: 20%;
 	}
-	#byline {
+	.byline {
 		text-align: center;
 		font-family: 'Lato', sans-serif;
 		font-style: italic;
 	}
 	h2, h3{
 		text-transform: uppercase;
-		font-family: 'Lato', sans-serif;
+		font-family: $header_sans;
 		font-size: $font-size-large;
 		margin-top: 55px;
 		margin-bottom: 15px;
@@ -158,5 +168,124 @@ footer {
 	
 	.entry {
 		text-align: left;
+		clear: left;
 	}
+	.card {
+		display: inline-block;
+		width: 22%;
+		min-width: 100px;
+		border: 3px solid $one_darker;
+		background-color: $primary_one;
+		border-radius: 5px;	
+		margin: 1%;
+		background-clip: padding-box;
+		@include transition-property(background-color);
+		@include transition-duration(0.1s);
+		@include transition-timing-function(ease-in);
+	
+		img {
+			width: 50%;
+			padding: 0;
+			margin: 5px;
+		}
+		.cardCaption {
+			color: white;
+			font-family: $header_sans;	
+			font-size: $font-size-large;
+			margin: 0;
+			padding-bottom: 10px;
+		}
+	}
+	.card:hover {
+		background-color: $one_darker;
+		cursor: pointer;
+	}
+	.row {
+		float:left;
+		clear: both;
+		width: 100%;
+		margin: 15px 0 15px 0;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+	header {
+		
+		#logo {
+			font-size: $font-size-large;		
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+	header {
+		height: $header_height / 2;
+		line-height: $header_height / 8;
+		#logo {
+			font-size: $font-size-large - 3;
+			
+			p {
+				margin-left: 5px;
+			}
+			img {
+				width: 100px;
+				height: auto;
+			}
+		
+		}
+
+		nav {
+			line-height: $header_height / 8;
+			a {
+				margin-left: 0;
+				padding: 5px;
+				font-size: 13px;
+			}
+		}
+	}
+
+	.content {
+		width: 94%;
+		padding-left: 3%;
+		padding-right: 3%;
+		padding-top: 80px;
+	}
+	nav.shrink, header.shrink {
+		height: $header_height / 6;
+		line-height: $header_height / 6 !important;
+	}
+	header.shrink {
+		#logo {
+			display:none;
+		}
+	}
+	.card .cardCaption {
+		font-family: $header_sans;	
+		font-size: $font-size-regular !important;
+	}
+
+
+
+}
+
+/* Standard classes for layouting */
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.clearBoth {
+	clear: both;
+}
+.clearRight {
+	clear: right;
+}
+.clearLeft {
+	clear: left;
+}
+.textCenter {
+	text-align: center;
 }
