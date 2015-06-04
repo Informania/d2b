@@ -121,6 +121,7 @@ footer {
 	text-align: center;
 	line-height: $footer_height / 2;
 	font-size: $font-size-large;
+	clear: both;
 	a {
 		color: $text_one;
 		text-decoration: none;
@@ -194,6 +195,7 @@ footer {
 			font-size: $font-size-large;
 			margin: 0;
 			padding-bottom: 10px;
+			text-transform: small-caps;
 		}
 	}
 	.card:hover {
