@@ -1,5 +1,4 @@
-<?php include('masterpages/header.html'); ?>
-  <div class="content">
+<?php include('masterpages/header.php'); ?>
 	<div class="row textCenter">
 		<h2>Distanser</h2>
 		<div onclick="location.href='#';" class="card">
@@ -35,7 +34,4 @@
 			<img src="images/markdistans_varg.png" />
 			<p class="cardCaption">Övrigt</p>
 		</div>
-
-	</div>
-	<div id="TEMPFILLER" style="height: 300px" ></div>
 <?php include('masterpages/footer.html'); ?>

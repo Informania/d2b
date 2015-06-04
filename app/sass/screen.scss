@@ -93,6 +93,35 @@ header {
 			background: white;
 		}
 	}
+
+	#search {
+		float: right;
+		margin-right: 3%;
+		margin-top: 15px;
+		input[type="text"] {
+			float: left;
+			padding: 10px;
+			font-size: $font-size-regular;
+			border: 0;
+			border-radius: 3px;
+			width: 280px;
+		}
+		img {
+			position: relative;
+			right: 40px;
+			float: left;
+			width: 25px;
+			margin-top: 5px;
+			padding: 2px;
+		}
+		img:hover {
+			cursor: pointer;
+		}
+		.fadedText {
+			color: #DADADA;
+		}
+
+	}
 }
 
 header.shrink, nav.shrink {
@@ -176,7 +205,7 @@ footer {
 		width: 22%;
 		min-width: 100px;
 		border: 3px solid $one_darker;
-		background-color: $primary_one;
+		background-color: #FFF;
 		border-radius: 5px;	
 		margin: 1%;
 		background-clip: padding-box;
@@ -190,7 +219,6 @@ footer {
 			margin: 5px;
 		}
 		.cardCaption {
-			color: white;
 			font-family: $header_sans;	
 			font-size: $font-size-large;
 			margin: 0;
@@ -207,6 +235,45 @@ footer {
 		clear: both;
 		width: 100%;
 		margin: 15px 0 15px 0;
+	}
+
+	.searchResult {
+		display: inline-block;
+		border:3px solid #EEE;
+		background-color: #FFF;
+		padding: 5px;
+		border-radius: 4px;
+		width: 45%;
+		height: 160px;
+		margin: 10px;
+		@include transition-property(background-color);
+		@include transition-duration(0.1s);
+		@include transition-timing-function(ease-in);
+
+		&:hover {
+			background-color: #EEE;
+			cursor: pointer;
+		}
+		img {
+			margin: 0;
+			padding: 0;
+			width: 20%;
+			display: block;
+			float: left;
+			margin-top: 5%;
+		}
+		.searchResultText {
+			float: right;
+			margin-left: 15px;
+			width: 75%;
+
+		}
+		h3 {
+			margin: 0;
+			padding: 5px 0 5px 0;
+		}
+	
+
 	}
 }
 
@@ -290,4 +357,7 @@ footer {
 }
 .textCenter {
 	text-align: center;
+}
+.textLeft {
+	text-align: left;
 }
