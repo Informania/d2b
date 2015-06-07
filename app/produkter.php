@@ -1,23 +1,23 @@
 <?php include('masterpages/header.php'); ?>
 	<div class="row textCenter">
 		<h2>Distanser</h2>
-		<div onclick="location.href='#';" class="card">
+		<div onclick="location.href='distanser.php?c=Mark';" class="card">
 			<img src="images/markdistans_varg.png" />
 			<p class="cardCaption">Mark</p>
 		</div>
-		<div class="card">
+		<div class="card" onclick="location.href='distanser.php?c=Valv';">
 			<img src="images/markdistans_varg.png" />
 			<p class="cardCaption">Valv</p>
 		</div>
-		<div class="card">
+		<div class="card" onclick="location.href='distanser.php?c=Pallning';">
 			<img src="images/markdistans_varg.png" />
 			<p class="cardCaption">Pallning</p>
 		</div>
-		<div class="card">
+		<div class="card" onclick="location.href='distanser.php?c=Runda';">
 			<img src="images/markdistans_varg.png" />
 			<p class="cardCaption">Runda</p>
 		</div>
-		<div class="card">
+		<div class="card" onclick="location.href='distanser.php?c=Isolering';">
 			<img src="images/markdistans_varg.png" />
 			<p class="cardCaption">Isolering</p>
 		</div>
