@@ -6,7 +6,7 @@ class DBHelper {
 
 	public function GetProductsByGroup($group)
 	{
-		$query = sprintf("SELECT id, namn, beskrivning, bild, produktgrupp_id FROM Produkt
+		$query = sprintf("SELECT id, namn, beskrivning, bild, produktgrupp_id FROM produkt
 					WHERE produktgrupp_id = 
 						(SELECT id FROM produkt_grupp WHERE namn = '%s')", $group);
 		$result = $this->mysqli->query($query);
