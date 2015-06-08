@@ -1,5 +1,5 @@
 <?php
-require dirname(__DIR__).'/../../d2bconf.php';
+require '../../d2bconf.php';
 require 'dbmodels.php';
 class DBHelper {
 	var $mysqli;
