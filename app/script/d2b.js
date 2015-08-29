@@ -19,5 +19,5 @@ function searchClick(searchBox, e) {
 
 function search() {
 	var searchBox = document.getElementById("searchTextInput");
-	window.location.href='../search.php?s=1&q=' + searchBox.value;
+	window.location.href='/search.php?s=1&q=' + searchBox.value;
 }

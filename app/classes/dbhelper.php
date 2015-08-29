@@ -1,12 +1,12 @@
 <?php
-require dirname(__DIR__).'/../../d2bconf.php';
+require dirname(__DIR__).'../../d2bconf.php';
 require 'dbmodels.php';
 class DBHelper {
 	var $mysqli;
 
 	public function GetProductsByGroup($group)
 	{
-		$query = sprintf("SELECT id, namn, beskrivning, bild, produktgrupp_id FROM Produkt
+		$query = sprintf("SELECT id, namn, beskrivning, bild, produktgrupp_id FROM produkt
 					WHERE produktgrupp_id = 
 						(SELECT id FROM produkt_grupp WHERE namn = '%s')", $group);
 		$result = $this->mysqli->query($query);
