@@ -7,6 +7,4 @@ class Product {
 	var $img;
 	var $groupId;
 }
-
-
 ?>

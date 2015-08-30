@@ -2,8 +2,8 @@
 
 	# Get products for given category after escaping input
 	$products;
-	if(ISSET($_REQUEST['c'])) {
-		$group = htmlspecialchars($_REQUEST['c'], ENT_QUOTES);
+	if(ISSET($_REQUEST['group'])) {
+		$group = htmlspecialchars($_REQUEST['group'], ENT_QUOTES);
 		$products = $DBHelper->GetProductsByGroup($group);
 	}
 	else {
@@ -18,7 +18,7 @@
 	# Display the products
 	foreach($products as $product) {
 		echo sprintf('<div class="card" onclick="location.href=\'produkt.php?pid=%d\'";>', $product->id);	
-		echo sprintf('<img src="images/%s" />', $product->img !== null ? $product->img : "missing.png");
+		echo sprintf('<img src="images/products/%s" />', $product->img !== null ? $product->img : "missing.png");
         echo sprintf('<p class="cardCaption">%s</p>', $product->name);
 		echo '</div>';
 	}	

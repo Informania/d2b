@@ -419,67 +419,69 @@ footer h2 {
   margin: 0;
   padding: 0;
 }
-/* line 292, ../sass/screen.scss */
-.content .productSpecs {
+
+/******* Table styles *******/
+/* line 294, ../sass/screen.scss */
+.productSpecs {
   clear: both;
 }
-/* line 294, ../sass/screen.scss */
-.content .productSpecs th {
-  font-weight: bold;
+/* line 296, ../sass/screen.scss */
+.productSpecs th {
+  font-family: "Open Sans", sans-serif;
   padding: 10px 20px 10px 20px;
   background-color: #DDD;
   border-bottom: 0;
 }
-/* line 300, ../sass/screen.scss */
-.content .productSpecs th, .content .productSpecs td {
+/* line 302, ../sass/screen.scss */
+.productSpecs th, .productSpecs td {
   text-align: center;
 }
-/* line 302, ../sass/screen.scss */
-.content .productSpecs tr.alternate {
+/* line 304, ../sass/screen.scss */
+.productSpecs tr.alternate {
   background-color: #DDD;
 }
-/* line 305, ../sass/screen.scss */
-.content .productSpecs td.green {
+/* line 307, ../sass/screen.scss */
+.productSpecs td.green {
   color: green;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 314, ../sass/screen.scss */
+  /* line 315, ../sass/screen.scss */
   header #logo {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 479px) {
-  /* line 323, ../sass/screen.scss */
+  /* line 324, ../sass/screen.scss */
   header {
     height: 100px;
     line-height: 25px;
   }
-  /* line 326, ../sass/screen.scss */
+  /* line 327, ../sass/screen.scss */
   header #logo {
     font-size: 21px;
   }
-  /* line 329, ../sass/screen.scss */
+  /* line 330, ../sass/screen.scss */
   header #logo p {
     margin-left: 5px;
   }
-  /* line 332, ../sass/screen.scss */
+  /* line 333, ../sass/screen.scss */
   header #logo img {
     width: 100px;
     height: auto;
   }
-  /* line 339, ../sass/screen.scss */
+  /* line 340, ../sass/screen.scss */
   header nav {
     line-height: 25px;
   }
-  /* line 341, ../sass/screen.scss */
+  /* line 342, ../sass/screen.scss */
   header nav a {
     margin-left: 0;
     padding: 5px;
     font-size: 13px;
   }
 
-  /* line 349, ../sass/screen.scss */
+  /* line 350, ../sass/screen.scss */
   .content {
     width: 94%;
     padding-left: 3%;
@@ -487,55 +489,55 @@ footer h2 {
     padding-top: 80px;
   }
 
-  /* line 355, ../sass/screen.scss */
+  /* line 356, ../sass/screen.scss */
   nav.shrink, header.shrink {
     height: 33.33333px;
     line-height: 33.33333px !important;
   }
 
-  /* line 360, ../sass/screen.scss */
+  /* line 361, ../sass/screen.scss */
   header.shrink #logo {
     display: none;
   }
 
-  /* line 364, ../sass/screen.scss */
+  /* line 365, ../sass/screen.scss */
   .card .cardCaption {
     font-family: "Lato", sans-serif;
     font-size: 16px !important;
   }
 }
 /* Standard classes for layouting */
-/* line 374, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 .floatLeft {
   float: left;
 }
 
-/* line 377, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
 .floatRight {
   float: right;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 381, ../sass/screen.scss */
 .clearBoth {
   clear: both;
 }
 
-/* line 383, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 .clearRight {
   clear: right;
 }
 
-/* line 386, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 .clearLeft {
   clear: left;
 }
 
-/* line 389, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 .textCenter {
   text-align: center;
 }
 
-/* line 392, ../sass/screen.scss */
+/* line 393, ../sass/screen.scss */
 .textLeft {
   text-align: left;
 }

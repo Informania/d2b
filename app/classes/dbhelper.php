@@ -1,8 +1,34 @@
 <?php
-require dirname(__DIR__).'../../d2bconf.php';
+require dirname(__DIR__).'/../../d2bconf.php';
 require 'dbmodels.php';
 class DBHelper {
 	var $mysqli;
+	
+	public function GetProductCategories() {
+		$query = 'SELECT id, namn FROM produkt_kategori';
+		$result = $this->mysqli->query($query);
+		$categories = array();
+		while($row = $result->fetch_assoc())
+		{
+			$category = new ProductCategory();
+			$category->id = $row['id'];
+			$category->name = $row['namn'];
+			array_push($categories, $category);
+		}
+		return $categories;
+	}
+
+	public function GetProductGroupsByCategory($category) {
+		if($category == "") 
+			$query = sprintf("SELECT id, namn, bild, kategori_id FROM produkt_grupp");
+		else
+			$query = sprintf("SELECT id, namn, bild, kategori_id FROM produkt_grupp WHERE kategori_id = 
+							(SELECT id FROM produkt_kategori WHERE namn = '%s')", $category);
+		$result = $this->mysqli->query($query);
+		$productGroups = $this->CreateProductGroupsArray($result);
+		return $productGroups;
+	
+	}
 
 	public function GetProductsByGroup($group)
 	{
@@ -10,18 +36,8 @@ class DBHelper {
 					WHERE produktgrupp_id = 
 						(SELECT id FROM produkt_grupp WHERE namn = '%s')", $group);
 		$result = $this->mysqli->query($query);
-		$products = array();
-		while($row = $result->fetch_assoc())
-		{
-			$product = new Product();
-			$product->id = $row['id'];
-			$product->name = $row['namn'];
-			$product->desc = $row['beskrivning'];
-			$product->img = $row['bild'];
-			$product->group_id = $row['produktgrupp_id'];
-			array_push($products, $product);
-		}
-
+		$products = $this->CreateProductArray($result);
+	
 		return $products;
 	}
 
@@ -94,6 +110,38 @@ class DBHelper {
 		array_push($productInfoValues, $productInfos); # Push the last row in the array
 		return $productInfoValues;
 	}
+
+	private function CreateProductArray($mysqliResult) {
+		$products = array();
+		while($row = $mysqliResult->fetch_assoc())
+		{
+			$product = new Product();
+			$product->id = $row['id'];
+			$product->name = $row['namn'];
+			$product->desc = $row['beskrivning'];
+			$product->img = $row['bild'];
+			$product->groupId = $row['produktgrupp_id'];
+			array_push($products, $product);
+		}
+		return $products;
+	}
+
+	private function CreateProductGroupsArray($mysqliResult) {
+		$productGroups = array();
+		while($row = $mysqliResult->fetch_assoc())
+		{
+			$productGroup = new ProductGroup();
+			$productGroup->id = $row['id'];
+			$productGroup->name = $row['namn'];
+			$productGroup->img = $row['bild'];
+			$productGroup->categoryId = $row['kategori_id'];
+			array_push($productGroups, $productGroup);
+		}
+		return $productGroups;
+	}
+
+
+	
 
 }
 ?>

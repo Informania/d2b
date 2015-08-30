@@ -288,16 +288,18 @@ footer {
 		}
 
 	}
+}
 
-	.productSpecs {
-		clear: both;
-		th {
-			font-weight: bold;
-			padding: 10px 20px 10px 20px;
-			background-color: #DDD;
-			border-bottom: 0;
-		}
-		th, td { text-align: center; }
+/******* Table styles *******/
+.productSpecs {
+	clear: both;
+	th {
+		font-family: $primary_sans;
+		padding: 10px 20px 10px 20px;
+		background-color: #DDD;
+		border-bottom: 0;
+	}
+	th, td { text-align: center; }
 		
 		tr.alternate {
 			background-color: #DDD;
@@ -305,7 +307,6 @@ footer {
 		td.green {
 			color: green;
 		}
-	}
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {

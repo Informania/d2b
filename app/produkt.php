@@ -13,7 +13,7 @@
 	}
 	echo sprintf('<h2>%s</h2>', $product->name);
 	echo sprintf('<p class="productInfo textLeft">%s</p>', $product->desc);
-	echo sprintf('<div class="productImgContainer"><img src="images/%s" /></div>', $product->img);	
+	echo sprintf('<div class="productImgContainer"><img src="images/products/%s" /></div>', $product->img);	
 
 	echo '<table class="productSpecs">
 			<thead>

@@ -1,37 +1,50 @@
-<?php include('masterpages/header.php'); ?>
-	<div class="row textCenter">
-		<h2>Distanser</h2>
-		<div onclick="location.href='distanser.php?c=Mark';" class="card">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Mark</p>
-		</div>
-		<div class="card" onclick="location.href='distanser.php?c=Valv';">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Valv</p>
-		</div>
-		<div class="card" onclick="location.href='distanser.php?c=Pallning';">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Pallning</p>
-		</div>
-		<div class="card" onclick="location.href='distanser.php?c=Runda';">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Runda</p>
-		</div>
-		<div class="card" onclick="location.href='distanser.php?c=Isolering';">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Isolering</p>
-		</div>
-		<h2 class="clearBoth">Andra produkter</h2>
-		<div class="card">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Prefab</p>
-		</div>
-		<div class="card">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Platsbyggnation</p>
-		</div>
-		<div class="card">
-			<img src="images/markdistans_varg.png" />
-			<p class="cardCaption">Övrigt</p>
-		</div>
+<?php include('masterpages/header.php'); 
+	if(ISSET($_REQUEST['category'])) {
+		$category = htmlspecialchars($_REQUEST['category'], ENT_QUOTES);
+		$oneCategory = true;
+	}
+	else {
+		$oneCategory = false;
+		$category = '';	
+	}
+
+	if($oneCategory) {	
+		$productGroups = $DBHelper->GetProductGroupsByCategory($category);
+
+		echo '<div class="row textCenter">';
+
+		echo sprintf("<h2>%s</h2>", $category);
+		foreach($productGroups as $pg) {
+			$onClickStr = sprintf('location.href=\'distanser.php?group=%s\'', $pg->name);
+			echo sprintf('
+				<div onclick="%3$s" class="card">
+					<img src="images/products/%2$s" />
+					<p class="cardCaption">%1$s</p>
+				</div>', $pg->name, $pg->img, $onClickStr);
+		}
+		echo '</div>';
+	}
+	else {
+		$categories = $DBHelper->GetProductCategories();
+		foreach($categories as $cat) {
+			echo '<div class="row textCenter">';	
+			echo sprintf("<h2>%s</h2>", $cat->name);
+			//TODO: Maybe get all productgroups and select the ones
+			//with the current categoryId?
+			$productGroups = $DBHelper->GetProductGroupsByCategory($cat->name);
+			foreach($productGroups as $pg) {
+				$onClickStr = sprintf('location.href=\'distanser.php?group=%s\'', $pg->name);
+				echo sprintf('
+					<div onclick="%3$s" class="card">
+						<img src="images/products/%2$s" />
+						<p class="cardCaption">%1$s</p>
+					</div>', $pg->name, $pg->img, $onClickStr);
+			}
+			echo '</div>';
+
+
+		}
+
+	}
+?>
 <?php include('masterpages/footer.html'); ?>
