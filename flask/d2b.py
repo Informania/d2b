@@ -4,13 +4,17 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
+def home():
     return render_template('index.html');
 
 
-@app.route("/page2")
-def page2():
-    return "Heya!"
+@app.route("/distanser")
+def category():
+    return render_template('produkter.html', category="cat");
+
+@app.route ("/produkter")
+def products():
+	return render_template('produkter.html', category="none");
 
 if __name__ == "__main__":
     app.run(debug=True)
