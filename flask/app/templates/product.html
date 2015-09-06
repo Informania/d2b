@@ -4,12 +4,21 @@
 {% endblock %}
 
 {% block content %}
-<div class="entry">
-    <h2 class="textCenter">{{ product.name }}</h2>
-	<p class="clearBoth">D2B levererar plastdistanser och annat distanseringsmaterial till byggbranchen. Vi erbjuder även tillbehör till prefabindustrin såsom magnetsystem till formsättning. 
-	Vi har egen tillverkning av plastprodukter och god kontakt med andra leverantörer i Sverige och utomlands och kan snabbt ta fram och leverera just de detaljer våra kunder behöver. 
-	Vi tar även fram nya produkter efter våra kunders önskemål. Om du inte finner den information du söker på hemsidan, tveka inte <a href="#">kontakta oss</a>. Vi ordnar det mesta!</p>
-</div>
+    <h2>{{ product.name }}</h2>
+    <p class="productInfo textLeft">{{ product.description|safe }}</p>
+    <div class="productImgContainer">
+        <img src='{{ url_for('static', filename='images/products/') }}{{ product.image }}'/>
+    </div>
+    {{ tableHeaders }}
+    <table class="productSpecs">
+        <thead>
+            <tr>
+                {% for header in tableHeaders %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+    </table>
 {% endblock %}
 {% block footer %}
 	{{ super() }}

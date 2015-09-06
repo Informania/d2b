@@ -12,7 +12,7 @@ class Product(Base):
     image           = db.Column(db.String(200), unique=False)
     url             = db.Column(db.String(100), unique=True)
     productGroup_id = db.Column(db.Integer, db.ForeignKey('productGroup.id'))
-    productInfos    = db.relationship('ProductInfo', backref=db.backref('products'), lazy='dynamic')
+    productInfos    = db.relationship('ProductInfo', backref=db.backref('product'), lazy='joined')
 
 
     def __init__(self, name, description, image, productgroup, url):
@@ -23,7 +23,7 @@ class Product(Base):
         self.url            = url
 
     def __repr__(self):
-        return '<User %r>' % self.name
+        return '<Product %r>' % self.name
 
 class ProductGroup(Base):
     __tablename__   = 'productGroup'
@@ -39,6 +39,8 @@ class ProductGroup(Base):
         self.category   = category
         self.url        = url
     
+    def __repr__(self):
+        return '<productGroup %r>' % self.name
 
 class ProductCategory(Base):
     __tablename__   = 'productCategory'
@@ -53,23 +55,23 @@ class ProductCategory(Base):
 
 class ProductInfo(Base):
     __tablename__   = 'productInfo'
-    infoname_id     = db.Column(db.Integer, db.ForeignKey('infoName.id'))
-    infoname        = db.relationship('InfoName', backref=db.backref('productinfo', lazy='dynamic'))
+    infoName_id     = db.Column(db.Integer, db.ForeignKey('infoName.id'))
+    infoName        = db.relationship('InfoName', lazy='joined')
     value           = db.Column(db.String(50), unique=False)
     collection_id   = db.Column(db.Integer)
     product_id      = db.Column(db.Integer, db.ForeignKey('product.id'))
 
-    def __init__(self, value, collectionId, infoname, product):
-        self.infoname       = infoname
+    def __init__(self, value, collectionId, infoName, product):
+        self.infoName       = infoName
         self.value          = value
         self.collection_id  = collectionId
-        self.product_id     = product.id
+        self.product        = product
 
 class InfoName(Base):
     __tablename__   = 'infoName'
     name            = db.Column(db.String(50), unique=True)
     order           = db.Column(db.Integer)
-
+    
     def __init__(self, name, order):
         self.name   = name
         self.order  = order

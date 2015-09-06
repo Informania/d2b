@@ -54,17 +54,13 @@ def productGroups(category):
 @app.route('/produkter/<category>/<productGroupUrl>/<productUrl>')
 def productPage(category, productGroupUrl, productUrl):
     product = Product.query.filter_by(url=productUrl).first_or_404()
-    return render_template('product.html', product=product)
+    # Get the unique headers for the table
+    infoNames = []
+    for productInfo in product.productInfos:
+        if productInfo.infoName.name in infoNames:
+            pass
+        else:
+            infoNames.append(productInfo.infoName.name)
 
-@app.route('/test')
-def test():
-    products = Product.query.all()
-    productgroup = products[0].productgroup
-    return str(productgroup.name)
-
-#@app.route('produkter/markdistanser')
-
-#@app.route('produkter/valvdistanser')
-
-
-
+    ## TODO: infoNames needs to be sorted vy infoName.order to get in the right order.
+    return render_template('product.html', product=product, tableHeaders=infoNames).encode('utf-8')
