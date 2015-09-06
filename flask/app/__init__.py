@@ -1,19 +1,16 @@
-# Import flask and template operators
 from flask import Flask, render_template
-
-# Import SQLAlchemy
 from flask.ext.sqlalchemy import SQLAlchemy
 
-# Define the WSGI application object
-app = Flask(__name__)
-
-# Configurations
-app.config.from_object('config')
-
-# Define the database object which is imported
+# 1: Define the WSGI application object
+# 2: Set configurations
+# 3: Define the database object which is imported
 # by modules and controllers
+app = Flask(__name__)
+app.config.from_object('config')
 db = SQLAlchemy(app)
-
+db.text_factory = str
+##from app import models, data
+from models import *
 # Sample HTTP error handling
 @app.errorhandler(404)
 def not_found(error):
@@ -30,8 +27,44 @@ def not_found(error):
 
 # Build the database:
 # This will create the database file using SQLAlchemy
+db.drop_all()
 db.create_all()
+import data
+data.CreateData()
+#pc = ProductCategory('Distanser')
+#db.session.add(pc)
+#db.session.commit()
+
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/produkter/')
+def allProducts():
+    return render_template('product_groups.html')
+
+@app.route('/produkter/<category>')
+def productGroups(category):
+    pCat = ProductCategory.query.filter_by(name=category).first_or_404()
+    productgroups = ProductGroup.query.filter_by(category=pCat).all()
+    return render_template('product_groups.html', category=category, groups=productgroups) 
+
+@app.route('/produkter/<category>/<productGroupUrl>/<productUrl>')
+def productPage(category, productGroupUrl, productUrl):
+    product = Product.query.filter_by(url=productUrl).first_or_404()
+    return render_template('product.html', product=product)
+
+@app.route('/test')
+def test():
+    products = Product.query.all()
+    productgroup = products[0].productgroup
+    return str(productgroup.name)
+
+#@app.route('produkter/markdistanser')
+
+#@app.route('produkter/valvdistanser')
+
+
+
