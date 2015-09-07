@@ -56,7 +56,7 @@ class ProductCategory(Base):
 class ProductInfo(Base):
     __tablename__   = 'productInfo'
     infoName_id     = db.Column(db.Integer, db.ForeignKey('infoName.id'))
-    infoName        = db.relationship('InfoName', lazy='joined')
+    infoName        = db.relationship('InfoName', lazy='joined', foreign_keys='ProductInfo.infoName_id')
     value           = db.Column(db.String(50), unique=False)
     collection_id   = db.Column(db.Integer)
     product_id      = db.Column(db.Integer, db.ForeignKey('product.id'))

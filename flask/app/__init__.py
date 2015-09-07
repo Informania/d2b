@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
-
+import operator
 # 1: Define the WSGI application object
 # 2: Set configurations
 # 3: Define the database object which is imported
@@ -54,13 +54,17 @@ def productGroups(category):
 @app.route('/produkter/<category>/<productGroupUrl>/<productUrl>')
 def productPage(category, productGroupUrl, productUrl):
     product = Product.query.filter_by(url=productUrl).first_or_404()
-    # Get the unique headers for the table
+    # Get the unique headers for the table. InfoName is the name of the productInfo (cell in table)
+    # Also fill a list with lists of productInfos as [['info', 'info], ['info, 'info']]
     infoNames = []
+    productInfos = [[] for _ in xrange(max(product.productInfos, key=operator.attrgetter('collection_id')).collection_id)]
     for productInfo in product.productInfos:
-        if productInfo.infoName.name in infoNames:
+        productInfos[productInfo.collection_id-1].append(productInfo.value)
+
+        if productInfo.infoName in infoNames:
             pass
         else:
-            infoNames.append(productInfo.infoName.name)
-
-    ## TODO: infoNames needs to be sorted vy infoName.order to get in the right order.
-    return render_template('product.html', product=product, tableHeaders=infoNames).encode('utf-8')
+            infoNames.append(productInfo.infoName)
+    infoNames.sort(key=operator.attrgetter('order'), reverse=False)
+    
+    return render_template('product.html', product=product, tableHeaders=infoNames, tableRows=productInfos).encode('utf-8')

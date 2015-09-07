@@ -9,15 +9,27 @@
     <div class="productImgContainer">
         <img src='{{ url_for('static', filename='images/products/') }}{{ product.image }}'/>
     </div>
-    {{ tableHeaders }}
     <table class="productSpecs">
         <thead>
             <tr>
                 {% for header in tableHeaders %}
-                <th>{{ header }}</th>
+                <th>{{ header.name }}</th>
                 {% endfor %}
             </tr>
         </thead>
+        <tbody>         
+            {% for row in tableRows %}
+                {% if (loop.revindex % 2) != 0 %}
+                    <tr>
+                {% else %}
+                    <tr class="alternate">
+                {% endif %}
+                {% for prodInfo in row %} 
+                    <td>{{ prodInfo }}</td>
+                {% endfor %}
+            {% endfor %}
+               </tr>
+        </tbody>
     </table>
 {% endblock %}
 {% block footer %}
