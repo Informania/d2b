@@ -31,6 +31,10 @@
                </tr>
         </tbody>
     </table>
+    {# (hopefully) temporary hack! #}
+    {% if product.name == 'Markdistans typ VARG' %}
+        <p class="floatLeft">* förpackade i säck</p>
+    {% endif %}
 {% endblock %}
 {% block footer %}
 	{{ super() }}
