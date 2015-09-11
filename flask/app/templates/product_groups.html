@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block header %}
+	{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="row textCenter">
+	{% if category %}
+		<h2>{{ category }}</h2>
+		<marquee scrollamount='20'>"Du tar två"</marquee>
+		<hr />
+	{% else %}
+		<h2>Produkter</h2>
+	{% endif %}
+	{% for group in groups %}
+	<div class="row textLeft">
+		<h3>{{ group.name }}</h3>
+		{% for product in group.products %}
+		<div onclick="location.href='/produkter/Distanser/{{group.url}}/{{product.url}}'" class="card">
+			<img src="{{ url_for('static', filename='images/products/')}}{{product.image}}" />
+			<p class="cardCaption">{{product.name}}</p>
+		</div>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}

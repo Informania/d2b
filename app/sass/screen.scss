@@ -96,7 +96,6 @@ header {
 
 	#search {
 		float: right;
-		margin-right: 3%;
 		margin-top: 15px;
 		input[type="text"] {
 			float: left;
@@ -108,7 +107,7 @@ header {
 		}
 		img {
 			position: relative;
-			right: 40px;
+			right: 35px;
 			float: left;
 			width: 25px;
 			margin-top: 5px;
@@ -196,6 +195,11 @@ footer {
 	}
 	p {margin-bottom: 25px;}
 	
+	p.productInfo {
+		float: left;
+		width: 75%;
+	}
+
 	.entry {
 		text-align: left;
 		clear: left;
@@ -272,9 +276,37 @@ footer {
 			margin: 0;
 			padding: 5px 0 5px 0;
 		}
-	
+	}
+	.productImgContainer {
+		float: right;
+		width: 20%;
+
+		img {
+			width: 70%;
+			margin: 0;
+			padding: 0;
+		}
 
 	}
+}
+
+/******* Table styles *******/
+.productSpecs {
+	clear: both;
+	th {
+		font-family: $primary_sans;
+		padding: 10px 20px 10px 20px;
+		background-color: #DDD;
+		border-bottom: 0;
+	}
+	th, td { text-align: center; }
+		
+		tr.alternate {
+			background-color: #DDD;
+		}
+		td.green {
+			color: green;
+		}
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
