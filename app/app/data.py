@@ -6,6 +6,7 @@ def CreateData():
     #####  ---- ProduktInfoNamn ----  #####
     lagerstatus = InfoName('Lagerstatus', 20)
     antalforpSt = InfoName(u'Antal per förpackning [st.]', 19)
+    antalForpPall = InfoName(u'Antal per förpackning / pall [st.]', 18)
     hojd = InfoName(u'Höjd [mm]', 1)
     jarn = InfoName(u'Järn diameter [mm]', 4)
     
@@ -13,6 +14,7 @@ def CreateData():
         lagerstatus, 
         antalforpSt,        
         hojd,
+		antalForpPall,
         jarn ])
 
 
@@ -60,7 +62,40 @@ def CreateData():
         ProductInfo('Ring oss', 7, lagerstatus, p),
         ProductInfo('Ring oss', 8, lagerstatus, p)
        ])
-        
+    # Distanslister för mark # 
+    p = Product(u'Distanslister för mark', u'Samma användningsområde som markdistansen. Passar dock bättre för nät än för lösarmering. Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enkelt och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidled. Görs inte detta är det stor risk att man skapar sprickanvisningar i den platta man gjuter. <br/>Rekommenderas cirka 1 meter per kvadratmeter.<br/>Levereras i längder om 2 meter. Kapade längder kan levereras på begäran. ', 'distanslist_mark.png', pg, 'Distanslist_mark')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('15', 1, hojd, p),
+        ProductInfo('20', 2, hojd, p),
+        ProductInfo('25', 3, hojd, p),
+        ProductInfo('30', 4, hojd, p),
+        ProductInfo('35', 5, hojd, p),
+        ProductInfo('40', 6, hojd, p),
+        ProductInfo('50', 7, hojd, p),
+        ProductInfo('60', 8, hojd, p),
+        ProductInfo('70', 9, hojd, p),
+        ProductInfo('50', 1, antalForpPall, p),
+        ProductInfo('50 / 3150', 2, antalForpPall, p),
+        ProductInfo('50 / 2100', 3, antalForpPall, p),
+        ProductInfo('50 / 1800', 4, antalForpPall, p),
+        ProductInfo('30 / 1200', 5, antalForpPall, p),
+        ProductInfo('30 / 1200', 6, antalForpPall, p),
+        ProductInfo('30 / 720', 7, antalForpPall, p),
+        ProductInfo('20', 8, antalForpPall, p),
+        ProductInfo('20', 9, antalForpPall, p),
+		ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 6, lagerstatus, p),
+        ProductInfo('Lagervara', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+        ProductInfo('Ring oss', 9, lagerstatus, p),
+		
+	])
+
     ## Distanser för valv ##
     pg = ProductGroup(u'Distanser för Valv', 'valvdistans_jarv.png', pc, u'Valv')
 
@@ -90,3 +125,4 @@ def CreateData():
         ProductInfo('Lagervara', 5, lagerstatus, p)
     ])
     db.session.commit()
+

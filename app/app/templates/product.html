@@ -25,7 +25,11 @@
                     <tr class="alternate">
                 {% endif %}
                 {% for prodInfo in row %} 
-                    <td>{{ prodInfo }}</td>
+					{% if prodInfo == 'Lagervara' %}
+						<td class="green">{{ prodInfo }}</td>
+					{% else %}
+						<td>{{ prodInfo }}</td>
+					{% endif %}
                 {% endfor %}
             {% endfor %}
                </tr>
@@ -39,3 +43,4 @@
 {% block footer %}
 	{{ super() }}
 {% endblock %}
+
