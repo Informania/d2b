@@ -46,6 +46,5 @@ config.py
 ehthumbs.db
 Thumbs.db
 
-*.scssc
-
 *.db
+
