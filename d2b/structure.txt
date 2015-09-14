@@ -1,0 +1,14 @@
+Home
+- Produkter (product_list.html)
+- - Distanser (product_group.html)
+- - - Markdistanser (product_group.html)
+- - - - Markdistans varg (product.html)
+- - - Valvdistanser (product_group.html)
+
+- - Prefab(?)
+- - Magnetsystem
+- - Elementmontering
+- Om
+- Kontakt(?)
+- Nyheter
+
