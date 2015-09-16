@@ -43,7 +43,8 @@ def home():
 
 @app.route('/produkter/')
 def allProducts():
-    return render_template('product_groups.html')
+    productGroups = ProductGroup.query.all() 
+    return render_template('product_groups.html', groups=productGroups)
 
 @app.route('/produkter/<category>')
 def productGroups(category):
