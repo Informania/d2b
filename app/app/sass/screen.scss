@@ -295,6 +295,13 @@ footer {
 		}
 
 	}
+    #crumbs {
+        font-family: $primary_sans;
+        a {
+            text-decoration: none;
+            color: $primary_two;
+        }
+    }
 }
 
 /******* Table styles *******/

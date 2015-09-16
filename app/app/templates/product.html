@@ -2,7 +2,10 @@
 {% block header %}
 	{{ super() }}
 {% endblock %}
-
+{% block crumbs %}
+	{{ super() }}
+	/ <a href="/produkter">Produkter</a> / <a href="/produkter/{{product.productgroup.category.name}}">{{product.productgroup.category.name}}</a> / {# should this be here? How to handle the link? {{product.productgroup.name}} /#} <a href="/produkter/{{product.productgroup.category.name}}/{{product.productgroup.url}}/{{product.url}}">{{product.name}}</a>
+	{% endblock %}
 {% block content %}
     <h2>{{ product.name }}</h2>
     <p class="productInfo textLeft">{{ product.description|safe }}</p>

@@ -68,4 +68,6 @@ def productPage(category, productGroupUrl, productUrl):
             infoNames.append(productInfo.infoName)
     infoNames.sort(key=operator.attrgetter('order'), reverse=False)
     
-    return render_template('product.html', product=product, tableHeaders=infoNames, tableRows=productInfos).encode('utf-8')
+    return render_template('product.html', product=product,
+            tableHeaders=infoNames,
+            tableRows=productInfos).encode('utf-8')

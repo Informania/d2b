@@ -286,7 +286,7 @@ footer h2 {
   font-style: italic;
 }
 /* line 186, ../../sass/screen.scss */
-.content h2, .content h3 {
+.content h1, .content h2, .content h3 {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   font-size: 24px;
@@ -294,24 +294,32 @@ footer h2 {
   margin-bottom: 15px;
 }
 /* line 193, ../../sass/screen.scss */
+.content h1 {
+  font-size: 48px;
+}
+/* line 196, ../../sass/screen.scss */
+.content h2 {
+  font-size: 24px;
+}
+/* line 199, ../../sass/screen.scss */
 .content h3 {
   font-size: 18px;
 }
-/* line 196, ../../sass/screen.scss */
+/* line 202, ../../sass/screen.scss */
 .content p {
   margin-bottom: 25px;
 }
-/* line 198, ../../sass/screen.scss */
+/* line 204, ../../sass/screen.scss */
 .content p.productInfo {
   float: left;
   width: 75%;
 }
-/* line 203, ../../sass/screen.scss */
+/* line 209, ../../sass/screen.scss */
 .content .entry {
   text-align: left;
   clear: left;
 }
-/* line 207, ../../sass/screen.scss */
+/* line 213, ../../sass/screen.scss */
 .content .card {
   display: inline-block;
   width: 22%;
@@ -334,13 +342,13 @@ footer h2 {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 221, ../../sass/screen.scss */
+/* line 227, ../../sass/screen.scss */
 .content .card img {
   width: 50%;
   padding: 0;
   margin: 5px;
 }
-/* line 226, ../../sass/screen.scss */
+/* line 232, ../../sass/screen.scss */
 .content .card .cardCaption {
   font-family: "Lato", sans-serif;
   font-size: 24px;
@@ -348,19 +356,19 @@ footer h2 {
   padding-bottom: 10px;
   text-transform: small-caps;
 }
-/* line 234, ../../sass/screen.scss */
+/* line 240, ../../sass/screen.scss */
 .content .card:hover {
   background-color: #065086;
   cursor: pointer;
 }
-/* line 238, ../../sass/screen.scss */
+/* line 244, ../../sass/screen.scss */
 .content .row {
   float: left;
   clear: both;
   width: 100%;
   margin: 15px 0 15px 0;
 }
-/* line 245, ../../sass/screen.scss */
+/* line 251, ../../sass/screen.scss */
 .content .searchResult {
   display: inline-block;
   border: 3px solid #EEE;
@@ -383,12 +391,12 @@ footer h2 {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 258, ../../sass/screen.scss */
+/* line 264, ../../sass/screen.scss */
 .content .searchResult:hover {
   background-color: #EEE;
   cursor: pointer;
 }
-/* line 262, ../../sass/screen.scss */
+/* line 268, ../../sass/screen.scss */
 .content .searchResult img {
   margin: 0;
   padding: 0;
@@ -397,91 +405,100 @@ footer h2 {
   float: left;
   margin-top: 5%;
 }
-/* line 270, ../../sass/screen.scss */
+/* line 276, ../../sass/screen.scss */
 .content .searchResult .searchResultText {
   float: right;
   margin-left: 15px;
   width: 75%;
 }
-/* line 276, ../../sass/screen.scss */
+/* line 282, ../../sass/screen.scss */
 .content .searchResult h3 {
   margin: 0;
   padding: 5px 0 5px 0;
 }
-/* line 281, ../../sass/screen.scss */
+/* line 287, ../../sass/screen.scss */
 .content .productImgContainer {
   float: right;
   width: 20%;
 }
-/* line 285, ../../sass/screen.scss */
+/* line 291, ../../sass/screen.scss */
 .content .productImgContainer img {
   width: 70%;
   margin: 0;
   padding: 0;
 }
+/* line 298, ../../sass/screen.scss */
+.content #crumbs {
+  font-family: "Open Sans", sans-serif;
+}
+/* line 300, ../../sass/screen.scss */
+.content #crumbs a {
+  text-decoration: none;
+  color: #F25C05;
+}
 
 /******* Table styles *******/
-/* line 295, ../../sass/screen.scss */
+/* line 308, ../../sass/screen.scss */
 .productSpecs {
   clear: both;
 }
-/* line 297, ../../sass/screen.scss */
+/* line 310, ../../sass/screen.scss */
 .productSpecs th {
   font-family: "Open Sans", sans-serif;
   padding: 10px 20px 10px 20px;
   background-color: #DDD;
   border-bottom: 0;
 }
-/* line 303, ../../sass/screen.scss */
+/* line 316, ../../sass/screen.scss */
 .productSpecs th, .productSpecs td {
   text-align: center;
 }
-/* line 305, ../../sass/screen.scss */
+/* line 318, ../../sass/screen.scss */
 .productSpecs tr.alternate {
   background-color: #DDD;
 }
-/* line 308, ../../sass/screen.scss */
+/* line 321, ../../sass/screen.scss */
 .productSpecs td.green {
   color: green;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 316, ../../sass/screen.scss */
+  /* line 329, ../../sass/screen.scss */
   header #logo {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 479px) {
-  /* line 325, ../../sass/screen.scss */
+  /* line 338, ../../sass/screen.scss */
   header {
     height: 100px;
     line-height: 25px;
   }
-  /* line 328, ../../sass/screen.scss */
+  /* line 341, ../../sass/screen.scss */
   header #logo {
     font-size: 21px;
   }
-  /* line 331, ../../sass/screen.scss */
+  /* line 344, ../../sass/screen.scss */
   header #logo p {
     margin-left: 5px;
   }
-  /* line 334, ../../sass/screen.scss */
+  /* line 347, ../../sass/screen.scss */
   header #logo img {
     width: 100px;
     height: auto;
   }
-  /* line 341, ../../sass/screen.scss */
+  /* line 354, ../../sass/screen.scss */
   header nav {
     line-height: 25px;
   }
-  /* line 343, ../../sass/screen.scss */
+  /* line 356, ../../sass/screen.scss */
   header nav a {
     margin-left: 0;
     padding: 5px;
     font-size: 13px;
   }
 
-  /* line 351, ../../sass/screen.scss */
+  /* line 364, ../../sass/screen.scss */
   .content {
     width: 94%;
     padding-left: 3%;
@@ -489,55 +506,55 @@ footer h2 {
     padding-top: 80px;
   }
 
-  /* line 357, ../../sass/screen.scss */
+  /* line 370, ../../sass/screen.scss */
   nav.shrink, header.shrink {
     height: 33.33333px;
     line-height: 33.33333px !important;
   }
 
-  /* line 362, ../../sass/screen.scss */
+  /* line 375, ../../sass/screen.scss */
   header.shrink #logo {
     display: none;
   }
 
-  /* line 366, ../../sass/screen.scss */
+  /* line 379, ../../sass/screen.scss */
   .card .cardCaption {
     font-family: "Lato", sans-serif;
     font-size: 16px !important;
   }
 }
 /* Standard classes for layouting */
-/* line 376, ../../sass/screen.scss */
+/* line 389, ../../sass/screen.scss */
 .floatLeft {
   float: left;
 }
 
-/* line 379, ../../sass/screen.scss */
+/* line 392, ../../sass/screen.scss */
 .floatRight {
   float: right;
 }
 
-/* line 382, ../../sass/screen.scss */
+/* line 395, ../../sass/screen.scss */
 .clearBoth {
   clear: both;
 }
 
-/* line 385, ../../sass/screen.scss */
+/* line 398, ../../sass/screen.scss */
 .clearRight {
   clear: right;
 }
 
-/* line 388, ../../sass/screen.scss */
+/* line 401, ../../sass/screen.scss */
 .clearLeft {
   clear: left;
 }
 
-/* line 391, ../../sass/screen.scss */
+/* line 404, ../../sass/screen.scss */
 .textCenter {
   text-align: center;
 }
 
-/* line 394, ../../sass/screen.scss */
+/* line 407, ../../sass/screen.scss */
 .textLeft {
   text-align: left;
 }
