@@ -35,6 +35,10 @@
 		</nav>
 		</header>
 		<div class="content">
+            <div id="crumbs" class="textLeft">
+                <p>Du är här: <a href="/">Start</a> {% block crumbs %}{% endblock %}</p>
+            </div>
+
 			{% block content %}{% endblock %}
 {% endblock %}
 {% block footer %}
