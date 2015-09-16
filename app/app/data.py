@@ -124,5 +124,108 @@ def CreateData():
         ProductInfo('Lagervara', 4, lagerstatus, p),
         ProductInfo('Lagervara', 5, lagerstatus, p)
     ])
+
+    # Valdistans Bock #
+    p = Product(u'Valvdistans BOCK', u'Allmänt kallad sågbock på grund av sin likhet med denna, dock lite mindre till formatet. Genom sin storlek och anliggningsyta passar den bra inom prefabindustrin, att den sedan är billig försämrar ju inte saken.<br />Levereras förpackade i påse.', 'valvdistans_bock.png', pg, 'Valvdistans_bock')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('15', 1, hojd, p),        
+        ProductInfo('20', 2, hojd, p),        
+        ProductInfo('25', 3, hojd, p),        
+        ProductInfo('30', 4, hojd, p),        
+        ProductInfo('35', 5, hojd, p),
+        ProductInfo('40', 6, hojd, p),
+        ProductInfo('45', 7, hojd, p),
+        ProductInfo('50', 8, hojd, p),
+        ProductInfo('6-12', 1, jarn, p),
+        ProductInfo('6-12', 2, jarn, p),
+        ProductInfo('6-12', 3, jarn, p),
+        ProductInfo('6-12', 4, jarn, p),
+        ProductInfo('6-12', 5, jarn, p),
+        ProductInfo('6-12', 6, jarn, p),
+        ProductInfo('6-12', 7, jarn, p),
+        ProductInfo('6-12', 8, jarn, p),
+        ProductInfo('500', 1, antalforpSt, p),
+        ProductInfo('500', 2, antalforpSt, p),
+        ProductInfo('500', 3, antalforpSt, p),
+        ProductInfo('500', 4, antalforpSt, p),
+        ProductInfo('250', 5, antalforpSt, p),
+        ProductInfo('250', 6, antalforpSt, p),
+        ProductInfo('125', 7, antalforpSt, p),
+        ProductInfo('125', 8, antalforpSt, p),
+        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+    ])
+
+    # Valvdistans VBOCK #
+    p = Product(u'Valvdistans VBOCK', u'Förstärkt version av Bock, sätts endast på ett järn, passar ej i krysset.', 'valvdistans_vbock.png', pg, 'Valvdistans_vbock')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('15', 1, hojd, p),        
+        ProductInfo('20', 2, hojd, p),        
+        ProductInfo('25', 3, hojd, p),        
+        ProductInfo('30', 4, hojd, p),         
+        ProductInfo('4-15', 1, jarn, p),
+        ProductInfo('4-15', 2, jarn, p),
+        ProductInfo('4-15', 3, jarn, p),
+        ProductInfo('4-15', 4, jarn, p),
+        ProductInfo('850', 1, antalforpSt, p),
+        ProductInfo('650', 2, antalforpSt, p),
+        ProductInfo('550', 3, antalforpSt, p),
+        ProductInfo('450', 4, antalforpSt, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+    ])
+
+    # Valvdistans PRAXI #
+    p = Product(u'Valvdistans PRAXI', u'Välkant fyrbening som är spikbar i alla ben samt i centrum. Används framförallt vid tung armering.', 'valvdistans_vbock.png', pg, 'Valvdistans_praxi')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('15', 1, hojd, p),        
+        ProductInfo('20', 2, hojd, p),        
+        ProductInfo('25', 3, hojd, p),        
+        ProductInfo('30', 4, hojd, p),        
+        ProductInfo('35', 5, hojd, p),        
+        ProductInfo('40', 6, hojd, p),        
+        ProductInfo('45', 7, hojd, p),        
+        ProductInfo('50', 8, hojd, p),        
+        ProductInfo('6-20', 1, jarn, p),
+        ProductInfo('6-20', 2, jarn, p),
+        ProductInfo('6-20', 3, jarn, p),
+        ProductInfo('6-20', 4, jarn, p),
+        ProductInfo('6-20', 5, jarn, p),
+        ProductInfo('6-20', 6, jarn, p),
+        ProductInfo('6-20', 7, jarn, p),
+        ProductInfo('6-20', 8, jarn, p),
+        ProductInfo('1000', 1, antalforpSt, p),
+        ProductInfo('1000', 2, antalforpSt, p),
+        ProductInfo('1000', 3, antalforpSt, p),
+        ProductInfo('1000', 4, antalforpSt, p),
+        ProductInfo('650', 5, antalforpSt, p),
+        ProductInfo('600', 6, antalforpSt, p),
+        ProductInfo('550', 7, antalforpSt, p),
+        ProductInfo('500', 8, antalforpSt, p),
+        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+    ])
+
+
+    
+
+
     db.session.commit()
 
