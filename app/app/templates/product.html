@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block header %}
+	{{ super() }}
+{% endblock %}
+{% block crumbs %}
+	{{ super() }}
+	/ <a href="/produkter">Produkter</a> / <a href="/produkter/{{product.productgroup.category.name}}">{{product.productgroup.category.name}}</a> / {# should this be here? How to handle the link? {{product.productgroup.name}} /#} <a href="/produkter/{{product.productgroup.category.name}}/{{product.productgroup.url}}/{{product.url}}">{{product.name}}</a>
+	{% endblock %}
+{% block content %}
+    <h2>{{ product.name }}</h2>
+    <p class="productInfo textLeft">{{ product.description|safe }}</p>
+    <div class="productImgContainer">
+        <img src='{{ url_for('static', filename='images/products/') }}{{ product.image }}'/>
+    </div>
+    <table class="productSpecs">
+        <thead>
+            <tr>
+                {% for header in tableHeaders %}
+                <th>{{ header.name }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>         
+            {% for row in tableRows %}
+                {% if (loop.index % 2) != 0 %}
+                    <tr>
+                {% else %}
+                    <tr class="alternate">
+                {% endif %}
+                {% for prodInfo in row %} 
+					{% if prodInfo == 'Lagervara' %}
+						<td class="green">{{ prodInfo }}</td>
+					{% else %}
+						<td>{{ prodInfo }}</td>
+					{% endif %}
+                {% endfor %}
+            {% endfor %}
+               </tr>
+        </tbody>
+    </table>
+    {# (hopefully) temporary hack! #}
+    {% if product.name == 'Markdistans typ VARG' %}
+        <p class="floatLeft">* 400 eller 250 anges vid beställning</p>
+    {% endif %}
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}
+

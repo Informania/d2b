@@ -46,6 +46,6 @@ config.py
 ehthumbs.db
 Thumbs.db
 
-*.scssc
-
 *.db
+
+node_modules
