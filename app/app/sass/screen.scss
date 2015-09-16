@@ -183,13 +183,19 @@ footer {
 		font-family: 'Lato', sans-serif;
 		font-style: italic;
 	}
-	h2, h3{
+    h1, h2, h3{
 		text-transform: uppercase;
 		font-family: $header_sans;
 		font-size: $font-size-large;
 		margin-top: 55px;
 		margin-bottom: 15px;
 	}
+    h1 {
+        font-size: $font-size-xx-large;
+    }
+    h2 {
+        font-size: $font-size-large;
+    }
  	h3 {
 		font-size: $font-size-large - 6;
 	}
