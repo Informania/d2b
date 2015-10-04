@@ -58,6 +58,7 @@ def productPage(category, productGroupUrl, productUrl):
     # Get the unique headers for the table. InfoName is the name of the productInfo (cell in table)
     # Also fill a list with lists of productInfos as [['info', 'info], ['info, 'info']]
     infoNames = []
+    #if product.productInfos:
     productInfos = [[] for _ in xrange(max(product.productInfos, key=operator.attrgetter('collection_id')).collection_id)]
     for productInfo in product.productInfos:
         productInfos[productInfo.collection_id-1].append(productInfo.value)

@@ -9,13 +9,15 @@ def CreateData():
     antalForpPall = InfoName(u'Antal per förpackning / pall [st.]', 18)
     hojd = InfoName(u'Höjd [mm]', 1)
     jarn = InfoName(u'Järn diameter [mm]', 4)
-    
+    langdCm = InfoName(u'Längd [cm]', 3) 
     db.session.add_all([
         lagerstatus, 
         antalforpSt,        
         hojd,
-		antalForpPall,
-        jarn ])
+	antalForpPall,
+        jarn,
+        langdCm
+    ])
 
 
     #####  ---- Distanser ----  #####	
@@ -186,7 +188,7 @@ def CreateData():
     ])
 
     # Valvdistans PRAXI #
-    p = Product(u'Valvdistans PRAXI', u'Välkant fyrbening som är spikbar i alla ben samt i centrum. Används framförallt vid tung armering.', 'valvdistans_vbock.png', pg, 'Valvdistans_praxi')
+    p = Product(u'Valvdistans PRAXI', u'Välkant fyrbening som är spikbar i alla ben samt i centrum. Används framförallt vid tung armering.', 'valvdistans_praxi.png', pg, 'Valvdistans_praxi')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -223,9 +225,147 @@ def CreateData():
         ProductInfo('Ring oss', 8, lagerstatus, p),
     ])
 
+    # Vägg- och valdistans GEMINI #
+    p = Product(u'Vägg- och Valvdistans GEMINI', u'Den distans med högsta täckskikt som finns på marknaden. Mycket kraftig vilket medför att den tål hög belastning.<br/>Används oftast för att distansera överkantsarmering.<br/>Kan grensla över en underkantsarmering och runda fötter ger liten anliggningsyta.<br/>Mycket bra betongomslutning.', 'vagg_valvdistans_gemini.png', pg, 'Vagg_valvdistans_gemini')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('60', 1, hojd, p),        
+        ProductInfo('65', 2, hojd, p),        
+        ProductInfo('70', 3, hojd, p),        
+        ProductInfo('75', 4, hojd, p),        
+        ProductInfo('80', 5, hojd, p),        
+        ProductInfo('85', 6, hojd, p),        
+        ProductInfo('90', 7, hojd, p),        
+        ProductInfo('100/100', 8, hojd, p),        
+        ProductInfo('110/120', 9, hojd, p),        
+        ProductInfo('120/130', 10, hojd, p),        
+        ProductInfo('140/150', 11, hojd, p),        
+        ProductInfo('160/170', 12, hojd, p),        
+        ProductInfo('4-24', 1, jarn, p),
+        ProductInfo('4-24', 2, jarn, p),
+        ProductInfo('4-24', 3, jarn, p),
+        ProductInfo('4-24', 4, jarn, p),
+        ProductInfo('4-24', 5, jarn, p),
+        ProductInfo('4-24', 6, jarn, p),
+        ProductInfo('4-24', 7, jarn, p),
+        ProductInfo('4-24', 8, jarn, p),
+        ProductInfo('4-24', 9, jarn, p),
+        ProductInfo('4-24', 10, jarn, p),
+        ProductInfo('4-24', 11, jarn, p),
+        ProductInfo('4-24', 12, jarn, p),
+        ProductInfo('250', 1, antalforpSt, p),
+        ProductInfo('250', 2, antalforpSt, p),
+        ProductInfo('250', 3, antalforpSt, p),
+        ProductInfo('250', 4, antalforpSt, p),
+        ProductInfo('250', 5, antalforpSt, p),
+        ProductInfo('250', 6, antalforpSt, p),
+        ProductInfo('200', 7, antalforpSt, p),
+        ProductInfo('150', 8, antalforpSt, p),
+        ProductInfo('150', 9, antalforpSt, p),
+        ProductInfo('-', 10, antalforpSt, p),
+        ProductInfo('100', 11, antalforpSt, p),
+        ProductInfo('75', 12, antalforpSt, p),
+        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+        ProductInfo('Ring oss', 9, lagerstatus, p),
+        ProductInfo('Ring oss', 10, lagerstatus, p),
+        ProductInfo('Ring oss', 11, lagerstatus, p),
+        ProductInfo('Ring oss', 12, lagerstatus, p),
+    ])
 
+    # Igelkott ENKEL # 
+    p = Product(u'Igelkott ENKEL', u'Används som valvdistanser på stålunderlag.<br/>Läggs ut i formen, nätarmeringen läggs direkt ovanpå. Skapar bra arbetsmiljö med få böjningar. Risker finns dock för halkolyckor om man går i formen vid utläggningen. Några fördelar mot ringarna är att det är lättare att nå ut i hörnen samt att den är enklare att använda där det är smalt. <br/>Mått: 90 x 195 mm.', 'igelkott_enkel.png', pg, 'Igelkott_enkel')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('15', 1, hojd, p),        
+        ProductInfo('20', 2, hojd, p),        
+        ProductInfo('25', 3, hojd, p),        
+        ProductInfo('30', 4, hojd, p),        
+        ProductInfo('35', 5, hojd, p),        
+        ProductInfo('40', 6, hojd, p),        
+        ProductInfo('45', 7, hojd, p),        
+        ProductInfo('50', 8, hojd, p),        
+        ProductInfo('9720', 1, antalForpPall, p),
+        ProductInfo('9720', 2, antalForpPall, p),
+        ProductInfo('9720', 3, antalForpPall, p),
+        ProductInfo('9720', 4, antalForpPall, p),
+        ProductInfo('9720', 5, antalForpPall, p),
+        ProductInfo('9720', 6, antalForpPall, p),
+        ProductInfo('9720', 7, antalForpPall, p),
+        ProductInfo('9720', 8, antalForpPall, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+    ])
+
+    # Igelkott DUBBEL # 
+    p = Product(u'Igelkott ENKEL', u'Används som Igelkott ENKEL.<br/>Mått: 195 x 195 mm', 'igelkott_dubbel.png', pg, 'Igelkott_dubbel')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('15', 1, hojd, p),        
+        ProductInfo('20', 2, hojd, p),        
+        ProductInfo('25', 3, hojd, p),        
+        ProductInfo('30', 4, hojd, p),        
+        ProductInfo('35', 5, hojd, p),        
+        ProductInfo('40', 6, hojd, p),        
+        ProductInfo('45', 7, hojd, p),        
+        ProductInfo('50', 8, hojd, p),        
+        ProductInfo('4860/3240', 1, antalForpPall, p),
+        ProductInfo('4860/3240', 2, antalForpPall, p),
+        ProductInfo('4860/3240', 3, antalForpPall, p),
+        ProductInfo('4860/3240', 4, antalForpPall, p),
+        ProductInfo('4860/3240', 5, antalForpPall, p),
+        ProductInfo('4860/3240', 6, antalForpPall, p),
+        ProductInfo('4860/3240', 7, antalForpPall, p),
+        ProductInfo('4860/3240', 8, antalForpPall, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 6, lagerstatus, p),
+        ProductInfo('Lagervara', 7, lagerstatus, p),
+        ProductInfo('Lagervara', 8, lagerstatus, p),
+    ])
+
+    # Distanslist VESSLA # 
+    p = Product(u'Distanslist VESSLA', u'Distanslist av typ Druzack. Fungerar mycket bra inom prefabindustrin, mot hårda underlag och på isolering om inte det blir för tung belastning. Kan naturligtvis även användas vid platsgjutning.<br/>Är hopkopplingsbar, även i vinkel upp till ca 30 grader, vilket gör det möjligt att bygga sin egen speciallist som bland annat kan gå runt hörn. Har fått sitt namn av att det är en smidig och slingrig typ.', 'distanslist_vessla.png', pg, 'Distanslist_vessla')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('25', 1, hojd, p),        
+        ProductInfo('30', 2, hojd, p),        
+        ProductInfo('35', 3, hojd, p),        
+        ProductInfo('40', 4, hojd, p),        
+        ProductInfo('45', 5, hojd, p),        
+        ProductInfo('50', 6, hojd, p),        
+        ProductInfo('67', 1, langdCm, p),
+        ProductInfo('67', 2, langdCm, p),
+        ProductInfo('67', 3, langdCm, p),
+        ProductInfo('67', 4, langdCm, p),
+        ProductInfo('67', 5, langdCm, p),
+        ProductInfo('67', 6, langdCm, p),
+        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+    ])
     
-
+    # Distanslist VESSLA # 
+    p = Product(u'Distanslist BÄVER', u'Distanslist av Quicktyp. Har mycket liten anliggningsyta tack vare sina små och spetsiga fötter. Är hopkopplingsbar, dock inte vinklingsbar. <br/>Har fått sitt namn av en kvinnlig fabriksägare, som tyckte att läppen som används för att koppla ihop dem med såg ut som en Bäversvans.<br/>Standardlängd 50 cm, finns i höjderna 15 till 60 mm.<br/>Kan levereras i sammansatta längder om 100, 150 eller 200 cm.', 'distanslist_baver.png', pg, 'Distanslist_baver')
+    db.session.add(p)
 
     db.session.commit()
 
