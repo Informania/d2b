@@ -59,16 +59,20 @@ def productPage(category, productGroupUrl, productUrl):
     # Also fill a list with lists of productInfos as [['info', 'info], ['info, 'info']]
     infoNames = []
     #if product.productInfos:
-    productInfos = [[] for _ in xrange(max(product.productInfos, key=operator.attrgetter('collection_id')).collection_id)]
-    for productInfo in product.productInfos:
-        productInfos[productInfo.collection_id-1].append(productInfo.value)
+    if product.productInfos:
+        productInfos = [[] for _ in xrange(max(product.productInfos, key=operator.attrgetter('collection_id')).collection_id)]
+        for productInfo in product.productInfos:
+            productInfos[productInfo.collection_id-1].append(productInfo.value)
 
-        if productInfo.infoName in infoNames:
-            pass
-        else:
-            infoNames.append(productInfo.infoName)
-    infoNames.sort(key=operator.attrgetter('order'), reverse=False)
-    
-    return render_template('product.html', product=product,
-            tableHeaders=infoNames,
-            tableRows=productInfos).encode('utf-8')
+            if productInfo.infoName in infoNames:
+           	    pass
+            else:
+           	    infoNames.append(productInfo.infoName)
+        infoNames.sort(key=operator.attrgetter('order'), reverse=False)
+        return render_template('product.html', product=product,
+                tableHeaders=infoNames,
+                tableRows=productInfos).encode('utf-8')
+    else:
+	    return render_template('product.html', product=product,
+                tableHeaders=infoNames,
+                tableRows=[]).encode('utf-8')
