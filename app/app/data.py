@@ -722,6 +722,64 @@ def CreateData():
         ProductInfo('Ring oss', 5, lagerstatus, p),
     ])
 
+    # Isolerstiftsring #
+    p = Product(u'Isolerstiftsring', u'Förstoringsring som passar både Hulling och Isolerstift.<br/>Ej nödvändig när det gäller frigolit, men användbar när det gäller så kallad “lös isolering”, exempelvis Rockwool eller Gulfiber.<br/>Antal per förpackning: 250 st', 'isolerstiftsring.png', pg, 'Isolerstiftsring')
+    db.session.add(p)
+
+    # Fluktsticka #
+    p = Product(u'Fluktsticka', u'Fluktstickan används huvudsakligen för avvägning, fluktning, mellan olika ytors höjd på en byggarbetsplats. Den har ingenting att göra med tittare, fluktare.', 'fluktsticka.png', pg, 'Fluktsticka')
+    db.session.add(p)
+    
+    db.session.add_all([
+        ProductInfo('Vit', 1, farg, p),        
+        ProductInfo('Gul', 2, farg, p),        
+        ProductInfo(u'Röd', 3, farg, p),        
+        ProductInfo(u'Blå', 4, farg, p),        
+        ProductInfo('1000', 1, antalforpSt, p),
+        ProductInfo('1000', 2, antalforpSt, p),
+        ProductInfo('1000', 3, antalforpSt, p),
+        ProductInfo('1000', 4, antalforpSt, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+    ])
+
+    # Isolerdistans typ ULV #
+    p = Product(u'Isolerdistans typ ULV', u'Ett komplement till den vanliga markklossen.<br/>Mindre anliggningsyta och lågt pris.<br/>Främst avsedd för att användas på frigolit.<br/>Tänkbara användningsområden är prefabindustrin vid sandwichelement, platsbyggnation och mindre områden där det är låg belastning på frigoliten.', 'isolerdistans_ulv.png', pg, 'Isolerdistans_typ_ULV')
+    db.session.add(p)
+    
+    db.session.add_all([
+        ProductInfo('4-12', 1, jarn, p),        
+        ProductInfo('4-12', 2, jarn, p),        
+        ProductInfo('4-12', 3, jarn, p),        
+        ProductInfo('4-12', 4, jarn, p),        
+        ProductInfo('4-12', 5, jarn, p),        
+        ProductInfo('4-12', 6, jarn, p),        
+        ProductInfo('4-12', 7, jarn, p),        
+        ProductInfo('10', 1, hojd, p),        
+        ProductInfo('15', 2, hojd, p),        
+        ProductInfo('20', 3, hojd, p),        
+        ProductInfo('25', 4, hojd, p),        
+        ProductInfo('30', 5, hojd, p),        
+        ProductInfo('35', 6, hojd, p),        
+        ProductInfo('40', 7, hojd, p),        
+        ProductInfo('650', 1, antalforpSt, p),
+        ProductInfo('600', 2, antalforpSt, p),
+        ProductInfo('500', 3, antalforpSt, p),
+        ProductInfo('450', 4, antalforpSt, p),
+        ProductInfo('400', 5, antalforpSt, p),
+        ProductInfo('400', 6, antalforpSt, p),
+        ProductInfo('35', 7, antalforpSt, p),
+        ProductInfo('Rings oss', 1, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+    ])
+
 
     db.session.commit()
 
