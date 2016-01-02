@@ -46,6 +46,12 @@ def allProducts():
     productGroups = ProductGroup.query.all() 
     return render_template('product_groups.html', groups=productGroups)
 
+@app.route('/produkter/add')
+def addProduct():
+    productGroups = ProductGroup.query.all() 
+    return render_template('addProduct.html', groups=productGroups)
+
+
 @app.route('/produkter/<category>')
 def productGroups(category):
     pCat = ProductCategory.query.filter_by(name=category).first_or_404()

@@ -14,6 +14,7 @@ def CreateData():
     langdMm = InfoName(u'Längd [mm]', 4)
     farg = InfoName(u'Färgkod', 7)
     forIsolering = InfoName(u'För isolering [mm]', 8)
+    tackskikt = InfoName(u'Täckskikt [mm]', 2)
     db.session.add_all([
         lagerstatus, 
         antalforpSt,        
@@ -23,7 +24,8 @@ def CreateData():
         langdCm,
         farg,
         langdMm,
-        forIsolering
+        forIsolering,
+        tackskikt
     ])
 
 
@@ -31,10 +33,10 @@ def CreateData():
     pc = ProductCategory('Distanser')
     db.session.add(pc)
     ## Distanser för Mark ##
-    pg = ProductGroup(u'Distanser för Mark', 'markdistans_varg.png', pc, u'Mark')
+    pg = ProductGroup(u'Distanser för Mark', '1_markdistans_varg.png', pc, u'Mark')
     db.session.add(pg)
     # Markdistans varg #
-    p = Product('Markdistans typ VARG', u'Den absolut största produkten sett till antalet som används för både lösarmering och armeringsnät. Fungerar lika bra på löst som fast/hårt underlag, viktigt att anläggningsytan är slät, så att markdistansen står stabilt mot underlaget. Det är också mycket viktigt att den är konstruerad i vädertåligt material och att den klarar hög belastning ovanifrån, då den bl.a. ska tåla en 120-kilos byggnadsarbetare som kliver i formen. <br/>Rekommenderat antal per kvadratmeter är 3-4 st.<br/>Kan även levereras i även i ”storpack”. <br/>Kontakta oss så löser vi det tillsammans med Er!', 'markdistans_varg.png', pg, 'Markdistans_varg')
+    p = Product('Markdistans typ VARG', u'Den absolut största produkten sett till antalet som används för både lösarmering och armeringsnät. Fungerar lika bra på löst som fast/hårt underlag, viktigt att anläggningsytan är slät, så att markdistansen står stabilt mot underlaget. Det är också mycket viktigt att den är konstruerad i vädertåligt material och att den klarar hög belastning ovanifrån, då den bl.a. ska tåla en 120-kilos byggnadsarbetare som kliver i formen. <br/>Rekommenderat antal per kvadratmeter är 3-4 st.<br/>Kan även levereras i även i ”storpack”. <br/>Kontakta oss så löser vi det tillsammans med Er!', '1_markdistans_varg.png', pg, 'Markdistans_varg')
     db.session.add(p)
  
     db.session.add_all([
@@ -72,7 +74,7 @@ def CreateData():
         ProductInfo('Ring oss', 8, lagerstatus, p)
        ])
     # Distanslister för mark # 
-    p = Product(u'Distanslister för mark', u'Samma användningsområde som markdistansen. Passar dock bättre för nät än för lösarmering. Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enkelt och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidled. Görs inte detta är det stor risk att man skapar sprickanvisningar i den platta man gjuter. <br/>Rekommenderas cirka 1 meter per kvadratmeter.<br/>Levereras i längder om 2 meter. Kapade längder kan levereras på begäran. ', 'distanslist_mark.png', pg, 'Distanslist_mark')
+    p = Product(u'Distanslister för mark', u'Samma användningsområde som markdistansen. Passar dock bättre för nät än för lösarmering. Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enkelt och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidled. Görs inte detta är det stor risk att man skapar sprickanvisningar i den platta man gjuter. <br/>Rekommenderas cirka 1 meter per kvadratmeter.<br/>Levereras i längder om 2 meter. Kapade längder kan levereras på begäran. ', '20_distanslister_for_mark.png', pg, 'Distanslist_mark')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),
@@ -106,10 +108,10 @@ def CreateData():
 	])
 
     ## Distanser för valv ##
-    pg = ProductGroup(u'Distanser för Valv', 'valvdistans_jarv.png', pc, u'Valv')
+    pg = ProductGroup(u'Distanser för Valv', '2_vagg_valvdistans_jarv.png', pc, u'Valv')
 
     # VäggValvdistans Järv #
-    p = Product(u'Vägg- och Valvdistans JÄRV', u'Denna distans har funnits i många olika och varierande utformningar, alla med sina egna goda egenskaper och fördelar. <br/> I mitten på 90 talet satte sig “Mr Distans” ner och försökte samla alla dess goda egenskaper i en distans. Resultatet blev Varianten, som genom åren har visat sig vara just den bästa och mest användbara vägg- och valvdistansen. Den används mot hårt underlag både på valv och i väggar, och passar likväl för lösarmering såsom armeringsnät. <br/>Vi tillverkar den i ett material som tål både värme och kyla. Rekommenderat antal per kvadratmeter är 3-4 st. <br/><br/>Höjderna 20/25, 30/35 och 40/45 finns numera även i regranulerat material. Den har samma hållfasthet fast färgen är mer mellangrå. Eftersom det är regranulerat (återanvänt) material innebär det lite lägre pris och mindre mijlöpåverkan.', 'valvdistans_jarv.png', pg, 'Vagg_valvdistans_jarv')
+    p = Product(u'Vägg- och Valvdistans JÄRV', u'Denna distans har funnits i många olika och varierande utformningar, alla med sina egna goda egenskaper och fördelar. <br/> I mitten på 90 talet satte sig “Mr Distans” ner och försökte samla alla dess goda egenskaper i en distans. Resultatet blev Varianten, som genom åren har visat sig vara just den bästa och mest användbara vägg- och valvdistansen. Den används mot hårt underlag både på valv och i väggar, och passar likväl för lösarmering såsom armeringsnät. <br/>Vi tillverkar den i ett material som tål både värme och kyla. Rekommenderat antal per kvadratmeter är 3-4 st. <br/><br/>Höjderna 20/25, 30/35 och 40/45 finns numera även i regranulerat material. Den har samma hållfasthet fast färgen är mer mellangrå. Eftersom det är regranulerat (återanvänt) material innebär det lite lägre pris och mindre mijlöpåverkan.', 'valvdistans_jarv.png', pg, '2_vagg_valvdistans_jarv.png')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15/20', 1, hojd, p),        
@@ -135,7 +137,7 @@ def CreateData():
     ])
 
     # Valdistans Bock #
-    p = Product(u'Valvdistans BOCK', u'Allmänt kallad sågbock på grund av sin likhet med denna, dock lite mindre till formatet. Genom sin storlek och anliggningsyta passar den bra inom prefabindustrin, att den sedan är billig försämrar ju inte saken.<br />Levereras förpackade i påse.', 'valvdistans_bock.png', pg, 'Valvdistans_bock')
+    p = Product(u'Valvdistans BOCK', u'Allmänt kallad sågbock på grund av sin likhet med denna, dock lite mindre till formatet. Genom sin storlek och anliggningsyta passar den bra inom prefabindustrin, att den sedan är billig försämrar ju inte saken.<br />Levereras förpackade i påse.', '14_valvdistans_bock.png', pg, 'Valvdistans_bock')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -173,7 +175,7 @@ def CreateData():
     ])
 
     # Valvdistans VBOCK #
-    p = Product(u'Valvdistans VBOCK', u'Förstärkt version av Bock, sätts endast på ett järn, passar ej i krysset.', 'valvdistans_vbock.png', pg, 'Valvdistans_vbock')
+    p = Product(u'Valvdistans VBOCK', u'Förstärkt version av Bock, sätts endast på ett järn, passar ej i krysset.', '64_valvdistans_vbock.png', pg, 'Valvdistans_vbock')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -195,7 +197,7 @@ def CreateData():
     ])
 
     # Valvdistans PRAXI #
-    p = Product(u'Valvdistans PRAXI', u'Välkant fyrbening som är spikbar i alla ben samt i centrum. Används framförallt vid tung armering.', 'valvdistans_praxi.png', pg, 'Valvdistans_praxi')
+    p = Product(u'Valvdistans PRAXI', u'Välkant fyrbening som är spikbar i alla ben samt i centrum. Används framförallt vid tung armering.', '51_valvdistans_praxi.png', pg, 'Valvdistans_praxi')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -233,7 +235,7 @@ def CreateData():
     ])
 
     # Vägg- och valdistans GEMINI #
-    p = Product(u'Vägg- och Valvdistans GEMINI', u'Den distans med högsta täckskikt som finns på marknaden. Mycket kraftig vilket medför att den tål hög belastning.<br/>Används oftast för att distansera överkantsarmering.<br/>Kan grensla över en underkantsarmering och runda fötter ger liten anliggningsyta.<br/>Mycket bra betongomslutning.', 'vagg_valvdistans_gemini.png', pg, 'Vagg_valvdistans_gemini')
+    p = Product(u'Vägg- och Valvdistans GEMINI', u'Den distans med högsta täckskikt som finns på marknaden. Mycket kraftig vilket medför att den tål hög belastning.<br/>Används oftast för att distansera överkantsarmering.<br/>Kan grensla över en underkantsarmering och runda fötter ger liten anliggningsyta.<br/>Mycket bra betongomslutning.', '30_valvdistans_gemini.png', pg, 'Vagg_valvdistans_gemini')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('60', 1, hojd, p),        
@@ -287,7 +289,7 @@ def CreateData():
     ])
 
     # Igelkott ENKEL # 
-    p = Product(u'Igelkott ENKEL', u'Används som valvdistanser på stålunderlag.<br/>Läggs ut i formen, nätarmeringen läggs direkt ovanpå. Skapar bra arbetsmiljö med få böjningar. Risker finns dock för halkolyckor om man går i formen vid utläggningen. Några fördelar mot ringarna är att det är lättare att nå ut i hörnen samt att den är enklare att använda där det är smalt. <br/>Mått: 90 x 195 mm.', 'igelkott_enkel.png', pg, 'Igelkott_enkel')
+    p = Product(u'Igelkott ENKEL', u'Används som valvdistanser på stålunderlag.<br/>Läggs ut i formen, nätarmeringen läggs direkt ovanpå. Skapar bra arbetsmiljö med få böjningar. Risker finns dock för halkolyckor om man går i formen vid utläggningen. Några fördelar mot ringarna är att det är lättare att nå ut i hörnen samt att den är enklare att använda där det är smalt. <br/>Mått: 90 x 195 mm.', '53_igelkott_enkel.png', pg, 'Igelkott_enkel')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -317,7 +319,7 @@ def CreateData():
     ])
 
     # Igelkott DUBBEL # 
-    p = Product(u'Igelkott DUBBEL', u'Används som Igelkott ENKEL.<br/>Mått: 195 x 195 mm', 'igelkott_dubbel.png', pg, 'Igelkott_dubbel')
+    p = Product(u'Igelkott DUBBEL', u'Används som Igelkott ENKEL.<br/>Mått: 195 x 195 mm', '22_igelkott_dubbel.png', pg, 'Igelkott_dubbel')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -347,7 +349,7 @@ def CreateData():
     ])
 
     # Distanslist VESSLA # 
-    p = Product(u'Distanslist VESSLA', u'Distanslist av typ Druzack. Fungerar mycket bra inom prefabindustrin, mot hårda underlag och på isolering om inte det blir för tung belastning. Kan naturligtvis även användas vid platsgjutning.<br/>Är hopkopplingsbar, även i vinkel upp till ca 30 grader, vilket gör det möjligt att bygga sin egen speciallist som bland annat kan gå runt hörn. Har fått sitt namn av att det är en smidig och slingrig typ.', 'distanslist_vessla.png', pg, 'Distanslist_vessla')
+    p = Product(u'Distanslist VESSLA', u'Distanslist av typ Druzack. Fungerar mycket bra inom prefabindustrin, mot hårda underlag och på isolering om inte det blir för tung belastning. Kan naturligtvis även användas vid platsgjutning.<br/>Är hopkopplingsbar, även i vinkel upp till ca 30 grader, vilket gör det möjligt att bygga sin egen speciallist som bland annat kan gå runt hörn. Har fått sitt namn av att det är en smidig och slingrig typ.', '65_distanslist_vessla.png', pg, 'Distanslist_vessla')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('25', 1, hojd, p),        
@@ -371,7 +373,7 @@ def CreateData():
     ])
     
     # Distanslist BÄVER # 
-    p = Product(u'Distanslist BÄVER', u'Distanslist av Quicktyp. Har mycket liten anliggningsyta tack vare sina små och spetsiga fötter. Är hopkopplingsbar, dock inte vinklingsbar. <br/>Har fått sitt namn av en kvinnlig fabriksägare, som tyckte att läppen som används för att koppla ihop dem med såg ut som en Bäversvans.<br/>Kan levereras i sammansatta längder om 100, 150 eller 200 cm.', 'distanslist_baver.png', pg, 'Distanslist_baver')
+    p = Product(u'Distanslist BÄVER', u'Distanslist av Quicktyp. Har mycket liten anliggningsyta tack vare sina små och spetsiga fötter. Är hopkopplingsbar, dock inte vinklingsbar. <br/>Har fått sitt namn av en kvinnlig fabriksägare, som tyckte att läppen som används för att koppla ihop dem med såg ut som en Bäversvans.<br/>Kan levereras i sammansatta längder om 100, 150 eller 200 cm.', '9_distanslist_baver.png', pg, 'Distanslist_baver')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('15', 1, hojd, p),        
@@ -407,7 +409,7 @@ def CreateData():
     ])
     
     # Armeringsstege KOBRA # 
-    p = Product(u'Armeringsstege KOBRA', u'Sinusformad armeringsstege, består av två längsgående vågformade armeringsjärn som hålls samman av vertikal tråd.<br/>Används vid dubbelarmering, läggs ovanpå lägsta armeringsnätet, nästa nät läggs ovanpå armeringsstegen. Rekommenderat är att armeringsstegen surras fast med najtråd i det undre nätet.<br/>Rekommenderat antal är 1 meter per kvadratmeter. Levereras i längder om 2 meter.', 'armeringsstege_kobra.png', pg, 'Armeringsstege_kobra')
+    p = Product(u'Armeringsstege KOBRA', u'Sinusformad armeringsstege, består av två längsgående vågformade armeringsjärn som hålls samman av vertikal tråd.<br/>Används vid dubbelarmering, läggs ovanpå lägsta armeringsnätet, nästa nät läggs ovanpå armeringsstegen. Rekommenderat är att armeringsstegen surras fast med najtråd i det undre nätet.<br/>Rekommenderat antal är 1 meter per kvadratmeter. Levereras i längder om 2 meter.', '40_armeringsstege_kobra.png', pg, 'Armeringsstege_kobra')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('30', 1, hojd, p),        
@@ -485,7 +487,7 @@ def CreateData():
     ])
 
     # Nätstöd typ A # 
-    p = Product(u'Nätstöd typ A', u'Rak armeringsstege, består av tre längsgående armeringsjärn som hålls samman av vågformad, längsgående tråd.<br/>Används vid dubbelarmering, läggs direkt ovanpå undre armeringsnätet, nästa nät läggs därefter ovanpå armeringsstegen. Rekommenderat är att armeringsstegen surras fast med najtråd i det undre nätet.<br/>Rekommenderat antal är 1 meter per kvadratmeter. Levereras i längder om 2 meter.', 'natstod_typ_a.png', pg, 'Natstod_typ_A')
+    p = Product(u'Nätstöd typ A', u'Rak armeringsstege, består av tre längsgående armeringsjärn som hålls samman av vågformad, längsgående tråd.<br/>Används vid dubbelarmering, läggs direkt ovanpå undre armeringsnätet, nästa nät läggs därefter ovanpå armeringsstegen. Rekommenderat är att armeringsstegen surras fast med najtråd i det undre nätet.<br/>Rekommenderat antal är 1 meter per kvadratmeter. Levereras i längder om 2 meter.', '17_natstod_typ_a.png', pg, 'Natstod_typ_A')
     db.session.add(p)
     
     db.session.add_all([
@@ -540,7 +542,7 @@ def CreateData():
     ])
 
      # Distanslister för valv # 
-    p = Product(u'Distanslister för valv', u'Samma användningsområde som valvdistansen. Passar dock bättre för nät än för lösarmering.<br/>Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enkelt och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidoled. Görs inte detta är det stor risk att man skapar sprickanvisningar i den platta man gjuter. <br/>Rekommenderat antal cirka 1 meter per kvadratmeter. Levereras i längder om 2 meter. Kapade längder kan levereras på begäran.', 'distanslist_valv.png', pg, 'Distanslist_valv')
+    p = Product(u'Distanslister för valv', u'Samma användningsområde som valvdistansen. Passar dock bättre för nät än för lösarmering.<br/>Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enkelt och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidoled. Görs inte detta är det stor risk att man skapar sprickanvisningar i den platta man gjuter. <br/>Rekommenderat antal cirka 1 meter per kvadratmeter. Levereras i längder om 2 meter. Kapade längder kan levereras på begäran.', '19_distansliste_for_valv.png', pg, 'Distanslist_valv')
     db.session.add(p)
 
     db.session.add_all([
@@ -574,15 +576,15 @@ def CreateData():
     ])
 
     # Distansspiral # 
-    p = Product(u'Distansspiral', u'Samma användningsområde som valvdistansen. Passar dock bättre för nät- än för lösarmering.<br/>Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enklare och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidoled. Görs inte detta är det mycket stor risk att man skapar sprickanvisningar i plattan man gjuter.<br/>Rekommenderat antal cirka 1 meter per kvadratmeter.<br/>Levereras i längder om 2,5 meter.', 'distansspiral.png', pg, 'Distansspiral')
+    p = Product(u'Distansspiral', u'Samma användningsområde som valvdistansen. Passar dock bättre för nät- än för lösarmering.<br/>Läggs ut i längder direkt på underlaget, därefter läggs nätet ovanpå. Enklare och mindre risk för olämpliga arbetsställningar.<br/>Skall kapas i längder under 1 meter innan utläggning sker, och bör ej läggas i långa rader efter varandra. Det bästa är att ha en förskjutning i sidoled. Görs inte detta är det mycket stor risk att man skapar sprickanvisningar i plattan man gjuter.<br/>Rekommenderat antal cirka 1 meter per kvadratmeter.<br/>Levereras i längder om 2,5 meter.', '18_distansspiral.png', pg, 'Distansspiral')
     db.session.add(p)
 
     # Betongkloss # 
-    p = Product(u'Betongkloss', u'Runda distanser av betong, nns både som valv- och markdistanser. Används huvudsakligen vid tyngre armeringskonstruktioner, framförallt vid brobyggen och anläggningsbyggen.<br/>Finns i höjderna 20 till 100 mm med diameter från 35 till 100 mm.<br/>Standardutförande är med rak najtråd, tillverkad i anläggningscement.<br/>Finns även med spik, öglad najtråd, utan tråd och i annan cementkvalitet.', 'betongkloss.png', pg, 'Betongkloss')
+    p = Product(u'Betongkloss', u'Runda distanser av betong, nns både som valv- och markdistanser. Används huvudsakligen vid tyngre armeringskonstruktioner, framförallt vid brobyggen och anläggningsbyggen.<br/>Finns i höjderna 20 till 100 mm med diameter från 35 till 100 mm.<br/>Standardutförande är med rak najtråd, tillverkad i anläggningscement.<br/>Finns även med spik, öglad najtråd, utan tråd och i annan cementkvalitet.', '12_betongklossar.png', pg, 'Betongkloss')
     db.session.add(p)
 
     # Kryssdistans # 
-    p = Product(u'Kryssdistans', u'Används där det är viktigt med så liten anliggningsyta mot formen som möjligt, exempelvis en prefabvägg som skall slipas.<br/>Kan fås färgade i t.ex. svart eller vitt. Detta innebär dock längre leveranstid och minsta antal på ca 5000 st.', 'kryssdistans.png', pg, 'Kryssdistans')
+    p = Product(u'Kryssdistans', u'Används där det är viktigt med så liten anliggningsyta mot formen som möjligt, exempelvis en prefabvägg som skall slipas.<br/>Kan fås färgade i t.ex. svart eller vitt. Detta innebär dock längre leveranstid och minsta antal på ca 5000 st.', '42_kryssdistans.png', pg, 'Kryssdistans')
     db.session.add(p)
     
     db.session.add_all([
@@ -604,7 +606,7 @@ def CreateData():
     pg = ProductGroup(u'Distanser för Pallning', 'pallningsbrickor_bjorn.png', pc, u'Pallning')
 
     # Pallningsbrickor BJÖRN #
-    p = Product(u'Pallningsbrickor BJÖRN', u'Avsedda för temporär pallning av prefabricerade betongelement vid montage. Undergjutning med betong eller pallning med stålbrickor måste ske efteråt.<br/>En av de produkter som har flest användningsområde. Förutom vid prefabmontage, så används denna bricka på de flesta ställen där man vill ha pallning mellan två underlag, exempelvis läggning av ny läkt på ett gammalt tak. Användningsområdena begränsas bara av användarens fantasi.<br/>Dimensionen är 45 x 70 mm, och höjderna är färgkodade för att det skall vara enkelt att skilja på dem. Alla brickor är även kompatibla med Pallningsbricka 50 x 80 mm.<br/>Levereras även i andra förpackningsstorlekar enligt ert önskemål. ”Blandade” kartonger, dvs alla tre storlekarna i samma kartong, är också möjligt.<br/>Kontakta oss så löser vi det tillsammans med er!', 'pallningsbrickor_bjorn.png', pg, 'Pallningsbrickor_bjorn')
+    p = Product(u'Pallningsbrickor BJÖRN', u'Avsedda för temporär pallning av prefabricerade betongelement vid montage. Undergjutning med betong eller pallning med stålbrickor måste ske efteråt.<br/>En av de produkter som har flest användningsområde. Förutom vid prefabmontage, så används denna bricka på de flesta ställen där man vill ha pallning mellan två underlag, exempelvis läggning av ny läkt på ett gammalt tak. Användningsområdena begränsas bara av användarens fantasi.<br/>Dimensionen är 45 x 70 mm, och höjderna är färgkodade för att det skall vara enkelt att skilja på dem. Alla brickor är även kompatibla med Pallningsbricka 50 x 80 mm.<br/>Levereras även i andra förpackningsstorlekar enligt ert önskemål. ”Blandade” kartonger, dvs alla tre storlekarna i samma kartong, är också möjligt.<br/>Kontakta oss så löser vi det tillsammans med er!', '13_pallningsbrickor_bjorn.png', pg, 'Pallningsbrickor_bjorn')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('2', 1, hojd, p),        
@@ -622,7 +624,7 @@ def CreateData():
     ])
     
     # Pallningsbrickor SLAGBJÖRN #
-    p = Product(u'Pallningsbrickor SLAGBJÖRN', u'Björnens storebror.<br/>Samma egenskaper som pallningsbricka BJÖRN.<br/>Dimension 95 x 95 mm', 'pallningsbrickor_slagbjorn.png', pg, 'Pallningsbrickor_slagbjorn')
+    p = Product(u'Pallningsbrickor SLAGBJÖRN', u'Björnens storebror.<br/>Samma egenskaper som pallningsbricka BJÖRN.<br/>Dimension 95 x 95 mm', '56_pallningsbrickor_slagbjorn.png', pg, 'Pallningsbrickor_slagbjorn')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('2', 1, hojd, p),        
@@ -640,10 +642,10 @@ def CreateData():
     ])
 
     ## Distanser för isolering ##
-    pg = ProductGroup(u'Distanser för Isolering', 'rorhulling.png', pc, u'Isolering')
+    pg = ProductGroup(u'Distanser för Isolering', '54_ror_hulling.png', pc, u'Isolering')
 
     # Hulling FALK #
-    p = Product(u'Hulling FALK', u'Från början avsedda för att fästa isolering vid våt/obrunnen betong, vilket den fortfarande naturligtvis fungerar utmärkt för.<br/>I samband med att det har blivit allt vanligare med isolering i mark- plattor, och även i så kallad sandwichvägg, har det uppstått ett behov av en plastspik, som förbinder de olika isoleringsskivorna, till detta ändamål fungerar hulling utmärkt.<br/>Antal per kvadratmeter är mycket beroende på yttre omständigheter. Är det en grund, där isoleringen skall ligga utsatt för vind en längre period innan pågjutningen sker, behövs det upp 6-8 st per skiva.<br/>Är omständigheterna mer gynnsamma, och pågjutningen kommer att ske snart därpå, räcker det med 2-4 st per skiva.', 'hulling_falk.png', pg, 'Hulling_falk')
+    p = Product(u'Hulling FALK', u'Från början avsedda för att fästa isolering vid våt/obrunnen betong, vilket den fortfarande naturligtvis fungerar utmärkt för.<br/>I samband med att det har blivit allt vanligare med isolering i mark- plattor, och även i så kallad sandwichvägg, har det uppstått ett behov av en plastspik, som förbinder de olika isoleringsskivorna, till detta ändamål fungerar hulling utmärkt.<br/>Antal per kvadratmeter är mycket beroende på yttre omständigheter. Är det en grund, där isoleringen skall ligga utsatt för vind en längre period innan pågjutningen sker, behövs det upp 6-8 st per skiva.<br/>Är omständigheterna mer gynnsamma, och pågjutningen kommer att ske snart därpå, räcker det med 2-4 st per skiva.', '23_hulling_falk.png', pg, 'Hulling_falk')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('50', 1, langdMm, p),        
@@ -673,7 +675,7 @@ def CreateData():
     ])
     
     # Rör-hulling #
-    p = Product(u'Rör-hulling', u'Vidareuteckling av Hullingen, försedd med fästa för värmerör ovanpå skallen.', 'rorhulling.png', pg, 'Ror_hulling')
+    p = Product(u'Rör-hulling', u'Vidareuteckling av Hullingen, försedd med fästa för värmerör ovanpå skallen.', '54_ror_hulling.png', pg, 'Ror_hulling')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('16', 1, ror, p),        
@@ -685,7 +687,7 @@ def CreateData():
     ])
 
     # Hullingkrok #
-    p = Product(u'Hullingkrok', u'Hulling avsedd för att hålla fast nät, ex putsnät eller annan tunn tråd mot isolering. Fungerar naturligtvis även för att hålla fast annat som passar i krokarna också.', 'hullingkrok.png', pg, 'Hullingkrok')
+    p = Product(u'Hullingkrok', u'Hulling avsedd för att hålla fast nät, ex putsnät eller annan tunn tråd mot isolering. Fungerar naturligtvis även för att hålla fast annat som passar i krokarna också.', '34_hullingkrok.png', pg, 'Hullingkrok')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('180', 1, langdMm, p),        
@@ -694,10 +696,10 @@ def CreateData():
     ])
 
     # SVÄRDFISK #
-    p = Product(u'SVÄRDFISK', u'Fixera isolering vid betong, fästa två isoleringsblock mot varandra, fixera isolering under en pålad grund och många andra användningsområden. Samma som hullingen eller Iso-skruven används till idag.<br/>Monteras ovanifrån då den körs ner genom skivorna och vrids ett kvarts varv, eller underifrån då man trär på skivorna. Tillverkad i rostfritt (A2) material, Ø 4 mm.<br/>Som standardlängder finns 350 mm för pålad grund med 300 mm isolering och 400 mm för att fästa 3-4 isoleringsblock mot varandra. Ytterligare längder kan tas fram vid behov.<br/>Leveranstid (standardlänger): Omgående. <br/>Leveranstid (special). 1-2 veckor.', 'svardfisk.png', pg, 'Svardfisk')
+    p = Product(u'SVÄRDFISK', u'Fixera isolering vid betong, fästa två isoleringsblock mot varandra, fixera isolering under en pålad grund och många andra användningsområden. Samma som hullingen eller Iso-skruven används till idag.<br/>Monteras ovanifrån då den körs ner genom skivorna och vrids ett kvarts varv, eller underifrån då man trär på skivorna. Tillverkad i rostfritt (A2) material, Ø 4 mm.<br/>Som standardlängder finns 350 mm för pålad grund med 300 mm isolering och 400 mm för att fästa 3-4 isoleringsblock mot varandra. Ytterligare längder kan tas fram vid behov.<br/>Leveranstid (standardlänger): Omgående. <br/>Leveranstid (special). 1-2 veckor.', '60_svardfisk.png', pg, 'Svardfisk')
     
     # Isolerstift #
-    p = Product(u'Isolerstift', u'Avsett för att fästa isolering i brunnen betong.<br/> Borra ett Ø 8 mm hål i betongen, minst 40 mm djupt.<br/>Stick stiftet igenom isoleringen, tryck in den räfflade delen i hålet (använd med fördel gummiklubba eller hammare till detta).<br/>Stiftets längd beräknas enligt följande: Isoleringens tjocklek + 40 mm = Stiftlängd.<br/>Exempel: Isolering: 80 mm + 40 mm = Stiftlängd 20 mm.', 'isolerstift.png', pg, 'Isolerstift')
+    p = Product(u'Isolerstift', u'Avsett för att fästa isolering i brunnen betong.<br/> Borra ett Ø 8 mm hål i betongen, minst 40 mm djupt.<br/>Stick stiftet igenom isoleringen, tryck in den räfflade delen i hålet (använd med fördel gummiklubba eller hammare till detta).<br/>Stiftets längd beräknas enligt följande: Isoleringens tjocklek + 40 mm = Stiftlängd.<br/>Exempel: Isolering: 80 mm + 40 mm = Stiftlängd 20 mm.', '35_isolerstift.png', pg, 'Isolerstift')
     db.session.add(p)
     db.session.add_all([
         ProductInfo('80', 1, langdMm, p),        
@@ -723,11 +725,11 @@ def CreateData():
     ])
 
     # Isolerstiftsring #
-    p = Product(u'Isolerstiftsring', u'Förstoringsring som passar både Hulling och Isolerstift.<br/>Ej nödvändig när det gäller frigolit, men användbar när det gäller så kallad “lös isolering”, exempelvis Rockwool eller Gulfiber.<br/>Antal per förpackning: 250 st', 'isolerstiftsring.png', pg, 'Isolerstiftsring')
+    p = Product(u'Isolerstiftsring', u'Förstoringsring som passar både Hulling och Isolerstift.<br/>Ej nödvändig när det gäller frigolit, men användbar när det gäller så kallad “lös isolering”, exempelvis Rockwool eller Gulfiber.<br/>Antal per förpackning: 250 st', '36_isolerstiftsring.png', pg, 'Isolerstiftsring')
     db.session.add(p)
 
     # Fluktsticka #
-    p = Product(u'Fluktsticka', u'Fluktstickan används huvudsakligen för avvägning, fluktning, mellan olika ytors höjd på en byggarbetsplats. Den har ingenting att göra med tittare, fluktare.', 'fluktsticka.png', pg, 'Fluktsticka')
+    p = Product(u'Fluktsticka', u'Fluktstickan används huvudsakligen för avvägning, fluktning, mellan olika ytors höjd på en byggarbetsplats. Den har ingenting att göra med tittare, fluktare.', '27_fluktsticka.png', pg, 'Fluktsticka')
     db.session.add(p)
     
     db.session.add_all([
@@ -746,7 +748,7 @@ def CreateData():
     ])
 
     # Isolerdistans typ ULV #
-    p = Product(u'Isolerdistans typ ULV', u'Ett komplement till den vanliga markklossen.<br/>Mindre anliggningsyta och lågt pris.<br/>Främst avsedd för att användas på frigolit.<br/>Tänkbara användningsområden är prefabindustrin vid sandwichelement, platsbyggnation och mindre områden där det är låg belastning på frigoliten.', 'isolerdistans_ulv.png', pg, 'Isolerdistans_typ_ULV')
+    p = Product(u'Isolerdistans typ ULV', u'Ett komplement till den vanliga markklossen.<br/>Mindre anliggningsyta och lågt pris.<br/>Främst avsedd för att användas på frigolit.<br/>Tänkbara användningsområden är prefabindustrin vid sandwichelement, platsbyggnation och mindre områden där det är låg belastning på frigoliten.', '62_isolerdistans_typ_ulv.png', pg, 'Isolerdistans_typ_ULV')
     db.session.add(p)
     
     db.session.add_all([
@@ -780,6 +782,62 @@ def CreateData():
         ProductInfo('Ring oss', 7, lagerstatus, p),
     ])
 
+    ## Runda distanser ##
+    pg = ProductGroup(u'Runda distanser', '15_dinkihjul.png', pc, u'Isolering')
+
+    # Hulling FALK #
+    p = Product(u'Dinkihjul', u'Allroundhjul framtaget för att passa på era olika järndimensioner, 4-12 mm. Detta för att minska antalet hjul som behövs hållas i lager, framförallt hos användaren.<br/>Hjulet har vågformade toppar för att ligga bra i handen och gör inte ont i handen för den som monterar.<br/>Finns för de esta olika järndimensionerna och med olika täckskikt. Fråga gärna efter det hjul som just ni behöver. OBS: Vi har mycket bra priser på dessa, förmodligen det lägsta på hela marknaden. Höjderna 20 25 och 30 finns även i nymaterial (vita) och är lagervaror.', '15_dinkihjul.png', pg, 'Dinkhjul')
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo('4-12', 1, jarn, p),        
+        ProductInfo('4-12', 2, jarn, p), 
+        ProductInfo('4-12', 3, jarn, p),        
+        ProductInfo('4-12', 4, jarn, p),        
+        ProductInfo('4-12', 5, jarn, p),        
+        ProductInfo('4-12', 6, jarn, p),        
+        ProductInfo('4-12', 7, jarn, p),        
+        ProductInfo('8-20', 8, jarn, p),        
+        ProductInfo('8-20', 9, jarn, p),        
+        ProductInfo('8-20', 10, jarn, p),        
+        ProductInfo('8-20', 11, jarn, p),        
+        ProductInfo('8-20', 12, jarn, p),        
+        ProductInfo('15', 1, tackskikt, p),
+        ProductInfo('20', 2, tackskikt, p),
+        ProductInfo('25', 3, tackskikt, p),
+        ProductInfo('30', 4, tackskikt, p),
+        ProductInfo('35', 5, tackskikt, p),
+        ProductInfo('40', 6, tackskikt, p),
+        ProductInfo('50', 7, tackskikt, p),
+        ProductInfo('25', 8, tackskikt, p),
+        ProductInfo('30', 9, tackskikt, p),
+        ProductInfo('35', 10, tackskikt, p),
+        ProductInfo('40', 11, tackskikt, p),
+        ProductInfo('50', 12, tackskikt, p),
+        ProductInfo('1000', 1, antalforpSt, p),
+        ProductInfo('1000', 2, antalforpSt, p),
+        ProductInfo('500', 3, antalforpSt, p),
+        ProductInfo('500', 4, antalforpSt, p),
+        ProductInfo('500', 5, antalforpSt, p),
+        ProductInfo('125', 6, antalforpSt, p),
+        ProductInfo('100', 7, antalforpSt, p),
+        ProductInfo('-', 8, antalforpSt, p),
+        ProductInfo('-', 9, antalforpSt, p),
+        ProductInfo('-', 10, antalforpSt, p),
+        ProductInfo('-', 11, antalforpSt, p),
+        ProductInfo('-', 12, antalforpSt, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 6, lagerstatus, p),
+        ProductInfo('Lagervara', 7, lagerstatus, p),
+        ProductInfo('Lagervara', 8, lagerstatus, p),
+        ProductInfo('Lagervara', 9, lagerstatus, p),
+        ProductInfo('Lagervara', 10, lagerstatus, p),
+        ProductInfo('Lagervara', 11, lagerstatus, p),
+        ProductInfo('Lagervara', 12, lagerstatus, p),
+    ])
 
     db.session.commit()
 

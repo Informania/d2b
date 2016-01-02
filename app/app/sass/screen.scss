@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
 $font-size-regular: 16px;
+$font-size-regular-plus: 20px;
 $font-size-large: 24px;
 $font-size-xx-large: 48px;
 
@@ -231,15 +232,18 @@ footer {
 		}
 		.cardCaption {
 			font-family: $header_sans;	
-			font-size: $font-size-large;
+			font-size: $font-size-regular-plus;
 			margin: 0;
 			padding-bottom: 10px;
 			text-transform: small-caps;
 		}
 	}
 	.card:hover {
-		background-color: $one_darker;
+		//background-color: $one_darker;
 		cursor: pointer;
+		p {
+			text-decoration: underline;
+		}
 	}
 	.row {
 		float:left;
