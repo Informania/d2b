@@ -783,7 +783,7 @@ def CreateData():
     ])
 
     ## Runda distanser ##
-    pg = ProductGroup(u'Runda distanser', '15_dinkihjul.png', pc, u'Isolering')
+    pg = ProductGroup(u'Runda distanser', '15_dinkihjul.png', pc, u'Runda')
 
     # Hulling FALK #
     p = Product(u'Dinkihjul', u'Allroundhjul framtaget för att passa på era olika järndimensioner, 4-12 mm. Detta för att minska antalet hjul som behövs hållas i lager, framförallt hos användaren.<br/>Hjulet har vågformade toppar för att ligga bra i handen och gör inte ont i handen för den som monterar.<br/>Finns för de esta olika järndimensionerna och med olika täckskikt. Fråga gärna efter det hjul som just ni behöver. OBS: Vi har mycket bra priser på dessa, förmodligen det lägsta på hela marknaden. Höjderna 20 25 och 30 finns även i nymaterial (vita) och är lagervaror.', '15_dinkihjul.png', pg, 'Dinkhjul')
