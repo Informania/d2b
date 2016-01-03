@@ -527,39 +527,44 @@ footer h2 {
     font-family: "Lato", sans-serif;
     font-size: 16px !important;
   }
+
+  /* line 391, ../../sass/screen.scss */
+  .row.textLeft {
+    text-align: center !important;
+  }
 }
 /* Standard classes for layouting */
-/* line 397, ../../sass/screen.scss */
+/* line 400, ../../sass/screen.scss */
 .floatLeft {
   float: left;
 }
 
-/* line 400, ../../sass/screen.scss */
+/* line 403, ../../sass/screen.scss */
 .floatRight {
   float: right;
 }
 
-/* line 403, ../../sass/screen.scss */
+/* line 406, ../../sass/screen.scss */
 .clearBoth {
   clear: both;
 }
 
-/* line 406, ../../sass/screen.scss */
+/* line 409, ../../sass/screen.scss */
 .clearRight {
   clear: right;
 }
 
-/* line 409, ../../sass/screen.scss */
+/* line 412, ../../sass/screen.scss */
 .clearLeft {
   clear: left;
 }
 
-/* line 412, ../../sass/screen.scss */
+/* line 415, ../../sass/screen.scss */
 .textCenter {
   text-align: center;
 }
 
-/* line 415, ../../sass/screen.scss */
+/* line 418, ../../sass/screen.scss */
 .textLeft {
   text-align: left;
 }
