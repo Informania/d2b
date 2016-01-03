@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block header %}
+	{{ super() }}
+{% endblock %}
+{% block crumbs %}
+	{{ super() }}
+	{% if category %}
+	/ <a href="/produkter">Produkter</a> / <a href="/produkter/{{category}}">{{category}}</a>
+	{% else %}
+	/ <a href="/produkter">Produkter</a>
+	{% endif %}
+{% endblock %}
+{% block content %}
+<div class="row textLeft">
+	<h2>Lägg till produkt</h2>
+	<label for="groupId">Produktgrupp</label>
+	<select id="groupId">
+	{% for group in groups %}
+		<option value="group.ID">{{ group.name }}</option>
+	{% endfor %}
+	</select>
+	<br/>
+	<label for="namnText">Namn</label>
+	<input type="text" id="namnText" />
+	<br/>
+	<label for="beskrivningText">Beskrivning</label><br/>
+	<textarea type="text" id="beskrivningText" rows="6" cols="50"></textarea>
+	<br/>
+
+</div>
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}
+
+

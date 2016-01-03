@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
 $font-size-regular: 16px;
+$font-size-regular-plus: 20px;
 $font-size-large: 24px;
 $font-size-xx-large: 48px;
 
@@ -21,7 +22,7 @@ $primary_serif: 'Merriweather', serif;
 $header_sans: 'Lato', sans-serif;
 
 /* other variables */
-$header_height: 200px;
+$header_height: 150px;
 $footer_height: 200px;
 
 
@@ -73,10 +74,12 @@ header {
 	@include transition-timing-function(ease-in);
 	nav {
 		clear: both;
-		line-height: $header_height / 1.3;
+		line-height: $header_height / 2.5;
 		@include transition-property(all);
 		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-out);
+		position: relative;
+		top: 0;
 		a {
 			padding: 10px;
 			text-decoration: none;
@@ -127,7 +130,7 @@ header.shrink, nav.shrink {
 		@include transition-property(all);
 		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-in);
-		line-height: $header_height / 3;
+		//line-height: $header_height / 3;
 		height: $header_height / 1.5;
 		background: rgba(41, 128, 185, 0.95);	
 		border-bottom: 1px solid;
@@ -135,7 +138,9 @@ header.shrink, nav.shrink {
 		nav.shrink {	
 			background-color: transparent;	
 			border-color: rgba(0, 0, 0, 0);
-			line-height: 10px;	
+			//line-height: 10px;	
+			position: relative;
+			top: -50px;
 	}
 }
 
@@ -231,15 +236,18 @@ footer {
 		}
 		.cardCaption {
 			font-family: $header_sans;	
-			font-size: $font-size-large;
+			font-size: $font-size-regular-plus;
 			margin: 0;
 			padding-bottom: 10px;
 			text-transform: small-caps;
 		}
 	}
 	.card:hover {
-		background-color: $one_darker;
+		//background-color: $one_darker;
 		cursor: pointer;
+		p {
+			text-decoration: underline;
+		}
 	}
 	.row {
 		float:left;
