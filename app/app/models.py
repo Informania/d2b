@@ -11,16 +11,18 @@ class Product(Base):
     description     = db.Column(db.Text, unique=False)
     image           = db.Column(db.String(200), unique=False)
     url             = db.Column(db.String(100), unique=True)
+    ownmade         = db.Column(db.Boolean, unique=False)
     productGroup_id = db.Column(db.Integer, db.ForeignKey('productGroup.id'))
     productInfos    = db.relationship('ProductInfo', backref=db.backref('product'), lazy='joined')
 
 
-    def __init__(self, name, description, image, productgroup, url):
+    def __init__(self, name, description, image, productgroup, url, ownmade):
         self.name           = name
         self.description    = description
         self.image          = image
         self.productgroup   = productgroup
         self.url            = url
+        self.ownmade        = ownmade
 
     def __repr__(self):
         return '<Product %r>' % self.name
