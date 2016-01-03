@@ -24,6 +24,7 @@ $header_sans: 'Lato', sans-serif;
 /* other variables */
 $header_height: 150px;
 $footer_height: 200px;
+$logo_size: 100px;
 
 
 body {
@@ -56,12 +57,12 @@ header {
 		@include transition-duration(0.3s);
 		img {
 			float:left;
-			height: 98px;
-
+			height: $logo_size;
 		}
 		p {
 			float: left;
 			margin-left: 10px;
+			margin-top: 25px;
 		}
 	}
 
@@ -74,6 +75,7 @@ header {
 	@include transition-timing-function(ease-in);
 	nav {
 		clear: both;
+		float: none;
 		line-height: $header_height / 2.5;
 		@include transition-property(all);
 		@include transition-duration(0.3s);
@@ -99,7 +101,7 @@ header {
 
 	#search {
 		float: right;
-		margin-top: 15px;
+		margin-top: 31px;
 		input[type="text"] {
 			float: left;
 			padding: 10px;
@@ -127,20 +129,28 @@ header {
 }
 
 header.shrink, nav.shrink {
-		@include transition-property(all);
-		@include transition-duration(0.3s);
-		@include transition-timing-function(ease-in);
-		//line-height: $header_height / 3;
-		height: $header_height / 1.5;
-		background: rgba(41, 128, 185, 0.95);	
-		border-bottom: 1px solid;
-		border-color: rgba(255, 255, 255, 0.8);
-		nav.shrink {	
-			background-color: transparent;	
-			border-color: rgba(0, 0, 0, 0);
-			//line-height: 10px;	
-			position: relative;
-			top: -50px;
+	@include transition-property(all);
+	@include transition-duration(0.3s);
+	@include transition-timing-function(ease-in);
+	//line-height: $header_height / 3;
+	height: $header_height / 2.2;
+	background: rgba(41, 128, 185, 0.95);	
+	border-bottom: 1px solid;
+	border-color: rgba(255, 255, 255, 0.8);
+	nav.shrink {	
+		background-color: transparent;	
+		border-color: rgba(0, 0, 0, 0);
+		//line-height: 10px;	
+		position: relative;
+		top: -60px;
+		float: left;
+		margin-left: 100px;
+	}
+	p {
+		display: none;
+	}
+	#logo img {
+		height: $logo_size / 1.5 !important; 
 	}
 }
 
