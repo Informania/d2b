@@ -16,7 +16,7 @@
 	<label for="groupId">Produktgrupp</label>
 	<select id="groupId">
 	{% for group in groups %}
-		<option value="group.ID">{{ group.name }}</option>
+    <option value="{{ group.id }}">{{ group.name }}</option>
 	{% endfor %}
 	</select>
 	<br/>
@@ -26,9 +26,19 @@
 	<label for="beskrivningText">Beskrivning</label><br/>
 	<textarea type="text" id="beskrivningText" rows="6" cols="50"></textarea>
 	<br/>
+    <h2>Kolumner</h2>
+	{% for column in columns %}
+        <div style="width: 200px; float: left; margin-bottom: 10px;">
+            <label for="{{column.name}}"><input type="checkbox" onclick="columnCheckboxChanged(this)" value="{{column.id}}" id="{{column.name}}">{{ column.name }} ({{column.order}})</input></label>
+        </div>
+	{% endfor %}
+    <div style="clear: left;" id="dataArea">
+        <div class="product"></div>
+    </div>
 
-</div>
-{% endblock %}
+    <input type="button" value="Lägg till produkt" onclick="addProduct()"/>
+
+    {% endblock %}
 {% block footer %}
 	{{ super() }}
 {% endblock %}

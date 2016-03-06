@@ -5,8 +5,8 @@ from app import db
 def CreateData():
     #####  ---- ProduktInfoNamn ----  #####
     lagerstatus = InfoName('Lagerstatus', 20)
-    antalforpSt = InfoName(u'Antal per förpackning [st.]', 19)
-    antalForpPall = InfoName(u'Antal per förpackning / pall [st.]', 18)
+    antalforpSt = InfoName(u'Antal per förp [st.]', 19)
+    antalForpPall = InfoName(u'Antal per förp / pall [st.]', 18)
     hojd = InfoName(u'Höjd [mm]', 1)
     jarn = InfoName(u'Järn diameter [mm]', 5)
     ror = InfoName(u'Rör-diameter [mm]', 5)
@@ -19,18 +19,30 @@ def CreateData():
     abc = InfoName(u'A x B x C [mm]', 5)
     utforande = InfoName(u'Utförande', 7)
     hbf = InfoName(u'Höjd x Bredd x Fasad [mm]', 5)
-    artnr = InfoName(u'Artikelnummer', 5)
-    benamning = InfoName(u'Benämning', 8)
+    artnr = InfoName(u'Artikelnummer', 1)
+    benamning = InfoName(u'Benämning', 2)
+    utokadBeskr = InfoName(u'Utökad beskrivning', 9)
     typ = InfoName(u'Typ', 5)
     diamInUt = InfoName(u'Diameter in/ut [mm]', 7)
     diameter = InfoName(u'Diameter [mm]', 5)
     blh = InfoName(u'B x L x H [mm]', 5)
-    spik = InfoName('Spik', 5)
+    spik = InfoName(u'Spik', 5)
+    magnetKraft = InfoName(u'Magnetkraft [kn]', 7)
+    viktKg = InfoName(u'Vikt [kg]', 9)
+    breddBotten = InfoName(u'Bredd botten [mm]', 11)
+    breddToppen = InfoName(u'Bredd toppen [mm]', 12)
+    hojdLateOrder = InfoName(u'Höjd [mm] ', 15)
+    rekTappstrlk = InfoName(u'Rekommenderad tappstorlek', 18)
+    tillAnkare = InfoName(u'Till ankarstorlek', 18)
+    tapphojd = InfoName(u'Tapphöjd', 6)
+    antMagneter = InfoName(u'Antal magneter som standard [st.]', 3)
+    viktInklMagnet = InfoName(u'Vikt inkl. magneter [kg]', 5)
+    viktPerMeter = InfoName(u'Vikt per meter', '20')
     db.session.add_all([
         lagerstatus, 
         antalforpSt,        
         hojd,
-	antalForpPall,
+    antalForpPall,
         jarn,
         langdCm,
         farg,
@@ -47,11 +59,23 @@ def CreateData():
         diamInUt,
         diameter,
         blh,
-        spik
+        spik,
+        magnetKraft,
+        viktKg,
+        breddBotten,
+        breddToppen,
+        hojdLateOrder,
+        rekTappstrlk,
+        tillAnkare,
+        tapphojd,
+        antMagneter,
+        viktInklMagnet,
+        utokadBeskr,
+        viktPerMeter
     ])
 
 
-    #####  ---- Distanser ----  #####	
+    #####  ---- Distanser ----  #####   
     pc = ProductCategory('Distanser')
     db.session.add(pc)
     ## Distanser för Mark ##
@@ -117,7 +141,7 @@ def CreateData():
         ProductInfo('30 / 720', 7, antalForpPall, p),
         ProductInfo('20', 8, antalForpPall, p),
         ProductInfo('20', 9, antalForpPall, p),
-		ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
         ProductInfo('Lagervara', 4, lagerstatus, p),
@@ -126,8 +150,8 @@ def CreateData():
         ProductInfo('Lagervara', 7, lagerstatus, p),
         ProductInfo('Ring oss', 8, lagerstatus, p),
         ProductInfo('Ring oss', 9, lagerstatus, p),
-		
-	])
+        
+    ])
 
     ## Distanser för valv ##
     pg = ProductGroup(u'Distanser för Valv', '2_vagg_valvdistans_jarv.png', pc, u'Valv')
@@ -1237,7 +1261,459 @@ def CreateData():
     p = Product(u'Märkbrickor', u'Märkbrickan är, som namnet antyder, en bricka av plast som används för att märka olika saker, exempelvis en armeringskonstruktion.<br/>Plasten i brickan går att skriva på med en tuschpenna, men vanligen används självhäftande etiketter.<br/>Finns i storlekarna: 40x70, 70x90 och 70x120 mm. Finns i färgerna vit, gul, röd blå och grön.<br/>Går att få både med och utan tråd.', '44_markbrickor.png', pg, 'Markbrickor', False)
     db.session.add(p)
 
+    
+    ###### -- Magneter -- ######
+    pc = ProductCategory('Magneter')
+    db.session.add(pc)
+   
+    pg = ProductGroup(u'Magfly', 'Missing.png', pc, u'Magfly')
+    db.session.add(pg)
+    
+    p = Product('Magnet typ K', u'', 'missing.png', pg, 'Magfly_k', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MF1000K', 1, artnr, p),
+        ProductInfo('MF1600K', 2, artnr, p),
+        ProductInfo('MF2000K', 3, artnr, p),
+        ProductInfo('MF2500K', 4, artnr, p),
+        ProductInfo('MF3000K', 5, artnr, p),
+        ProductInfo('1100', 1, magnetKraft, p),
+        ProductInfo('1600', 2, magnetKraft, p),
+        ProductInfo('2200', 3, magnetKraft, p),
+        ProductInfo('2700', 4, magnetKraft, p),
+        ProductInfo('3300', 5, magnetKraft, p),
+        ProductInfo('5', 1, viktKg, p),
+        ProductInfo('7.5', 2, viktKg, p),
+        ProductInfo('10', 3, viktKg, p),
+        ProductInfo('12.5', 4, viktKg, p),
+        ProductInfo('15', 5, viktKg, p),
+       ])
+    
+    p = Product(u'Magnetfot för gängtapp', u'', 'missing.png', pg, 'Magnetfot_gangtapp', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFGB50', 1, artnr, p),
+        ProductInfo('MFGB64', 2, artnr, p),
+        ProductInfo('MFGB80', 3, artnr, p),
+        ProductInfo('MFGB106', 4, artnr, p),
+        ProductInfo('650', 1, magnetKraft, p),
+        ProductInfo('1000', 2, magnetKraft, p),
+        ProductInfo('1500', 3, magnetKraft, p),
+        ProductInfo('1900', 4, magnetKraft, p),
+        ProductInfo('0.13', 1, viktKg, p),
+        ProductInfo('0.23', 2, viktKg, p),
+        ProductInfo('0.4', 3, viktKg, p),
+        ProductInfo('0.75', 4, viktKg, p),
+        ProductInfo('50', 1, breddBotten, p),
+        ProductInfo('64', 2, breddBotten, p),
+        ProductInfo('80', 3, breddBotten, p),
+        ProductInfo('106', 4, breddBotten, p),
+        ProductInfo('47', 1, breddToppen, p),
+        ProductInfo('61', 2, breddToppen, p),
+        ProductInfo('77', 3, breddToppen, p),
+        ProductInfo('103', 4, breddToppen, p),
+        ProductInfo('12', 1, hojdLateOrder, p),
+        ProductInfo('12', 2, hojdLateOrder, p),
+        ProductInfo('12', 3, hojdLateOrder, p),
+        ProductInfo('12', 4, hojdLateOrder, p),
+        ProductInfo('M10 - M16', 1, rekTappstrlk, p),
+        ProductInfo('M12 - M24', 2, rekTappstrlk, p),
+        ProductInfo('M16 - M30', 3, rekTappstrlk, p),
+        ProductInfo('M20 - M36', 4, rekTappstrlk, p),
+       ])
 
+     
+    p = Product(u'Gängtapp för magnetfot', u'', 'missing.png', pg, 'gangtapp_magnetfot', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFGB5010', 1, artnr, p),
+        ProductInfo('MFGB5012', 2, artnr, p),
+        ProductInfo('MFGB5016', 3, artnr, p),
+        ProductInfo('MFGB5020', 4, artnr, p),
+        ProductInfo('MFGB5024', 5, artnr, p),
+        ProductInfo('MFGB5030', 6, artnr, p),
+        ProductInfo('MFGB5036', 7, artnr, p),
+        ProductInfo(u'M10', 1, ganga, p),
+        ProductInfo(u'M12', 2, ganga, p),
+        ProductInfo(u'M16', 3, ganga, p),
+        ProductInfo(u'M20', 4, ganga, p),
+        ProductInfo(u'M24', 5, ganga, p),
+        ProductInfo(u'M30', 6, ganga, p),
+        ProductInfo(u'M36', 7, ganga, p),
+        ProductInfo(u'20', 1, tapphojd, p),
+        ProductInfo(u'20', 2, tapphojd, p),
+        ProductInfo(u'20', 3, tapphojd, p),
+        ProductInfo(u'20', 4, tapphojd, p),
+        ProductInfo(u'20', 5, tapphojd, p),
+        ProductInfo(u'20', 6, tapphojd, p),
+        ProductInfo(u'20', 7, tapphojd, p),
+       ])
+
+
+    p = Product(u'Magnetfot för kulankare', u'', 'missing.png', pg, 'Magnetfot_kulankare', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFKU13', 1, artnr, p),
+        ProductInfo('MFKU25', 2, artnr, p),
+        ProductInfo('MFKU35', 3, artnr, p),
+        ProductInfo('MFKU75', 4, artnr, p),
+        ProductInfo('MFKU10', 5, artnr, p),
+        ProductInfo('100', 1, magnetKraft, p),
+        ProductInfo('100', 2, magnetKraft, p),
+        ProductInfo('150', 3, magnetKraft, p),
+        ProductInfo('200', 4, magnetKraft, p),
+        ProductInfo('220', 5, magnetKraft, p),
+        ProductInfo('0.49', 1, viktKg, p),
+        ProductInfo('0.65', 2, viktKg, p),
+        ProductInfo('2.5', 3, viktKg, p),
+        ProductInfo('3.3', 4, viktKg, p),
+        ProductInfo('3.3', 5, viktKg, p),
+        ProductInfo('66', 1, breddBotten, p),
+        ProductInfo('74', 2, breddBotten, p),
+        ProductInfo('104', 3, breddBotten, p),
+        ProductInfo('118', 4, breddBotten, p),
+        ProductInfo('118', 5, breddBotten, p),
+        ProductInfo('20.5', 1, breddToppen, p),
+        ProductInfo('27.5', 2, breddToppen, p),
+        ProductInfo('38.5', 3, breddToppen, p),
+        ProductInfo('48.5', 4, breddToppen, p),
+        ProductInfo('48.5', 5, breddToppen, p),
+        ProductInfo('30.8', 1, hojdLateOrder, p),
+        ProductInfo('33', 2, hojdLateOrder, p),
+        ProductInfo('50.5', 3, hojdLateOrder, p),
+        ProductInfo('53', 4, hojdLateOrder, p),
+        ProductInfo('54', 5, hojdLateOrder, p),
+        ProductInfo('1.3 ton', 1, tillAnkare, p),
+        ProductInfo('2.5 ton', 2, tillAnkare, p),
+        ProductInfo('3/5 ton', 3, tillAnkare, p),
+        ProductInfo('7.5 ton', 4, tillAnkare, p),
+        ProductInfo('10 ton', 5, tillAnkare, p),
+       ])
+
+    p = Product(u'Gummitätning för magnetfot', u'', 'missing.png', pg, 'Gummitatning_magnetfot', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFKU13G', 1, artnr, p),
+        ProductInfo('MFKU25G', 2, artnr, p),
+        ProductInfo('MFKU35G', 3, artnr, p),
+        ProductInfo('MFKU75G', 4, artnr, p),
+        ProductInfo('MFKU10G', 5, artnr, p),
+        ProductInfo('1.3 ton', 1, tillAnkare, p),
+        ProductInfo('2.5 ton', 2, tillAnkare, p),
+        ProductInfo('3/5 ton', 3, tillAnkare, p),
+        ProductInfo('7.5 ton', 4, tillAnkare, p),
+        ProductInfo('10 ton', 5, tillAnkare, p),
+       ])
+
+    p = Product('Magnet typ BR', u'', 'missing.png', pg, 'Magfly_br', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFBR30185', 1, artnr, p),
+        ProductInfo('MFBR40153', 2, artnr, p),
+        ProductInfo('MFBR5097', 3, artnr, p),
+        ProductInfo('MFBR50140', 4, artnr, p),
+        ProductInfo('MFBR50185', 5, artnr, p),
+        ProductInfo('MFBR50230', 6, artnr, p),
+        ProductInfo('MFBRAV', 7, artnr, p),
+        ProductInfo('Magnet typ BR', 1, benamning, p),
+        ProductInfo('Magnet typ BR', 2, benamning, p),
+        ProductInfo('Magnet typ BR', 3, benamning, p),
+        ProductInfo('Magnet typ BR', 4, benamning, p),
+        ProductInfo('Magnet typ BR', 5, benamning, p),
+        ProductInfo('Magnet typ BR', 6, benamning, p),
+        ProductInfo(u'Avformingsverktyg för BR', 7, benamning, p),
+        ProductInfo('750', 1, magnetKraft, p),
+        ProductInfo('750', 2, magnetKraft, p),
+        ProductInfo('450', 3, magnetKraft, p),
+        ProductInfo('650', 4, magnetKraft, p),
+        ProductInfo('800', 5, magnetKraft, p),
+        ProductInfo('1000', 6, magnetKraft, p),
+        ProductInfo('', 7, magnetKraft, p),
+        ProductInfo('2.2', 1, viktKg, p),
+        ProductInfo('2.5', 2, viktKg, p),
+        ProductInfo('1.7', 3, viktKg, p),
+        ProductInfo('2.5', 4, viktKg, p),
+        ProductInfo('3.3', 5, viktKg, p),
+        ProductInfo('4.1', 6, viktKg, p),
+        ProductInfo('2', 7, viktKg, p),
+       ])
+
+
+    p = Product('Magnet typ FP', u'', 'missing.png', pg, 'Magfly_fp', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFFP240', 1, artnr, p),
+        ProductInfo('MFFP300', 2, artnr, p),
+        ProductInfo('MFFP400', 3, artnr, p),
+        ProductInfo('Magnet typ FP', 1, benamning, p),
+        ProductInfo('Magnet typ FP', 2, benamning, p),
+        ProductInfo('Magnet typ FP', 3, benamning, p),
+        ProductInfo('500', 1, magnetKraft, p),
+        ProductInfo('500', 2, magnetKraft, p),
+        ProductInfo('500', 3, magnetKraft, p),
+        ProductInfo('5', 1, viktKg, p),
+        ProductInfo('7.5', 2, viktKg, p),
+        ProductInfo('10', 3, viktKg, p),
+       ])
+
+    
+    ###### LISTER MAGNETER ######
+
+    pg = ProductGroup(u'Magnetlister', 'Missing.png', pc, u'Magnetlister')
+    db.session.add(pg)
+    
+    p = Product('Magnetlist typ trekantig', u'', 'missing.png', pg, 'magnetlist_trekant', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MCS1010E', 1, artnr, p),
+        ProductInfo('MCS1010D', 2, artnr, p),
+        ProductInfo('MCS1515E', 3, artnr, p),
+        ProductInfo('MCS1515D', 4, artnr, p),
+        ProductInfo(u'Trekantslist av stål med en sida magnetisk', 1, benamning, p),
+        ProductInfo(u'Trekantslist av stål med två sidor magnetiska', 2, benamning, p),
+        ProductInfo(u'Trekantslist av stål med en sida magnetisk', 3, benamning, p),
+        ProductInfo(u'Trekantslist av stål med två sidor magnetiska', 4, benamning, p),
+        ProductInfo(u'10 x 10 x 20', 1, blh, p),
+        ProductInfo(u'10 x 10 x 20', 2, blh, p),
+        ProductInfo(u'15 x 15 x 20', 3, blh, p),
+        ProductInfo(u'15 x 15 x 20', 4, blh, p),
+        ProductInfo(u'3000', 1, langdMm, p),
+        ProductInfo(u'3000', 2, langdMm, p),
+        ProductInfo(u'3000', 3, langdMm, p),
+        ProductInfo(u'3000', 4, langdMm, p),
+       ])
+
+    p = Product('Magnetlist typ blindfogslist', u'', 'missing.png', pg, 'magnetlist_blindfog', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MTT101515', 1, artnr, p),
+        ProductInfo('MTT201010', 2, artnr, p),
+        ProductInfo('MTT301020', 3, artnr, p),
+        ProductInfo('MTT32106', 4, artnr, p),
+        ProductInfo('MTT402020', 5, artnr, p),
+        ProductInfo(u'Blindfogslist magnetisk', 1, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 2, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 3, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 4, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 5, benamning, p),
+        ProductInfo(u'10 x 10 x 15', 1, blh, p),
+        ProductInfo(u'10 x 10 x 20', 2, blh, p),
+        ProductInfo(u'10 x 20 x 30', 3, blh, p),
+        ProductInfo(u'16 x 10 x 32', 4, blh, p),
+        ProductInfo(u'20 x 20 x 40', 5, blh, p),
+        ProductInfo(u'3000', 1, langdMm, p),
+        ProductInfo(u'3000', 2, langdMm, p),
+        ProductInfo(u'3000', 3, langdMm, p),
+        ProductInfo(u'3000', 4, langdMm, p),
+        ProductInfo(u'3000', 5, langdMm, p),
+       ])
+
+    ###### Formsidesadapters ######
+    pg = ProductGroup(u'Formsidesadaptrar', 'Missing.png', pc, u'Formsidesadaptrar')
+    db.session.add(pg)
+    
+    p = Product('Multiform typ 1', u'', 'missing.png', pg, 'multiform_typ_1', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MFT165', 1, artnr, p),
+        ProductInfo('MFT170', 2, artnr, p),
+        ProductInfo('MFT190', 3, artnr, p),
+        ProductInfo('MFT148', 4, artnr, p),
+        ProductInfo('MFT190', 5, artnr, p),
+        ProductInfo('MFT1248', 6, artnr, p),
+        ProductInfo(u'110 x 284 x 65', 1, blh, p),
+        ProductInfo(u'110 x 284 x 70', 2, blh, p),
+        ProductInfo(u'110 x 284 x 90', 3, blh, p),
+        ProductInfo(u'110 x 284 x 148', 4, blh, p),
+        ProductInfo(u'110 x 284 x 190', 5, blh, p),
+        ProductInfo(u'110 x 284 x 248', 6, blh, p),
+       ])
+
+
+    ###### Färdiga adaptrar med magneter ######
+    pg = ProductGroup(u'Färdiga adaptrar med magneter', 'Missing.png', pc, u'Adaptrar_med_magneter')
+    db.session.add(pg)
+    
+    p = Product('MagPin', u'Magpin 70x60 mm', 'missing.png', pg, 'Magpin', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MP6070500', 1, artnr, p),
+        ProductInfo('MP6070750', 2, artnr, p),
+        ProductInfo('MP60701000', 3, artnr, p),
+        ProductInfo('MP60701500', 4, artnr, p),
+        ProductInfo('MP60702000', 5, artnr, p),
+        ProductInfo('MP60702500', 6, artnr, p),
+        ProductInfo('MP60703000', 7, artnr, p),
+        ProductInfo(u'1', 1, antMagneter, p),
+        ProductInfo(u'1', 2, antMagneter, p),
+        ProductInfo(u'2', 3, antMagneter, p),
+        ProductInfo(u'2', 4, antMagneter, p),
+        ProductInfo(u'2', 5, antMagneter, p),
+        ProductInfo(u'2', 6, antMagneter, p),
+        ProductInfo(u'3', 7, antMagneter, p),
+        ProductInfo(u'500', 1, langdMm, p),
+        ProductInfo(u'750', 2, langdMm, p),
+        ProductInfo(u'1000', 3, langdMm, p),
+        ProductInfo(u'1500', 4, langdMm, p),
+        ProductInfo(u'2000', 5, langdMm, p),
+        ProductInfo(u'2500', 6, langdMm, p),
+        ProductInfo(u'3000', 7, langdMm, p),
+        ProductInfo(u'8.5', 1, viktInklMagnet, p),
+        ProductInfo(u'9.7', 2, viktInklMagnet, p),
+        ProductInfo(u'17.0', 3, viktInklMagnet, p),
+        ProductInfo(u'19.5', 4, viktInklMagnet, p),
+        ProductInfo(u'22.0', 5, viktInklMagnet, p),
+        ProductInfo(u'24.5', 6, viktInklMagnet, p),
+        ProductInfo(u'33.0', 7, viktInklMagnet, p),
+       ])
+    
+    p = Product(u'Magnet för MagPin', u'', 'missing.png', pg, 'Magnet_magpin', False)
+    db.session.add(p)
+ 
+    db.session.add_all([
+        ProductInfo('MPM1054030', 1, artnr, p),
+        ProductInfo('MPM2104030', 2, artnr, p),
+        ProductInfo(u'600', 1, magnetKraft, p),
+        ProductInfo(u'1200', 2, magnetKraft, p),
+        ProductInfo(u'40 x 105 x 30', 1, blh, p),
+        ProductInfo(u'40 x 210 x 30', 2, blh, p),
+       ])
+
+   
+    ###### -- Magneter -- ######
+    pc = ProductCategory(u'Vägginfästning')
+    db.session.add(pc)
+    
+    pg = ProductGroup(u'Igloo', 'Missing.png', pc, u'Igloo')
+    db.session.add(pg)
+
+
+    p = Product(u'Skruvkoppling IGLOO', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', 'missing.png', pg, 'Skruvkoppling_igloo', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('SP12FZV', 1, artnr, p),
+        ProductInfo('SP12FZVSET', 2, artnr, p),
+        ProductInfo('SP12RF', 3, artnr, p),
+        ProductInfo('SP12RFSET', 4, artnr, p),
+        ProductInfo('SP16FZV', 5, artnr, p),
+        ProductInfo('SP16FZVSET', 6, artnr, p),
+        ProductInfo('SP16RF', 7, artnr, p),
+        ProductInfo('SP16RFSET', 8, artnr, p),
+        ProductInfo('SP20FZV', 9, artnr, p),
+        ProductInfo('SP20FZVSET', 10, artnr, p),
+        ProductInfo('SP20RF', 11, artnr, p),
+        ProductInfo('SP20RFSET', 12, artnr, p),
+        ProductInfo(u'Skruvkoppling Igloo M12 FZV', 1, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M12 FZV', 2, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M12 Rostfritt', 3, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M12 Rostfritt', 4, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M16 FZV', 5, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M16 FZV', 6, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M16 Rostfritt', 7, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M16 Rostfritt', 8, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M20 FZV', 9, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M20 FZV', 10, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M20 Rostfritt', 11, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo M20 Rostfritt', 12, benamning, p),
+        ProductInfo(u'', 1, utokadBeskr, p),
+        ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 2, utokadBeskr, p),
+        ProductInfo(u'', 3, utokadBeskr, p),
+        ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 4, utokadBeskr, p),
+        ProductInfo(u'', 5, utokadBeskr, p),
+        ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 6, utokadBeskr, p),
+        ProductInfo(u'', 7, utokadBeskr, p),
+        ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 8, utokadBeskr, p),
+        ProductInfo(u'', 9, utokadBeskr, p),
+        ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 10, utokadBeskr, p),
+        ProductInfo(u'', 11, utokadBeskr, p),
+        ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 12, utokadBeskr, p),
+       ])
+
+    p = Product(u'Ursparing för IGLOO', u'Fler modeller finns, kontakta oss för mer information.', 'missing.png', pg, 'Ursparing_igloo', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('SPU112', 1, artnr, p),
+        ProductInfo('SPUH16', 2, artnr, p),
+        ProductInfo('SPU16', 3, artnr, p),
+        ProductInfo('SPUH20', 4, artnr, p),
+        ProductInfo('SPU20', 5, artnr, p),
+        ProductInfo('SPUH12UM', 6, artnr, p),
+        ProductInfo('SPU12UM', 7, artnr, p),
+        ProductInfo('SPUH16UM', 8, artnr, p),
+        ProductInfo('SPU16UM', 9, artnr, p),
+        ProductInfo('SPUH20UM', 10, artnr, p),
+        ProductInfo('SPU20UM', 11, artnr, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing M12', 1, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing för hörn M16', 2, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing M16', 3, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing för hörn M20', 4, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo ursparing M20', 5, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing för hörn M12', 6, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing M12', 7, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing för hörn M16', 8, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing M16', 9, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing för hörn M20', 10, benamning, p),
+        ProductInfo(u'Skruvkoppling Igloo Ursparing M20', 11, benamning, p),
+        ProductInfo(u'Med magneter', 1, utokadBeskr, p),
+        ProductInfo(u'Med magneter', 2, utokadBeskr, p),
+        ProductInfo(u'Med magneter', 3, utokadBeskr, p),
+        ProductInfo(u'Med magneter', 4, utokadBeskr, p),
+        ProductInfo(u'Med magneter', 5, utokadBeskr, p),
+        ProductInfo(u'Utan Magneter', 6, utokadBeskr, p),
+        ProductInfo(u'Utan Magneter', 7, utokadBeskr, p),
+        ProductInfo(u'Utan Magneter', 8, utokadBeskr, p),
+        ProductInfo(u'Utan Magneter', 9, utokadBeskr, p),
+        ProductInfo(u'Utan Magneter', 10, utokadBeskr, p),
+        ProductInfo(u'Utan Magneter', 11, utokadBeskr, p),
+       ])
+    
+    pg = ProductGroup(u'Rubberelast', 'Missing.png', pc, u'Rubberelast')
+    db.session.add(pg)
+
+
+    p = Product(u'Rubberelast', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', 'missing.png', pg, 'Rubberelast', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('RE1717', 1, artnr, p),
+        ProductInfo('RE2519', 2, artnr, p),
+        ProductInfo('RE3225', 3, artnr, p),
+        ProductInfo('RE3832', 4, artnr, p),
+        ProductInfo('RE4842', 5, artnr, p),
+        ProductInfo(u'Rubber Elast 17x17', 1, benamning, p),
+        ProductInfo(u'Rubber Elast 25x19', 2, benamning, p),
+        ProductInfo(u'Rubber Elast 32x25', 3, benamning, p),
+        ProductInfo(u'Rubber Elast 38x32', 4, benamning, p),
+        ProductInfo(u'Rubber Elast 48x42', 5, benamning, p),
+        ProductInfo(u'4000', 1, langdMm, p),
+        ProductInfo(u'4400', 2, langdMm, p),
+        ProductInfo(u'4400', 3, langdMm, p),
+        ProductInfo(u'3200', 4, langdMm, p),
+        ProductInfo(u'2250', 5, langdMm, p),
+        ProductInfo(u'9', 1, antalforpSt, p),
+        ProductInfo(u'6', 2, antalforpSt, p),
+        ProductInfo(u'4', 3, antalforpSt, p),
+        ProductInfo(u'4', 4, antalforpSt, p),
+        ProductInfo(u'4', 5, antalforpSt, p),
+        ProductInfo(u'0.41', 1, viktPerMeter, p),
+        ProductInfo(u'0.72', 2, viktPerMeter, p),
+        ProductInfo(u'1.11', 3, viktPerMeter, p),
+        ProductInfo(u'1.66', 4, viktPerMeter, p),
+        ProductInfo(u'2.87', 5, viktPerMeter, p),
+       ])
 
     db.session.commit()
 
