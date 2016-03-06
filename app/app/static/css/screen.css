@@ -70,14 +70,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* Colors */
 /* text: */
 /* other variables */
-/* line 30, ../../sass/screen.scss */
+/* line 31, ../../sass/screen.scss */
 body {
   background: #ffffff;
   width: 100%;
   font-size: 16px;
 }
 
-/* line 36, ../../sass/screen.scss */
+/* line 37, ../../sass/screen.scss */
 header {
   text-align: center;
   width: 100%;
@@ -107,7 +107,7 @@ header {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 51, ../../sass/screen.scss */
+/* line 52, ../../sass/screen.scss */
 header #logo {
   float: left;
   text-align: center;
@@ -122,23 +122,23 @@ header #logo {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 58, ../../sass/screen.scss */
+/* line 59, ../../sass/screen.scss */
 header #logo img {
   float: left;
   height: 100px;
 }
-/* line 62, ../../sass/screen.scss */
+/* line 63, ../../sass/screen.scss */
 header #logo p {
   float: left;
   margin-left: 10px;
   margin-top: 25px;
 }
-/* line 69, ../../sass/screen.scss */
+/* line 70, ../../sass/screen.scss */
 header a {
   color: #ECF0F1;
   font-family: "Lato", sans-serif;
 }
-/* line 76, ../../sass/screen.scss */
+/* line 77, ../../sass/screen.scss */
 header nav {
   clear: both;
   float: none;
@@ -158,7 +158,7 @@ header nav {
   position: relative;
   top: 0;
 }
-/* line 85, ../../sass/screen.scss */
+/* line 86, ../../sass/screen.scss */
 header nav a {
   padding: 10px;
   text-decoration: none;
@@ -168,19 +168,19 @@ header nav a {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
 }
-/* line 94, ../../sass/screen.scss */
+/* line 95, ../../sass/screen.scss */
 header nav a:hover {
   color: white;
   border-bottom: 1px dotted white;
   color: #2980B9;
   background: white;
 }
-/* line 102, ../../sass/screen.scss */
+/* line 103, ../../sass/screen.scss */
 header #search {
   float: right;
   margin-top: 31px;
 }
-/* line 105, ../../sass/screen.scss */
+/* line 106, ../../sass/screen.scss */
 header #search input[type="text"] {
   float: left;
   padding: 10px;
@@ -189,7 +189,7 @@ header #search input[type="text"] {
   border-radius: 3px;
   width: 280px;
 }
-/* line 113, ../../sass/screen.scss */
+/* line 114, ../../sass/screen.scss */
 header #search img {
   position: relative;
   right: 35px;
@@ -198,16 +198,16 @@ header #search img {
   margin-top: 5px;
   padding: 2px;
 }
-/* line 121, ../../sass/screen.scss */
+/* line 122, ../../sass/screen.scss */
 header #search img:hover {
   cursor: pointer;
 }
-/* line 124, ../../sass/screen.scss */
+/* line 125, ../../sass/screen.scss */
 header #search .fadedText {
   color: #DADADA;
 }
 
-/* line 131, ../../sass/screen.scss */
+/* line 132, ../../sass/screen.scss */
 header.shrink, nav.shrink {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -226,7 +226,7 @@ header.shrink, nav.shrink {
   border-bottom: 1px solid;
   border-color: rgba(255, 255, 255, 0.8);
 }
-/* line 140, ../../sass/screen.scss */
+/* line 141, ../../sass/screen.scss */
 header.shrink nav.shrink, nav.shrink nav.shrink {
   background-color: transparent;
   border-color: transparent;
@@ -235,20 +235,20 @@ header.shrink nav.shrink, nav.shrink nav.shrink {
   float: left;
   margin-left: 100px;
 }
-/* line 149, ../../sass/screen.scss */
+/* line 150, ../../sass/screen.scss */
 header.shrink p, nav.shrink p {
   display: none;
 }
-/* line 152, ../../sass/screen.scss */
+/* line 153, ../../sass/screen.scss */
 header.shrink #logo img, nav.shrink #logo img {
   height: 66.66667px !important;
 }
-/* line 155, ../../sass/screen.scss */
+/* line 156, ../../sass/screen.scss */
 header.shrink #search, nav.shrink #search {
   margin-top: 17px;
 }
 
-/* line 160, ../../sass/screen.scss */
+/* line 161, ../../sass/screen.scss */
 footer {
   text-transform: uppercase;
   width: 100%;
@@ -261,19 +261,19 @@ footer {
   font-size: 24px;
   clear: both;
 }
-/* line 171, ../../sass/screen.scss */
+/* line 172, ../../sass/screen.scss */
 footer a {
   color: #ECF0F1;
   text-decoration: none;
   border-bottom: 1px dotted black;
 }
-/* line 176, ../../sass/screen.scss */
+/* line 177, ../../sass/screen.scss */
 footer h2 {
   font-family: "Lato", sans-serif;
   font-size: 24px;
 }
 
-/* line 182, ../../sass/screen.scss */
+/* line 183, ../../sass/screen.scss */
 .content {
   background: #ffffff;
   font-family: "Merriweather", serif;
@@ -284,11 +284,11 @@ footer h2 {
   text-align: center;
   /* to center entry images */
 }
-/* line 190, ../../sass/screen.scss */
+/* line 191, ../../sass/screen.scss */
 .content .entry_img {
   text-align: center;
 }
-/* line 191, ../../sass/screen.scss */
+/* line 192, ../../sass/screen.scss */
 .content img {
   display: inline;
   text-align: center;
@@ -297,13 +297,13 @@ footer h2 {
   margin-bottom: 20px;
   width: 20%;
 }
-/* line 199, ../../sass/screen.scss */
+/* line 200, ../../sass/screen.scss */
 .content .byline {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-style: italic;
 }
-/* line 204, ../../sass/screen.scss */
+/* line 205, ../../sass/screen.scss */
 .content h1, .content h2, .content h3 {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
@@ -311,33 +311,33 @@ footer h2 {
   margin-top: 55px;
   margin-bottom: 15px;
 }
-/* line 211, ../../sass/screen.scss */
+/* line 212, ../../sass/screen.scss */
 .content h1 {
   font-size: 48px;
 }
-/* line 214, ../../sass/screen.scss */
+/* line 215, ../../sass/screen.scss */
 .content h2 {
   font-size: 24px;
 }
-/* line 217, ../../sass/screen.scss */
+/* line 218, ../../sass/screen.scss */
 .content h3 {
   font-size: 18px;
 }
-/* line 220, ../../sass/screen.scss */
+/* line 221, ../../sass/screen.scss */
 .content p {
   margin-bottom: 25px;
 }
-/* line 222, ../../sass/screen.scss */
+/* line 223, ../../sass/screen.scss */
 .content p.productInfo {
   float: left;
   width: 75%;
 }
-/* line 227, ../../sass/screen.scss */
+/* line 228, ../../sass/screen.scss */
 .content .entry {
   text-align: left;
   clear: left;
 }
-/* line 231, ../../sass/screen.scss */
+/* line 232, ../../sass/screen.scss */
 .content .card {
   display: inline-block;
   width: 22%;
@@ -360,13 +360,13 @@ footer h2 {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 245, ../../sass/screen.scss */
+/* line 246, ../../sass/screen.scss */
 .content .card img {
   width: 50%;
   padding: 0;
   margin: 5px;
 }
-/* line 250, ../../sass/screen.scss */
+/* line 251, ../../sass/screen.scss */
 .content .card .cardCaption {
   font-family: "Lato", sans-serif;
   font-size: 20px;
@@ -374,22 +374,22 @@ footer h2 {
   padding-bottom: 10px;
   text-transform: small-caps;
 }
-/* line 258, ../../sass/screen.scss */
+/* line 259, ../../sass/screen.scss */
 .content .card:hover {
   cursor: pointer;
 }
-/* line 261, ../../sass/screen.scss */
+/* line 262, ../../sass/screen.scss */
 .content .card:hover p {
   text-decoration: underline;
 }
-/* line 265, ../../sass/screen.scss */
+/* line 266, ../../sass/screen.scss */
 .content .row {
   float: left;
   clear: both;
   width: 100%;
   margin: 15px 0 15px 0;
 }
-/* line 272, ../../sass/screen.scss */
+/* line 273, ../../sass/screen.scss */
 .content .searchResult {
   display: inline-block;
   border: 3px solid #EEE;
@@ -412,12 +412,12 @@ footer h2 {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 285, ../../sass/screen.scss */
+/* line 286, ../../sass/screen.scss */
 .content .searchResult:hover {
   background-color: #EEE;
   cursor: pointer;
 }
-/* line 289, ../../sass/screen.scss */
+/* line 290, ../../sass/screen.scss */
 .content .searchResult img {
   margin: 0;
   padding: 0;
@@ -426,100 +426,106 @@ footer h2 {
   float: left;
   margin-top: 5%;
 }
-/* line 297, ../../sass/screen.scss */
+/* line 298, ../../sass/screen.scss */
 .content .searchResult .searchResultText {
   float: right;
   margin-left: 15px;
   width: 75%;
 }
-/* line 303, ../../sass/screen.scss */
+/* line 304, ../../sass/screen.scss */
 .content .searchResult h3 {
   margin: 0;
   padding: 5px 0 5px 0;
 }
-/* line 308, ../../sass/screen.scss */
+/* line 309, ../../sass/screen.scss */
 .content .productImgContainer {
   float: right;
   width: 20%;
 }
-/* line 312, ../../sass/screen.scss */
+/* line 313, ../../sass/screen.scss */
 .content .productImgContainer img {
   width: 70%;
   margin: 0;
   padding: 0;
 }
-/* line 319, ../../sass/screen.scss */
+/* line 320, ../../sass/screen.scss */
 .content #crumbs {
-  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-family: "Lato", sans-serif;
 }
-/* line 321, ../../sass/screen.scss */
+/* line 323, ../../sass/screen.scss */
 .content #crumbs a {
   text-decoration: none;
   color: #F25C05;
 }
 
 /******* Table styles *******/
-/* line 329, ../../sass/screen.scss */
+/* line 331, ../../sass/screen.scss */
 .productSpecs {
   clear: both;
 }
-/* line 331, ../../sass/screen.scss */
+/* line 333, ../../sass/screen.scss */
 .productSpecs th {
   font-family: "Open Sans", sans-serif;
   padding: 10px 20px 10px 20px;
   background-color: #DDD;
   border-bottom: 0;
 }
-/* line 337, ../../sass/screen.scss */
+/* line 339, ../../sass/screen.scss */
 .productSpecs th, .productSpecs td {
   text-align: center;
 }
-/* line 339, ../../sass/screen.scss */
+/* line 341, ../../sass/screen.scss */
 .productSpecs tr.alternate {
   background-color: #DDD;
 }
-/* line 342, ../../sass/screen.scss */
+/* line 344, ../../sass/screen.scss */
 .productSpecs td.green {
   color: green;
 }
+/* line 347, ../../sass/screen.scss */
+.productSpecs td {
+  font-family: "Arial", "sans-serif";
+  padding: 5px;
+}
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 350, ../../sass/screen.scss */
+  /* line 353, ../../sass/screen.scss */
   header #logo {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 479px) {
-  /* line 359, ../../sass/screen.scss */
+  /* line 362, ../../sass/screen.scss */
   header {
     height: 75px;
     line-height: 18.75px;
   }
-  /* line 362, ../../sass/screen.scss */
+  /* line 365, ../../sass/screen.scss */
   header #logo {
     font-size: 21px;
   }
-  /* line 365, ../../sass/screen.scss */
+  /* line 368, ../../sass/screen.scss */
   header #logo p {
     margin-left: 5px;
   }
-  /* line 368, ../../sass/screen.scss */
+  /* line 371, ../../sass/screen.scss */
   header #logo img {
     width: 100px;
     height: auto;
   }
-  /* line 375, ../../sass/screen.scss */
+  /* line 378, ../../sass/screen.scss */
   header nav {
     line-height: 18.75px;
   }
-  /* line 377, ../../sass/screen.scss */
+  /* line 380, ../../sass/screen.scss */
   header nav a {
     margin-left: 0;
     padding: 5px;
     font-size: 13px;
   }
 
-  /* line 385, ../../sass/screen.scss */
+  /* line 388, ../../sass/screen.scss */
   .content {
     width: 94%;
     padding-left: 3%;
@@ -527,60 +533,60 @@ footer h2 {
     padding-top: 80px;
   }
 
-  /* line 391, ../../sass/screen.scss */
+  /* line 394, ../../sass/screen.scss */
   nav.shrink, header.shrink {
     height: 25px;
     line-height: 25px !important;
   }
 
-  /* line 396, ../../sass/screen.scss */
+  /* line 399, ../../sass/screen.scss */
   header.shrink #logo {
     display: none;
   }
 
-  /* line 400, ../../sass/screen.scss */
+  /* line 403, ../../sass/screen.scss */
   .card .cardCaption {
     font-family: "Lato", sans-serif;
     font-size: 16px !important;
   }
 
-  /* line 404, ../../sass/screen.scss */
+  /* line 407, ../../sass/screen.scss */
   .row.textLeft {
     text-align: center !important;
   }
 }
 /* Standard classes for layouting */
-/* line 413, ../../sass/screen.scss */
+/* line 416, ../../sass/screen.scss */
 .floatLeft {
   float: left;
 }
 
-/* line 416, ../../sass/screen.scss */
+/* line 419, ../../sass/screen.scss */
 .floatRight {
   float: right;
 }
 
-/* line 419, ../../sass/screen.scss */
+/* line 422, ../../sass/screen.scss */
 .clearBoth {
   clear: both;
 }
 
-/* line 422, ../../sass/screen.scss */
+/* line 425, ../../sass/screen.scss */
 .clearRight {
   clear: right;
 }
 
-/* line 425, ../../sass/screen.scss */
+/* line 428, ../../sass/screen.scss */
 .clearLeft {
   clear: left;
 }
 
-/* line 428, ../../sass/screen.scss */
+/* line 431, ../../sass/screen.scss */
 .textCenter {
   text-align: center;
 }
 
-/* line 431, ../../sass/screen.scss */
+/* line 434, ../../sass/screen.scss */
 .textLeft {
   text-align: left;
 }
