@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 import operator
 # 1: Define the WSGI application object
@@ -48,8 +48,9 @@ def allProducts():
 
 @app.route('/produkter/add')
 def addProduct():
-    productGroups = ProductGroup.query.all() 
-    return render_template('addProduct.html', groups=productGroups)
+    productGroups = ProductGroup.query.all()
+    columns = InfoName.query.order_by(InfoName.order.asc()).all()
+    return render_template('addProduct.html', groups=productGroups, columns=columns)
 
 
 @app.route('/produkter/<category>')
@@ -71,14 +72,14 @@ def productPage(category, productGroupUrl, productUrl):
             productInfos[productInfo.collection_id-1].append(productInfo.value)
 
             if productInfo.infoName in infoNames:
-           	    pass
+                pass
             else:
-           	    infoNames.append(productInfo.infoName)
+                infoNames.append(productInfo.infoName)
         infoNames.sort(key=operator.attrgetter('order'), reverse=False)
         return render_template('product.html', product=product,
                 tableHeaders=infoNames,
                 tableRows=productInfos).encode('utf-8')
     else:
-	    return render_template('product.html', product=product,
+        return render_template('product.html', product=product,
                 tableHeaders=infoNames,
                 tableRows=[]).encode('utf-8')
