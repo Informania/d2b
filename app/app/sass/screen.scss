@@ -18,6 +18,7 @@ $two_darker: #C94706;
 /* text: */
 $text_one: #ECF0F1;
 $primary_sans: 'Open Sans', sans-serif;
+$secondary_sans: 'Arial', 'sans-serif';
 $primary_serif: 'Merriweather', serif;
 $header_sans: 'Lato', sans-serif;
 
@@ -317,7 +318,8 @@ footer {
 
 	}
     #crumbs {
-        font-family: $primary_sans;
+        font-weight: normal;
+        font-family: $header_sans;
         a {
             text-decoration: none;
             color: $primary_two;
@@ -342,6 +344,7 @@ footer {
 		td.green {
 			color: green;
 		}
+    td { font-family: $secondary_sans; padding: 5px; }
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
