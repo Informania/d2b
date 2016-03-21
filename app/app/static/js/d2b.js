@@ -10,14 +10,14 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
 }
 
 function initSearch(searchBox) {
-	if(searchBox.value != "Sök på varg för bästa resultat...") return;
+	if(searchBox.value != "Sök produkt") return;
 	searchBox.value = "";
 	searchBox.classList.remove("fadedText");
 }
 
 function checkSearchInput(searchBox) {
 	if(searchBox.value == "") {
-		searchBox.value = "Sök på varg för bästa resultat...";
+		searchBox.value = "Sök produkt";
 		searchBox.classList.add("fadedText");
 	}
 }
@@ -30,9 +30,9 @@ function searchClick(searchBox, e) {
 
 function search() {
 	var searchBox = document.getElementById("searchTextInput");
-	//window.location.href='/search.php?s=1&q=' + searchBox.value;
+	window.location.href='/sok/' + searchBox.value;
 }
-
+/* Code for adding product. Scrap atm. 
 var oneProduct;
 function columnCheckboxChanged(checkBox) {
     var data = document.getElementById("dataArea");
@@ -56,4 +56,4 @@ function columnCheckboxChanged(checkBox) {
 function addProduct() {
     var dataArea = document.getElementById("dataArea");
     dataArea.innerHTML += '<div class="product">' + oneProduct.innerHTML + '</div>';
-}
+} */

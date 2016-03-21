@@ -21,8 +21,8 @@
 		  </div>
 		  <div id="search">
 			<input type="text" id="searchTextInput"
-					value="Sök på varg för bästa resultat..."
-					class="fadedText" 
+			value="{% if query %}{{ query }}{% else %}Sök produkt{% endif %}"
+			class="{% if query %}{% else %}fadedText{% endif %}" 
 					onFocus="initSearch(this)" onBlur="checkSearchInput(this)" onKeyDown="searchClick(this, event)" />
 				<img id="searchImg" src="{{ url_for('static', filename='images/search.png') }}" onClick="search()"/>
 		  </div>

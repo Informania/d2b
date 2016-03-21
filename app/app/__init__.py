@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 import operator
+import urllib
 # 1: Define the WSGI application object
 # 2: Set configurations
 # 3: Define the database object which is imported
@@ -40,6 +41,16 @@ data.CreateData()
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/sok/<searchquery>')
+def search(searchquery):
+	foundProducts = Product.query.filter(Product.name.ilike('%'+searchquery+'%')).all()
+	foundProducts += Product.query.filter(Product.description.ilike('%'+searchquery+'%')).all()
+	prods = set(foundProducts)
+	prods = sorted(prods, key=lambda product: product.name)
+	productGroups = ProductGroup.query.filter(ProductGroup.name.ilike('%'+searchquery+'%')).all()	
+	return render_template('search.html', products = prods, query = searchquery, groups = productGroups)
+
 
 @app.route('/produkter/')
 def allProducts():
