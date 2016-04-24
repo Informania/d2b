@@ -1,0 +1,79 @@
+{% if product.name == 'Markdistans typ VARG' %}
+        <p class="floatLeft">* 400 eller 250 anges vid beställning</p>
+{% endif %}
+{% if product.name == 'Adaptrar för formbordsmagnet typ K' %}
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_horn.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för hörn</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_multiform.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för multiform</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_plyfa.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för plyfa</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_skalvagg.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för skalvägg</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_vinkelstod.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter med vinkelstöd</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_hojdstod.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter med höjdstöd</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_kundanpassad1.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Exempel kundanpassning</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_kundanpassad2.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Exempel kundanpassning</p>
+</div>
+{% endif %}
+{% if product.name == 'Formbordsmagnet typ BR' %}
+	<br/>
+	<p class="floatLeft italic">Fler storlekar finns på förfrågan.</p>
+{% endif %}
+{% if product.name == 'Magnetlister' %}
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+		<img src="{{ url_for('static', filename='images/products/') }}76_trekantslist.jpg" />
+	</div>
+	<p class="pictureBoxCaption"></p>Trekantslist</p>
+</div>
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}77_blindfogslist.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Blindfogslist</p>
+</div>
+</div>
+{% endif %}

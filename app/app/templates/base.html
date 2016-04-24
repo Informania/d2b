@@ -5,12 +5,14 @@
 			<meta http-equiv="refresh" content="" />
 			<meta charset="UTF-8" />
 			<link rel="stylesheet" media="screen, projection" href="{{ url_for('static', filename='css/screen.css') }}" type="text/css" />
+			<link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/balloon.css') }}" type="text/css" />
+			<link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/lightbox.css') }}" type="text/css" />
 			<title>D2B Byggprodukter AB</title>
+			<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
 			<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 			<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
 			<script src="{{ url_for('static', filename='js/d2b.js') }}"></script>
 			<script src="{{ url_for('static', filename='js/header.js') }}"></script>
-
 		</head>
 		<body>
 		<div class="container">
@@ -68,7 +70,16 @@ while(x=eval(x));
 </script>
     </p>
   </footer>
+  <script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+  <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'fadeDuration': 300,
+	  'disableScrolling': true
+    })
+</script>
 </body>
 <script src="{{ url_for('static', filename='js/header.js') }}></script>
+
 </html>
 	{% endblock %}

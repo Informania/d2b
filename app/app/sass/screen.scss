@@ -10,8 +10,8 @@ $font-size-large: 24px;
 $font-size-xx-large: 48px;
 
 /* Colors */
-$primary_one: #2980B9;
-$primary_two: #F25C05;
+$primary_one: #096EB0;
+$primary_two: #008C41;
 $primary_three: #ffffff;
 $one_darker: #065086;
 $two_darker: #C94706;
@@ -24,7 +24,7 @@ $header_sans: 'Lato', sans-serif;
 
 /* other variables */
 $header_height: 150px;
-$footer_height: 200px;
+$footer_height: 100px;
 $logo_size: 100px;
 
 
@@ -189,6 +189,7 @@ footer {
 	width: 80%;
 	text-align: center;
 	.entry_img {text-align:center;} /* to center entry images */
+	b { font-weight: bold; }
 	img {
 		display: inline;
 		text-align: center;
@@ -263,6 +264,27 @@ footer {
 			text-decoration: underline;
 		}
 	}
+
+	.pictureBox {
+		height: 200px;
+		width: 24%;
+		float: left;
+		margin-right: 1%;
+		margin-top: 15px;
+		img {
+			max-height: 100%;
+			width: auto;
+			max-width: 100%;
+			padding: 0;
+		}
+		.pictureBoxImgWrapper {
+			height: 80%;
+			width: 100%;
+		}
+		.pictureBoxCaption {
+			margin: 0;
+		}
+	}
 	.row {
 		float:left;
 		clear: both;
@@ -326,7 +348,12 @@ footer {
             color: $primary_two;
         }
     }
-}
+	ul, li {
+		float:left;
+		clear:left;
+		list-style: inside;
+	}
+} /* END CONTENT */
 
 /******* Table styles *******/
 .productSpecs {
@@ -343,12 +370,12 @@ footer {
 			background-color: #DDD;
 		}
 		td.green {
-			color: green;
+			color: $primary_two;
 		}
     td { font-family: $secondary_sans; padding: 5px; }
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 1100px) {
 	header {
 		
 		#logo {
@@ -359,9 +386,9 @@ footer {
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 479px) {
+@media screen and (min-width: 0px) and (max-width: 800px) {
 	header {
-		height: $header_height / 2;
+		height: $header_height - 50;
 		line-height: $header_height / 8;
 		#logo {
 			font-size: $font-size-large - 3;
@@ -384,13 +411,16 @@ footer {
 				font-size: 13px;
 			}
 		}
+		#search {
+			margin-top: 15px;
+		}
 	}
 
 	.content {
 		width: 94%;
 		padding-left: 3%;
 		padding-right: 3%;
-		padding-top: 80px;
+		padding-top: 110px;
 	}
 	nav.shrink, header.shrink {
 		height: $header_height / 6;
@@ -409,7 +439,9 @@ footer {
 		text-align: center !important;
 	}
 
+}
 
+@media screen and (min-width: 0px) and (max-width: 720px) {
 
 }
 
@@ -434,4 +466,7 @@ footer {
 }
 .textLeft {
 	text-align: left;
+}
+.italic {
+	font-style: italic;
 }

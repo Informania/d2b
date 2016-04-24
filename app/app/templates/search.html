@@ -33,7 +33,7 @@
 				<div class="searchResultText">
 					<h3>{{ product.name }}</h3>
 					<p class="textLeft">
-					{{ product.description | replace("<br/>", " ") | truncate(180) }}	
+					{{ product.description | replace("<b>","") | replace("</b>","") | replace("<br/>", " ") | truncate(180) }}	
 					</p>
 				</div>
 			</div>

@@ -42,6 +42,10 @@ data.CreateData()
 def home():
     return render_template('index.html')
 
+@app.route('/om')
+def omOss(): 
+	return render_template('om_oss.html')
+
 @app.route('/sok/<searchquery>')
 def search(searchquery):
 	foundProducts = Product.query.filter(Product.name.ilike('%'+searchquery+'%')).all()
