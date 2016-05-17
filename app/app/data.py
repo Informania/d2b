@@ -1052,7 +1052,7 @@ def CreateData():
     ])
 
     # Ståltrekantslist #
-    p = Product(u'Ståltrekantslist', u'Används för att få en snygg fas på stålformar. Svetsbar.', 'missing.png', pg, 'Staltrekantslist', False)
+    p = Product(u'Ståltrekantslist', u'Används för att få en snygg fas på stålformar. Svetsbar.', '80_trekantslist.jpg', pg, 'Staltrekantslist', False)
     db.session.add(p)
     db.session.add_all([
         ProductInfo(u'22 x 10 x 5', 1, abc, p), 
@@ -1404,7 +1404,7 @@ def CreateData():
 
      
 
-    p = Product(u'Magnetfäste för kulankare typ KU', u'Vår magnet för gängat är av stål, det finns för och nackdelar med stål kontra gummi, fördelen är hållbarheten, en i stål klarar betydligt fler gjutningar än en i gummi, en nackdel är att ytorna i ursparingen inte är lika fina, om det nu har någon betydelse.<br/>Lätta att hålla rena, tål alla sorter av formsläppingsmedel. Är lätta att lossa efter användandet.<br>Artikelnummer som slutar på G är tillhörande gummiringar.', '73_magnet_typ_ku.jpg', pg, 'Magnetfot_kulankare', False)
+    p = Product(u'Magnetfäste för kulankare typ KU', u'Vår magnet för gängat är av stål, det finns för och nackdelar med stål kontra gummi, fördelen är hållbarheten, en i stål klarar betydligt fler gjutningar än en i gummi, en nackdel är att ytorna i ursparingen inte är lika fina, om det nu har någon betydelse.<br/>Lätta att hålla rena, tål alla sorter av formsläppingsmedel. Är lätta att lossa efter användandet.<br>Artikelnummer som slutar på G är tillhörande gummiringar.', '73_magnet_typ_ku.png', pg, 'Magnetfot_kulankare', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1480,7 +1480,7 @@ def CreateData():
         ProductInfo('10 ton', 10, tillAnkare, p),
        ])
 
-    p = Product('Formbordsmagnet typ BR', u'Även populärt kallad våffelmagnet.<br/>Är i första hand avsedd att sitta inne i en U-stålprofil med måtten 60x70 mm.<br/>Naturligtvis går BR magneten att använda till annat också, det är nog bara fantasin som sätter gränser på de olika användningsområdena', '74_magnet_typ_br.jpg', pg, 'Magfly_br', False)
+    p = Product('Formbordsmagnet typ BR', u'Även populärt kallad våffelmagnet.<br/>Är i första hand avsedd att sitta inne i en U-stålprofil med måtten 60x70 mm.<br/>Naturligtvis går BR magneten att använda till annat också, det är nog bara fantasin som sätter gränser på de olika användningsområdena', '74_magnet_typ_br.png', pg, 'Magfly_br', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1515,7 +1515,7 @@ def CreateData():
        ])
 
 
-    p = Product('Formbordsmagnet typ FP', u'Magnetsystem huvudsakligen avsedd för kvarsittande formsida, men fungerar även vid fastsättning av andra typer av formsidor.<br/> Levereras komplett, men delarna går att köpa var för sig', '75_magnet_typ_fp.jpg', pg, 'Magfly_fp', False)
+    p = Product('Formbordsmagnet typ FP', u'Magnetsystem huvudsakligen avsedd för kvarsittande formsida, men fungerar även vid fastsättning av andra typer av formsidor.<br/> Levereras komplett, men delarna går att köpa var för sig', '75_magnet_typ_fp.png', pg, 'Magfly_fp', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1538,7 +1538,34 @@ def CreateData():
     
     p = Product('Formsidesmagnet AP2000', u'AP2200 får en lillebror med namn AP2000. Den största skillnaden är dess låga höjd och smala bredd. AP2000 är fortfarande i prototypstadiet, alla mått är inte helt klara än, men efterhand som de är klara kommer vi att uppdatera detta produktblad.<br/>Den har samma fördelar som AP när det gäller tålighet och praktisk användning, den är dock inte anpassad efter vår formsidessystem Multiform typ 2 utan skall användas med Multiform adapter typ 1.<br/><br/>Dragkraft 2000 kn<br/>Vikt ?<br/>Total höjd inklusive avformningsarm = 75 mm<br/>Höjd exklusive avformningsarm = ?<br/>Total bredd inklusive avformningsarm = 65 mm<br/>Total längd inklusive avformningsarm (i2) = ?<br/>Längd vid anslutning till stålbord (i1) = ?', 'missing.png', pg, 'Formsidesmaget_ap2000', False)
     db.session.add(p)
-    
+
+    p = Product('Formbordsmagnet typ PL/E', u'Enkel magnet vars enda funktion är att sitta fast på en stålyta. Mycket flexibel flera användningsområde, ex fönsterursparingar, i sibbformar, m.m. Ett prisvärt och flexibelt alternativ.<br/>Finns med olika magnetkraft, se tabell.', '82_magnet_typ_ple.jpg', pg, 'Formbordsmagnet_typ_pl-e', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('MFPLE400', 1, artnr, p),
+        ProductInfo('MFPLE650', 2, artnr, p),
+        ProductInfo('MFPLE850', 3, artnr, p),
+		ProductInfo('Magnet typ PL/E', 1, benamning, p),
+        ProductInfo('Magnet typ PL/E', 2, benamning, p),
+        ProductInfo('Magnet typ PL/E', 3, benamning, p),
+        ProductInfo(u'252 x 180 x 160', 1, blh, p),
+        ProductInfo(u'252 x 180 x 160', 2, blh, p),
+        ProductInfo(u'252 x 180 x 160', 3, blh, p),
+        ProductInfo('400', 1, magnetKraft, p),
+        ProductInfo('650', 2, magnetKraft, p),
+        ProductInfo('850', 3, magnetKraft, p),
+        ProductInfo('3.7', 1, viktKg, p),
+        ProductInfo('3.7', 2, viktKg, p),
+        ProductInfo('3.7', 3, viktKg, p),
+       ])
+
+    p = Product(u'Magnet för eldosor Typ E', u'Magnet för elektriska dosor. Ny modell som är under utveckling, ring oss för mer information!', 'missing.png', pg, 'Magnet_eldosor_typ_e', False)
+    db.session.add(p)
+
+    p = Product(u'Magnet för rör Typ A', u'Magnet för rör. Ny modell som är under utveckling, ring oss för mer information!', 'missing.png', pg, 'Magnet_eldosor_typ_a', False)
+    db.session.add(p)
+
     ###### LISTER MAGNETER ######
 
     pg = ProductGroup(u'Magnetlister', 'Missing.png', pc, u'Magnetlister')
@@ -1613,12 +1640,73 @@ def CreateData():
         ProductInfo(u'110 x 284 x 248', 6, blh, p),
        ])
 
+    p = Product('Multiform typ 2', u'Formsidesadapter i stål för i huvudsak AP magneten men magnet typ K med adapter fungerar också. Går oftast lätt att modifiera för att passa till andra modeller av formsidesmagneter.<br/>Låg vikt, mycket vridstyv och lätt att skruva plyfa mot då inga extra höjdstöd behövs oavsett höjd. Standardlängd 3050 mm, men det går enkelt att koppla ihop flera längder.', '83_multiform_typ_2.png', pg, 'multiform_typ_2', False)
+    db.session.add(p)
+
+
+    db.session.add_all([
+        ProductInfo('MFT2983000', 1, artnr, p),
+        ProductInfo('MFT21483000', 2, artnr, p),
+        ProductInfo('MFT21983000', 3, artnr, p),
+        ProductInfo('MFT22483000', 4, artnr, p),
+        ProductInfo('MFT22983000', 5, artnr, p),
+        ProductInfo('MFT23483000', 6, artnr, p),
+        ProductInfo('MFT23983000', 7, artnr, p),
+        ProductInfo('MFT24483000', 8, artnr, p),
+        ProductInfo('MFT24983000', 9, artnr, p),
+        ProductInfo('MFT25483000', 10, artnr, p),
+        ProductInfo('MFT25983000', 11, artnr, p),
+        ProductInfo('MFT26483000', 12, artnr, p),
+        ProductInfo('MFT26983000', 13, artnr, p),
+        ProductInfo(u'150 x 3050 x 65', 1, blh, p),
+        ProductInfo(u'150 x 3050 x 70', 2, blh, p),
+        ProductInfo(u'150 x 3050 x 90', 3, blh, p),
+        ProductInfo(u'200 x 3050 x 148', 4, blh, p),
+        ProductInfo(u'200 x 3050 x 190', 5, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 6, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 7, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 8, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 9, blh, p),
+        ProductInfo(u'* x 3050 x 548', 10, blh, p),
+        ProductInfo(u'* x 3050 x 598', 11, blh, p),
+        ProductInfo(u'* x 3050 x 648', 12, blh, p),
+        ProductInfo(u'* x 3050 x 698', 13, blh, p),
+        ProductInfo('12.9', 1, viktKg, p),
+        ProductInfo('17.8', 2, viktKg, p),
+        ProductInfo('19.4', 3, viktKg, p),
+        ProductInfo('23.6', 4, viktKg, p),
+        ProductInfo('25.0', 5, viktKg, p),
+        ProductInfo('29.7', 6, viktKg, p),
+        ProductInfo('32.8', 7, viktKg, p),
+        ProductInfo('35.4', 8, viktKg, p),
+        ProductInfo('38.5', 9, viktKg, p),
+        ProductInfo('*', 10, viktKg, p),
+        ProductInfo('*', 11, viktKg, p),
+        ProductInfo('*', 12, viktKg, p),
+        ProductInfo('*', 13, viktKg, p),
+
+       ])
+ 
+    p = Product('Multiform typ Flyframe', u'Formsidesadapter i aluminium, samma fördelar som typ 2, men endast halva vikten', '84_multiform_typ_flyframe.png', pg, 'multiform_typ_flyframe', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('MFFF98', 1, artnr, p),
+        ProductInfo('MFFF198', 2, artnr, p),
+        ProductInfo('MFFF298', 3, artnr, p),
+        ProductInfo(u'180 x 3050 x 98', 1, blh, p),
+        ProductInfo(u'180 x 3050 x 198', 2, blh, p),
+        ProductInfo(u'180 x 3050 x 298', 3, blh, p),
+        ProductInfo('8.1', 1, viktKg, p),
+        ProductInfo('9.7', 2, viktKg, p),
+        ProductInfo('11.3', 3, viktKg, p),
+       ])
 
     ###### Färdiga adaptrar med magneter ######
     pg = ProductGroup(u'Färdiga adaptrar med magneter', 'Missing.png', pc, u'Adaptrar_med_magneter')
     db.session.add(pg)
     
-    p = Product('MagPin', u'U-profilssystem med integrerade magneter.<br/>Lämplig vid gjutning av skalväggar och plattbärlag, även kallat filigranbärlag.<br/>Standarddimension, bredd 60 mm, höjd 70 mm, möjlig att få faser på en eller två sidor. Standard maxlängd 3000 mm.<br/>Går att få i andra dimensioner, och längder på beställning.<br/>Två olika magneter med olika dragkraft finns.', '79_magpin.png', pg, 'Magpin', False)
+    p = Product('MagPin', u'U-profilssystem med integrerade magneter.<br/>Lämplig vid gjutning av skalväggar och plattbärlag, även kallat filigranbärlag.<br/>Standarddimension, bredd 60 mm, höjd 70 mm, möjlig att få faser på en eller två sidor. Standard maxlängd 3000 mm.<br/>Går att få i andra dimensioner, och längder på beställning.<br/>Två olika magneter med olika dragkraft finns. Tabellen nedan visar standardlängder.', '79_magpin.png', pg, 'Magpin', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1629,6 +1717,19 @@ def CreateData():
         ProductInfo('MP60702000', 5, artnr, p),
         ProductInfo('MP60702500', 6, artnr, p),
         ProductInfo('MP60703000', 7, artnr, p),
+		ProductInfo('', 8, artnr, p),
+		ProductInfo('MPM1054030', 9, artnr, p),
+        ProductInfo('MPM2104030', 10, artnr, p),
+        ProductInfo('MagPin 70x60 mm', 1, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 2, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 3, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 4, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 5, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 6, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 7, benamning, p),
+        ProductInfo('', 8, benamning, p),
+        ProductInfo(u'Magnet för magpin', 9, benamning, p),
+        ProductInfo(u'Magnet för magpin', 10, benamning, p),
         ProductInfo(u'1', 1, antMagneter, p),
         ProductInfo(u'1', 2, antMagneter, p),
         ProductInfo(u'2', 3, antMagneter, p),
@@ -1636,6 +1737,9 @@ def CreateData():
         ProductInfo(u'2', 5, antMagneter, p),
         ProductInfo(u'2', 6, antMagneter, p),
         ProductInfo(u'3', 7, antMagneter, p),
+        ProductInfo(u'', 8, antMagneter, p),
+        ProductInfo(u'', 9, antMagneter, p),
+        ProductInfo(u'', 10, antMagneter, p),
         ProductInfo(u'500', 1, langdMm, p),
         ProductInfo(u'750', 2, langdMm, p),
         ProductInfo(u'1000', 3, langdMm, p),
@@ -1643,6 +1747,19 @@ def CreateData():
         ProductInfo(u'2000', 5, langdMm, p),
         ProductInfo(u'2500', 6, langdMm, p),
         ProductInfo(u'3000', 7, langdMm, p),
+        ProductInfo(u'', 8, langdMm, p),
+        ProductInfo(u'', 9, langdMm, p),
+        ProductInfo(u'', 10, langdMm, p),
+		ProductInfo(u'', 1, blh, p),
+		ProductInfo(u'', 2, blh, p),
+		ProductInfo(u'', 3, blh, p),
+		ProductInfo(u'', 4, blh, p),
+		ProductInfo(u'', 5, blh, p),
+		ProductInfo(u'', 6, blh, p),
+		ProductInfo(u'', 7, blh, p),
+		ProductInfo(u'', 8, blh, p),
+		ProductInfo(u'40 x 105 x 30', 9, blh, p),
+        ProductInfo(u'40 x 210 x 30', 10, blh, p),
         ProductInfo(u'8.5', 1, viktInklMagnet, p),
         ProductInfo(u'9.7', 2, viktInklMagnet, p),
         ProductInfo(u'17.0', 3, viktInklMagnet, p),
@@ -1650,21 +1767,24 @@ def CreateData():
         ProductInfo(u'22.0', 5, viktInklMagnet, p),
         ProductInfo(u'24.5', 6, viktInklMagnet, p),
         ProductInfo(u'33.0', 7, viktInklMagnet, p),
-       ])
-    
-    p = Product(u'Magnet för MagPin', u'', 'missing.png', pg, 'Magnet_magpin', False)
-    db.session.add(p)
- 
-    db.session.add_all([
-        ProductInfo('MPM1054030', 1, artnr, p),
-        ProductInfo('MPM2104030', 2, artnr, p),
-        ProductInfo(u'600', 1, magnetKraft, p),
-        ProductInfo(u'1200', 2, magnetKraft, p),
-        ProductInfo(u'40 x 105 x 30', 1, blh, p),
-        ProductInfo(u'40 x 210 x 30', 2, blh, p),
-       ])
+        ProductInfo(u'', 8, viktInklMagnet, p),
+        ProductInfo(u'', 9, viktInklMagnet, p),
+        ProductInfo(u'', 10, viktInklMagnet, p),
+		ProductInfo(u'', 1, magnetKraft, p),
+		ProductInfo(u'', 2, magnetKraft, p),
+		ProductInfo(u'', 3, magnetKraft, p),
+		ProductInfo(u'', 4, magnetKraft, p),
+		ProductInfo(u'', 5, magnetKraft, p),
+		ProductInfo(u'', 6, magnetKraft, p),
+		ProductInfo(u'', 7, magnetKraft, p),
+		ProductInfo(u'', 8, magnetKraft, p),
+		ProductInfo(u'600', 9, magnetKraft, p),
+        ProductInfo(u'1200', 10, magnetKraft, p),	       
+    ])
 
-   
+    p = Product('Formsidor olika profiler m.m.', u'Formsidor med exempelvis H-profil, kan levereras både med och utan integrerad magnet. Även specialavstängare för plattbjälklag finns. <br/>Hittar ni inte det ni vill ha på bilden, ring oss det finns många fler modeller och vi skräddarsyr gärna enligt kundönskemål', '81_formsidor_olika_profiler.png', pg, 'Formsidor_profiler', False)
+    db.session.add(p)
+
     ###### -- Magneter -- ######
     pc = ProductCategory(u'Vägginfästning')
     db.session.add(pc)

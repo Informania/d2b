@@ -46,7 +46,11 @@ def home():
 def omOss(): 
 	return render_template('om_oss.html')
 
-@app.route('/sok/<searchquery>')
+@app.route('/kontakt')
+def kontakt(): 
+	return render_template('kontakt.html')
+
+@app.route('/sok/<path:searchquery>')
 def search(searchquery):
 	foundProducts = Product.query.filter(Product.name.ilike('%'+searchquery+'%')).all()
 	foundProducts += Product.query.filter(Product.description.ilike('%'+searchquery+'%')).all()

@@ -2,27 +2,27 @@
 {% block header %}
 	{{ super() }}
 {% endblock %}
-
+{% block crumbs %}
+	{{ super() }}
+	/ <a href="/om">Om D2B</a>{% endblock %}
 {% block content %}
 <div class="entry">
 	<h2 class="textCenter">Lite om D2B</h2>
-	<p class="clearBoth">Den 1 januari 2010 bildades D2B Byggprodukter AB. 
-	
-	Företaget, som i första hand producerar plastdistanser, är resultatet av ett samarbete mellan distansräven Håkan Stenholm och egenföretagaren Christer Lundkvist.
-	Visionen är att bli Sveriges ledande producent och leverantör av plastdistanser, och att även erbjuda ett brett sortiment av andra produkter inom branchen.</p>
+	<p class="clearBoth">Den 1 januari 2010 bildades D2B Byggprodukter AB av distansräven Håkan Stenholm och egenföretagaren Christer Lundkvist. Visionen var att bli Sveriges ledande producent och leverantör av distanseringsmaterial för byggindustrin, och även erbjuda ett brett sortiment av andra produkter i branschen.<br/>
+Vi säljer det mesta av plastdistanser och är representanter för ett komplett system för formsättning i Prefab.</p>
 </div>
 <div class="pictureBox">
 	<div class="pictureBoxImgWrapper">
 <img src="{{ url_for('static', filename='images/') }}hakan.png" />
 </div>
-<p class="pictureBoxCaption"></p>Håkan Stenholm</p>
+<p class="pictureBoxCaption">Håkan Stenholm</p>
 </div>
 
 <div class="pictureBox">
 	<div class="pictureBoxImgWrapper">
 <img src="{{ url_for('static', filename='images/') }}christer.png" />
 </div>
-<p class="pictureBoxCaption"></p>Christer Lundkvist</p>
+<p class="pictureBoxCaption">Christer Lundkvist</p>
 </div>
 
 {% endblock %}

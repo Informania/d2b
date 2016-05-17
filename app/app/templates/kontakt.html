@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block header %}
+	{{ super() }}
+{% endblock %}
+{% block crumbs %}
+	{{ super() }}
+	/ <a href="/om">Om D2B</a>{% endblock %}
+{% block content %}
+<h2>Leverans- och besöksadress</h2>
+<div class="entry col-2-left" >
+	<img src="{{ url_for('static', filename='images/') }}D2B.jpg" style="width: 90%;" />
+	<p class="clearBoth">
+	D2B Byggprodukter AB<br/>
+	Johans Väg 4<br/>
+	438 39 Landvetter</p>
+	
+	<h2>Telefon</h2>
+	Håkan: 031 - 91 63 04<br/>
+	Christer: 031 - 91 63 08<br/>
+   	Växel: 031 - 91 63 01</p>
+</div>
+<div style="col-2-right">
+	<div class="iframe-container">
+	<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJbwn9YSX6T0YRy4QYU-oSESE&key=AIzaSyBFwf-Z3KtlYjiG8ivJSPKuinLULxG0O98" allowfullscreen></iframe>
+</div>
+</div>
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}
+

@@ -1,13 +1,60 @@
-Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-}
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-}
+//Element.prototype.remove = function() {
+//    this.parentElement.removeChild(this);
+//}
+//NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+//    for(var i = this.length - 1; i >= 0; i--) {
+//        if(this[i] && this[i].parentElement) {
+//            this[i].parentElement.removeChild(this[i]);
+//        }
+//    }
+//}
+
+$(document).ready(function() {
+	var buttons = document.getElementsByClassName("imageSizeButton");
+	$(buttons[0]).addClass("inactive");
+	var curSize = $('#currentImageSize').html();
+	for(var i = 0; i < buttons.length; i++) {
+		$(buttons[i]).on("click", function() {
+			switch(this.innerHTML) {
+				case "-":
+					if(curSize == 4) return;
+					
+					curSize++;
+					if(curSize == 4)
+						$(buttons[0]).addClass("inactive");
+					if(curSize > 2) 
+						$(buttons[1]).removeClass("inactive");
+
+					$('.card').removeClass('card-2').removeClass('card-3').removeClass('card-4').addClass('card-'+curSize);
+					break;
+				case "+":
+					if(curSize == 2) return;
+					
+					curSize--;
+					if(curSize == 2)
+						$(buttons[1]).addClass("inactive");
+					if(curSize < 4) 
+						$(buttons[0]).removeClass("inactive");
+
+					$('.card').removeClass('card-2').removeClass('card-3').removeClass('card-4').addClass('card-'+curSize);
+					break;
+			}
+
+		});
+	}
+	$("#productGroupsNav").on("click", function () {
+		var nav = $("#productGroupsNavInner");
+		var triangle = $("#navTriangle");
+		if(nav.hasClass('hidden')) {
+			nav.removeClass('hidden');
+			triangle.html('&#x25B2;');
+		}
+		else {
+			nav.addClass('hidden');
+			triangle.html('&#x25BC;');
+		}
+	});
+})
 
 function initSearch(searchBox) {
 	if(searchBox.value != "Sök produkt") return;

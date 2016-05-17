@@ -11,17 +11,33 @@
 	{% endif %}
 {% endblock %}
 {% block content %}
+<div id="imageControls" class="unselectable">
+	<p style="margin-bottom: 0;">Bildstorlek</p>
+	<div class="button imageSizeButton">-</div>
+	<div class="button imageSizeButton">+</div>
+	<span id="currentImageSize" style="visibility:hidden;">4</span>
+</div>
 <div class="row textCenter">
-	{% if category %}
-		<h1>{{ category }}</h1>
-	{% else %}
-	<h1>Produkter</h1>
-	{% endif %}
+	<div id="productsHeader">
+		{% if category %}
+			<h1>{{ category }}</h1>
+		{% else %}
+		<h1>Produkter</h1>
+		{% endif %}
+		<div id="productGroupsNav" class="unselectable">
+			<h3>Kategorier <span id="navTriangle">&#x25BC;</span></h3>
+			<div id="productGroupsNavInner" class="hidden">
+				{% for group in groups %}
+				<a href="#{{ group.url }}"><label class="productGroupsNavItem">{{ group.name }}</label></a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 	{% for group in groups %}
 	<div class="row textLeft">
-		<h2>{{ group.name }}</h2>
+		<h2 id="{{ group.url }}">{{ group.name }}</h2>
 		{% for product in group.products %}
-		<div onclick="location.href='/produkter/Distanser/{{group.url}}/{{product.url}}'" class="card">
+		<div onclick="location.href='/produkter/Distanser/{{group.url}}/{{product.url}}'" class="card card-4">
 			<img src="{{ url_for('static', filename='images/products/')}}{{product.image}}" />
 			<p class="cardCaption">{{product.name}}</p>
 		</div>
