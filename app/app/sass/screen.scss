@@ -549,6 +549,15 @@ footer {
     td { font-family: $secondary_sans; padding: 5px; }
 }
 
+@media screen and (min-width: 0px) and (max-width: 990px) {
+	nav.shrink {
+		a {
+			margin-left: 0;
+		}
+	}
+
+}
+
 @media screen and (min-width: 0px) and (max-width: 900px) {
 	header {
 		height: $header_height - 40;
@@ -598,13 +607,17 @@ footer {
 
 	
 	nav.shrink, header.shrink {
-		height: $header_height / 6;
-		line-height: $header_height / 6 !important;
+		height: $header_height / 2;
+		line-height: $header_height / 2 !important;
 	}
 	header.shrink {
 		#logo {
 			display:none;
 		}
+		nav.shrink {
+			top: -53px;
+		}
+
 	}
 	.card .cardCaption {
 		font-family: $header_sans;	
@@ -622,8 +635,15 @@ footer {
 		#search input[type="text"] {	
 			width: 130px;
 		}
+		
 	}
-	.content {
+	header.shrink {
+		height: $header_height / 2;
+		nav.shrink {
+			top: -31px;
+		}
+	}
+		.content {
 		.card-4 {
 			width: 47%;
 		}
