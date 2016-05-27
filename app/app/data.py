@@ -1536,7 +1536,7 @@ def CreateData():
     p = Product('Formsidesmagnet AP2200', u'Vår mest sålda magnet, designad för att klara den tuffa miljön i en prefabfabrik, de få rörliga delar som finns är väl skyddade, och går ändå lätt att rengöra. Tål betongdamm och betongspill bra. Inget separat avformningsverktyg behövs, det är inkluderat i magneten.<br/>Är anpassad för användning tillsammans med Multiform formsidesadaptrar system, men går utmärkt att använda med andra formsidor med en adapter typ 1, vilken kan antingen skruvas eller svetsas i befintlig formsida.<br/><br/>Dragkraft 2200 kn<br/>Vikt 5,4 kg<br/>Total höjd inklusive avformningsarm (h2) = 100 mm<br/>Höjd exklusive avformningsarm (h1) = 76 mm<br/>Total bredd inklusive avformningsarm (b2) = 130 mm<br/>Bredd vid anslutning till stålbord (b1) = 96 mm<br/>Total längd inklusive avformningsarm  (l2) =  385 mm<br/>Längd vid anslutning till stålbord (l1) = 260 mm', '69_ap_magnet.jpg', pg, 'Formsidesmaget_ap2200', False)
     db.session.add(p)
     
-    p = Product('Formsidesmagnet AP2000', u'AP2200 får en lillebror med namn AP2000. Den största skillnaden är dess låga höjd och smala bredd. AP2000 är fortfarande i prototypstadiet, alla mått är inte helt klara än, men efterhand som de är klara kommer vi att uppdatera detta produktblad.<br/>Den har samma fördelar som AP när det gäller tålighet och praktisk användning, den är dock inte anpassad efter vår formsidessystem Multiform typ 2 utan skall användas med Multiform adapter typ 1.<br/><br/>Dragkraft 2000 kn<br/>Vikt ?<br/>Total höjd inklusive avformningsarm = 75 mm<br/>Höjd exklusive avformningsarm = ?<br/>Total bredd inklusive avformningsarm = 65 mm<br/>Total längd inklusive avformningsarm (i2) = ?<br/>Längd vid anslutning till stålbord (i1) = ?', 'missing.png', pg, 'Formsidesmaget_ap2000', False)
+    p = Product('Formsidesmagnet AP2000', u'AP2200 får en lillebror med namn AP2000. Den största skillnaden är dess låga höjd och smala bredd. AP2000 är fortfarande i prototypstadiet, alla mått är inte helt klara än, men efterhand som de är klara kommer vi att uppdatera detta produktblad.<br/>Den har samma fördelar som AP när det gäller tålighet och praktisk användning, den är dock inte anpassad efter vår formsidessystem Multiform typ 2 utan skall användas med Multiform adapter typ 1.<br/><br/>Dragkraft 2000 kn<br/>Vikt ?<br/>Total höjd inklusive avformningsarm = 75 mm<br/>Höjd exklusive avformningsarm = ?<br/>Total bredd inklusive avformningsarm = 65 mm<br/>Total längd inklusive avformningsarm (i2) = ?<br/>Längd vid anslutning till stålbord (i1) = ?', '86_AP_2000.png', pg, 'Formsidesmaget_ap2000', False)
     db.session.add(p)
 
     p = Product('Formbordsmagnet typ PL/E', u'Enkel magnet vars enda funktion är att sitta fast på en stålyta. Mycket flexibel flera användningsområde, ex fönsterursparingar, i sibbformar, m.m. Ett prisvärt och flexibelt alternativ.<br/>Finns med olika magnetkraft, se tabell.', '82_magnet_typ_ple.jpg', pg, 'Formbordsmagnet_typ_pl-e', False)
@@ -1876,11 +1876,11 @@ def CreateData():
     
 
     ## Rubberellast ##
-    pg = ProductGroup(u'Rubberelast', 'Missing.png', pc, u'Rubberelast')
+    pg = ProductGroup(u'Rubberelast', '85_rubberelast.png', pc, u'Rubberelast')
     db.session.add(pg)
 
 
-    p = Product(u'Rubberelast', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', 'missing.png', pg, 'Rubberelast', False)
+    p = Product(u'Rubberelast', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', '85_rubberelast.png', pg, 'Rubberelast', False)
     db.session.add(p)
 
     db.session.add_all([
