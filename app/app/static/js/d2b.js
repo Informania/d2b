@@ -44,7 +44,7 @@ $(document).ready(function() {
 	}
 	$("#productGroupsNav").on("click", function () {
 		var nav = $("#productGroupsNavInner");
-		var triangle = $("#navTriangle");
+		var triangle = $("#productNavTriangle");
 		if(nav.hasClass('hidden')) {
 			nav.removeClass('hidden');
 			triangle.html('&#x25B2;');
@@ -54,6 +54,19 @@ $(document).ready(function() {
 			triangle.html('&#x25BC;');
 		}
 	});
+	$("#productCatalogButton").on("click", function () {
+		var nav = $("#productCatalogInner");
+		var triangle = $("#catalogNavTriangle");
+		if(nav.hasClass('hidden')) {
+			nav.removeClass('hidden');
+			triangle.html('&#x25B2;');
+		}
+		else {
+			nav.addClass('hidden');
+			triangle.html('&#x25BC;');
+		}
+	});
+
 })
 
 function initSearch(searchBox) {

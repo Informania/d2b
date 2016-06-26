@@ -8,11 +8,11 @@
 	{% endblock %}
 {% block content %}
 <h2>{{ product.name }}{% if product.ownmade %} <span class="italic" style="font-size: .7em;">(Egentillverkad)</span>{%endif%} </h2>
-    <p class="productInfo textLeft">{{ product.description|safe }}</p>
-    <div class="productImgContainer" data-balloon="Klicka för att visa full storlek" data-balloon-pos="up">
+	<div class="productImgContainer" data-balloon="Klicka för att visa full storlek" data-balloon-pos="up">
 		<a href="{{ url_for('static', filename='images/products/') }}{{ product.image }}" data-lightbox="image-1"><img src='{{ url_for('static', filename='images/products/') }}{{ product.image }}'/></a>
     </div>
-    <table class="productSpecs">
+    <p class="productInfo textLeft">{{ product.description|safe }}</p>
+        <table class="productSpecs">
         <thead>
             <tr>
                 {% for header in tableHeaders %}
@@ -38,6 +38,26 @@
                </tr>
         </tbody>
     </table>
+	<div class="productSpecsSmall">
+	{% for row in tableRows %}
+		{% if (loop.index % 2) != 1 %}
+			<div class="smallProduct">
+		{% else %}
+			<div class="smallProduct alternate">
+		{% endif %}
+			<div class="smallProductLeftCol">
+				{% for header in tableHeaders %}
+					<label class="header-label">{{ header.name }}</label>
+				{% endfor %}
+			</div>
+			<div class="smallProductRightCol">
+				{% for prodInfo in row %}
+				<label>{{ prodInfo }}</label>	
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</div>
 	{% include "products_addons.html" with context %} 
 {% endblock %}
 {% block footer %}

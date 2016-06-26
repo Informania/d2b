@@ -132,13 +132,13 @@ def CreateData():
         ProductInfo('50', 7, hojd, p),
         ProductInfo('60', 8, hojd, p),
         ProductInfo('70', 9, hojd, p),
-        ProductInfo('50', 1, antalForpPall, p),
+        ProductInfo('50 / 3150', 1, antalForpPall, p),
         ProductInfo('50 / 3150', 2, antalForpPall, p),
         ProductInfo('50 / 2100', 3, antalForpPall, p),
         ProductInfo('50 / 1800', 4, antalForpPall, p),
-        ProductInfo('30 / 1200', 5, antalForpPall, p),
+        ProductInfo('30 / 1260', 5, antalForpPall, p),
         ProductInfo('30 / 1200', 6, antalForpPall, p),
-        ProductInfo('30 / 720', 7, antalForpPall, p),
+        ProductInfo('30 / 840', 7, antalForpPall, p),
         ProductInfo('20', 8, antalForpPall, p),
         ProductInfo('20', 9, antalForpPall, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
@@ -271,9 +271,9 @@ def CreateData():
         ProductInfo('550', 7, antalforpSt, p),
         ProductInfo('500', 8, antalforpSt, p),
         ProductInfo('Ring oss', 1, lagerstatus, p),
-        ProductInfo('Lagervara', 2, lagerstatus, p),
-        ProductInfo('Lagervara', 3, lagerstatus, p),
-        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Ring oss', 4, lagerstatus, p),
         ProductInfo('Ring oss', 5, lagerstatus, p),
         ProductInfo('Ring oss', 6, lagerstatus, p),
         ProductInfo('Ring oss', 7, lagerstatus, p),
@@ -376,14 +376,14 @@ def CreateData():
         ProductInfo('40', 6, hojd, p),        
         ProductInfo('45', 7, hojd, p),        
         ProductInfo('50', 8, hojd, p),        
-        ProductInfo('4860 / 3240', 1, antalForpPall, p),
-        ProductInfo('4860 / 3240', 2, antalForpPall, p),
-        ProductInfo('4860 / 3240', 3, antalForpPall, p),
-        ProductInfo('4860 / 3240', 4, antalForpPall, p),
-        ProductInfo('4860 / 3240', 5, antalForpPall, p),
-        ProductInfo('4860 / 3240', 6, antalForpPall, p),
-        ProductInfo('4860 / 3240', 7, antalForpPall, p),
-        ProductInfo('4860 / 3240', 8, antalForpPall, p),
+        ProductInfo('4860', 1, antalForpPall, p),
+        ProductInfo('4860', 2, antalForpPall, p),
+        ProductInfo('4860', 3, antalForpPall, p),
+        ProductInfo('4860', 4, antalForpPall, p),
+        ProductInfo('4860', 5, antalForpPall, p),
+        ProductInfo('4860', 6, antalForpPall, p),
+        ProductInfo('4860', 7, antalForpPall, p),
+        ProductInfo('4860', 8, antalForpPall, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
@@ -572,22 +572,22 @@ def CreateData():
         ProductInfo('50', 14, antalforpSt, p),
         ProductInfo('50', 15, antalforpSt, p),
         ProductInfo('50', 16, antalforpSt, p),
-        ProductInfo('Lagervara', 1, lagerstatus, p),
-        ProductInfo('Lagervara', 2, lagerstatus, p),
-        ProductInfo('Lagervara', 3, lagerstatus, p),
-        ProductInfo('Lagervara', 4, lagerstatus, p),
-        ProductInfo('Lagervara', 5, lagerstatus, p),
-        ProductInfo('Lagervara', 6, lagerstatus, p),
-        ProductInfo('Lagervara', 7, lagerstatus, p),
-        ProductInfo('Lagervara', 8, lagerstatus, p),
-        ProductInfo('Lagervara', 9, lagerstatus, p),
-        ProductInfo('Lagervara', 10, lagerstatus, p),
-        ProductInfo('Lagervara', 11, lagerstatus, p),
-        ProductInfo('Lagervara', 12, lagerstatus, p),
-        ProductInfo('Lagervara', 13, lagerstatus, p),
-        ProductInfo('Lagervara', 14, lagerstatus, p),
-        ProductInfo('Lagervara', 15, lagerstatus, p),
-        ProductInfo('Lagervara', 16, lagerstatus, p),
+        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+        ProductInfo('Ring oss', 9, lagerstatus, p),
+        ProductInfo('Ring oss', 10, lagerstatus, p),
+        ProductInfo('Ring oss', 11, lagerstatus, p),
+        ProductInfo('Ring oss', 12, lagerstatus, p),
+        ProductInfo('Ring oss', 13, lagerstatus, p),
+        ProductInfo('Ring oss', 14, lagerstatus, p),
+        ProductInfo('Ring oss', 15, lagerstatus, p),
+        ProductInfo('Ring oss', 16, lagerstatus, p),
     ])
 
      # Distanslister för valv # 
@@ -602,26 +602,20 @@ def CreateData():
         ProductInfo('35', 5, hojd, p),        
         ProductInfo('40', 6, hojd, p),        
         ProductInfo('50', 7, hojd, p),        
-        ProductInfo('60', 8, hojd, p),        
-        ProductInfo('70', 9, hojd, p),        
-        ProductInfo('50', 1, antalForpPall, p),
+        ProductInfo('50 / 3150', 1, antalForpPall, p),
         ProductInfo('50 / 3150', 2, antalForpPall, p),
         ProductInfo('50 / 2100', 3, antalForpPall, p),
         ProductInfo('50 / 1800', 4, antalForpPall, p),
-        ProductInfo('30 / 1200', 5, antalForpPall, p),
+        ProductInfo('30 / 1260', 5, antalForpPall, p),
         ProductInfo('30 / 1200', 6, antalForpPall, p),
-        ProductInfo('30 / 720', 7, antalForpPall, p),
-        ProductInfo('20', 8, antalForpPall, p),
-        ProductInfo('20', 9, antalForpPall, p),
+        ProductInfo('30 / 840', 7, antalForpPall, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
         ProductInfo('Lagervara', 4, lagerstatus, p),
         ProductInfo('Lagervara', 5, lagerstatus, p),
-        ProductInfo('Lagervara', 6, lagerstatus, p),
-        ProductInfo('Lagervara', 7, lagerstatus, p),
-        ProductInfo('Ring oss', 8, lagerstatus, p),
-        ProductInfo('Ring oss', 9, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
     ])
 
     # Distansspiral # 
@@ -766,11 +760,11 @@ def CreateData():
         ProductInfo('250', 3, antalforpSt, p),
         ProductInfo('250', 4, antalforpSt, p),
         ProductInfo('250', 5, antalforpSt, p),
-        ProductInfo('Ring oss', 1, lagerstatus, p),
-        ProductInfo('Ring oss', 2, lagerstatus, p),
-        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
         ProductInfo('Ring oss', 4, lagerstatus, p),
-        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
     ])
 
     # Isolerstiftsring #
@@ -970,9 +964,9 @@ def CreateData():
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
-        ProductInfo('Ring oss', 4, lagerstatus, p),
-        ProductInfo('Ring oss', 5, lagerstatus, p),
-        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 6, lagerstatus, p),
     ])
     
     ## Gängade brickor ##
@@ -1045,10 +1039,10 @@ def CreateData():
         ProductInfo(u'Vit, spikhål', 2, utforande, p),
         ProductInfo(u'Spikhål', 3, utforande, p),
         ProductInfo(u'Spikhål', 4, utforande, p),
-        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Ring oss', 2, lagerstatus, p),
-        ProductInfo('Ring oss', 3, lagerstatus, p),
-        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
     ])
 
     # Ståltrekantslist #
@@ -1086,15 +1080,15 @@ def CreateData():
     db.session.add(p)
     
     # Dubbursparing KORP #
-    p = Product(u'Dubbursparing KORP', u'En ny modell av dubbursparing, i första hand för 20 mm dubb. Den är tvådelad, det förenklar vid fastsättandet i formen.<br/>Locket monteras i formsidan. När huvudarmeringen och tilläggsarmeringen är nedlagda i formen sätts rördelen dit. Detta innebär att den inte rivs bort eller hamnar snett. Den har en täckande plasthinna som förhindrar att det kommer in grus och vatten.<br/>Locket: 75x75 mm<br/>Rördelen: 160 mm<br/>Antal/förpackning: 450 st','41_dubbsparing_korp.png', pg, 'Dubbursparing_korp', False)
+    p = Product(u'Dubbursparing KORP', u'En ny modell av dubbursparing, i första hand för 20 mm dubb. Den är tvådelad, det förenklar vid fastsättandet i formen.<br/>Locket monteras i formsidan. När huvudarmeringen och tilläggsarmeringen är nedlagda i formen sätts rördelen dit. Detta innebär att den inte rivs bort eller hamnar snett. Den har en täckande plasthinna som förhindrar att det kommer in grus och vatten.<br/>Locket: 75x75 mm<br/>Rördelen: 160 mm<br/>Antal/förpackning: 450 st<br/>Lagervara','41_dubbsparing_korp.png', pg, 'Dubbursparing_korp', False)
     db.session.add(p)
 
     # Dubbursparing GÖK #
-    p = Product(u'Dubbursparing GÖK', u'Samma användningsområde och specifikationer som Dubbursparing KORP, med skillnaden att den är anpassad för rör på 100mm.', '31_dubbsparing_gok.png', pg, 'Dubbursparing_gok', False)
+    p = Product(u'Dubbursparing GÖK', u'Samma användningsområde och specifikationer som Dubbursparing KORP, med skillnaden att den är anpassad för rör på 100mm.<br/>Lagervara', '31_dubbsparing_gok.png', pg, 'Dubbursparing_gok', False)
     db.session.add(p)
 
     # KAMEL #
-    p = Product(u'Kraftfogsursparing KAMEL', u'Kamelen är en list för att skapa en fog för kraftöverföring mellan prefabväggar och liknande konstruktioner. Den har många andra benämningar, varav hönstrappa, puckelpist och förtagningslist är de vanligaste. Kamelen kan med fördel ersätta befintliga lister i trä, cellplast eller gummi då den är billigare än en trälist och tål att användas flera gånger.<br/>Kan monteras mot träform med spik eller skruv, mot stålform med magnet eller vår egna list, Kamelspåret.<br/>Har en mycket slät och fin yta vilket gör den lätt att ta bort.<br/>Mycket tålig vid varsam hantering.<br/>Tål alla former av formoljor, formvax mm.<br/>Längd: 615 mm<br/>Bredd: 72 mm<br/>Höjd: 20/38 mm<br/>Antal/förpackning: 50 st (30 meter)', '39_kraftfogsursparing_kamel.png', pg, 'Kraftfogsursparing_kamel', False)
+    p = Product(u'Kraftfogsursparing KAMEL', u'Kamelen är en list för att skapa en fog för kraftöverföring mellan prefabväggar och liknande konstruktioner. Den har många andra benämningar, varav hönstrappa, puckelpist och förtagningslist är de vanligaste. Kamelen kan med fördel ersätta befintliga lister i trä, cellplast eller gummi då den är billigare än en trälist och tål att användas flera gånger.<br/>Kan monteras mot träform med spik eller skruv, mot stålform med magnet eller vår egna list, Kamelspåret.<br/>Har en mycket slät och fin yta vilket gör den lätt att ta bort.<br/>Mycket tålig vid varsam hantering.<br/>Tål alla former av formoljor, formvax mm.<br/>Längd: 615 mm<br/>Bredd: 72 mm<br/>Höjd: 20/38 mm<br/>Antal/förpackning: 50 st (30 meter)<br/>Lagervara', '39_kraftfogsursparing_kamel.png', pg, 'Kraftfogsursparing_kamel', False)
     db.session.add(p)
 
      # KAMELSPÅRET #
@@ -1118,10 +1112,10 @@ def CreateData():
         ProductInfo('200', 2, antalforpSt, p),
         ProductInfo('400', 3, antalforpSt, p),
         ProductInfo('400', 4, antalforpSt, p),
-        ProductInfo('Ring oss', 1, lagerstatus, p),
-        ProductInfo('Ring oss', 2, lagerstatus, p),
-        ProductInfo('Ring oss', 3, lagerstatus, p),
-        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
     ])
     
     # T-List #
@@ -1265,8 +1259,8 @@ def CreateData():
     db.session.add(p)
 
     
-    ###### -- Magneter -- ######
-    pc = ProductCategory('Magneter')
+    ###### -- Formsättning -- ######
+    pc = ProductCategory(u'Formsättning')
     db.session.add(pc)
    
     pg = ProductGroup(u'Magfly', 'Missing.png', pc, u'Magfly')
@@ -1560,10 +1554,10 @@ def CreateData():
         ProductInfo('3.7', 3, viktKg, p),
        ])
 
-    p = Product(u'Magnet för eldosor Typ E', u'Magnet för elektriska dosor. Ny modell som är under utveckling, ring oss för mer information!', 'missing.png', pg, 'Magnet_eldosor_typ_e', False)
+    p = Product(u'Magnet för eldosor Typ E', u'Magnet för elektriska dosor. Ny modell som är under utveckling, ring oss för mer information!', '87_eldosemagnet.png', pg, 'Magnet_eldosor_typ_e', False)
     db.session.add(p)
 
-    p = Product(u'Magnet för rör Typ A', u'Magnet för rör. Ny modell som är under utveckling, ring oss för mer information!', 'missing.png', pg, 'Magnet_eldosor_typ_a', False)
+    p = Product(u'Magnet för rör Typ A', u'Magnet för rör. Ny modell som är under utveckling, ring oss för mer information!', '87_eldosemagnet.png', pg, 'Magnet_eldosor_typ_a', False)
     db.session.add(p)
 
     ###### LISTER MAGNETER ######
@@ -1701,7 +1695,11 @@ def CreateData():
         ProductInfo('9.7', 2, viktKg, p),
         ProductInfo('11.3', 3, viktKg, p),
        ])
+    
+    p = Product(u'Tillbehör multiform', u'Det finns många olika tillbehör till Multiformsystemet. Nedan finns de vanligaste.<br/>Det finns fler och vi skräddarsyr gärna kundanpassade lösningar, kontakta oss för mer information.', 'multiform_toppformstag.jpg', pg, 'Tillbehor_multiform', False)
+    db.session.add(p)
 
+    
     ###### Färdiga adaptrar med magneter ######
     pg = ProductGroup(u'Färdiga adaptrar med magneter', 'Missing.png', pc, u'Adaptrar_med_magneter')
     db.session.add(pg)
@@ -1784,16 +1782,22 @@ def CreateData():
 
     p = Product('Formsidor olika profiler m.m.', u'Formsidor med exempelvis H-profil, kan levereras både med och utan integrerad magnet. Även specialavstängare för plattbjälklag finns. <br/>Hittar ni inte det ni vill ha på bilden, ring oss det finns många fler modeller och vi skräddarsyr gärna enligt kundönskemål', '81_formsidor_olika_profiler.png', pg, 'Formsidor_profiler', False)
     db.session.add(p)
+    ## Fjäril ##
+    pg = ProductGroup(u'Fjäril för batteriformar', '90_fjaril.png', pc, u'Fjaril_batteriformar')
+    db.session.add(pg)
 
-    ###### -- Magneter -- ######
-    pc = ProductCategory(u'Vägginfästning')
+    p = Product(u'Fjäril för batteriformar', u'Produktionen av prefabricerade element sker idag ibland med batteriform. Med hjälp av detta system, som är en ny lösning på hur man hanterar formsättningen i en batteriform, sparas både tid och arbetsbelastning.<br/><br/> Fördelar:<br/>Produktionen är snabb och enkel att använda. Ytan är slät på båda sidor så att ingen ytterligare efterbehandling krävs.<br/> Mängd element producerade i en batteriform ökar rejält med litet krav på extra utrymme.<br/>Ger flexibilitet när det gäller lämplig plats', '90_fjaril.png', pg, 'Fjaril_batteriformar', False)
+    db.session.add(p)
+
+    ###### -- ELEMENTINFÄSTNING  -- ######
+    pc = ProductCategory(u'Elementinfästning')
     db.session.add(pc)
     
-    pg = ProductGroup(u'Igloo', 'Missing.png', pc, u'Igloo')
+    pg = ProductGroup(u'Igloo', '88_igloo.png', pc, u'Igloo')
     db.session.add(pg)
 
 
-    p = Product(u'Skruvkoppling IGLOO', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', 'missing.png', pg, 'Skruvkoppling_igloo', False)
+    p = Product(u'Skruvkoppling IGLOO', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss eller se den tekniska specifikationen längst ner (.PDF)', '88_igloo.png', pg, 'Skruvkoppling_igloo', False)
     db.session.add(p)
 
     db.session.add_all([
@@ -1835,7 +1839,7 @@ def CreateData():
         ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 12, utokadBeskr, p),
        ])
 
-    p = Product(u'Ursparing för IGLOO', u'Fler modeller finns, kontakta oss för mer information.', 'missing.png', pg, 'Ursparing_igloo', False)
+    p = Product(u'Ursparing för IGLOO', u'Fler modeller finns, kontakta oss för mer information.', '89_igloo_2.png', pg, 'Ursparing_igloo', False)
     db.session.add(p)
 
     db.session.add_all([
@@ -1880,7 +1884,7 @@ def CreateData():
     db.session.add(pg)
 
 
-    p = Product(u'Rubberelast', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', '85_rubberelast.png', pg, 'Rubberelast', False)
+    p = Product(u'Rubberelast', u'RubberElast® är ett material som enkelt och snabbt tillämpas överallt, nästan helt oberoende på temperatur. Materialet blir vattentät omedelbart efter applicering, eftersom det är stadigt limmat mot de prefabricerade ytorna genom tryck. Materialet förblir tixotrop. Det är motståndskraftigt mot aggressiva miljöer. Detta gör att RubberElast® passar i miljöer där avloppsvatten förekommer. Testcertifikat utfärdas av Material Testing Institut i Braunschweig, Tyskland.<br/>Enkelt att applicera, extremt hög motståndskraft mot vatten och gas. <br/>Mycket god vidhäftnings kapacitet.  Snabbarbetat, inga verktyg behövs.<br/>Blir vattentät omedelbart efter applicering. Fungerar även vid låga temperaturer.<br/>Resistent mot syror, alkalier, salter och betongslam.', '85_rubberelast.png', pg, 'Rubberelast', False)
     db.session.add(p)
 
     db.session.add_all([
@@ -1911,6 +1915,7 @@ def CreateData():
         ProductInfo(u'2.87', 5, viktPerMeter, p),
        ])
 
+    
 
 
     db.session.commit()
