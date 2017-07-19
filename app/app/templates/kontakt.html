@@ -1,60 +1,71 @@
 {% extends "base.html" %}
 {% block header %}
-	{{ super() }}
+{{ super() }}
 {% endblock %}
 {% block crumbs %}
-	{{ super() }}
-	/ <a href="/om">Om D2B</a>{% endblock %}
+{{ super() }}
+/ <a href="/om">Om D2B</a>{% endblock %}
 {% block content %}
 <h2>Kontakt</h2>
-<div class="entry col-2-left" >
-	<img src="{{ url_for('static', filename='images/') }}D2B.jpg" style="width: 70%;" />
-<p class="clearLeft floatLeft" style="margin-right: 40px;">
-<b>Besöksadress</b><br/>
+<div class="entry floatLeft" style="width: 100%; margin-bottom: 50px;">
+	<div class="contactBox">
+		<div class="contactBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}D2B.jpg" />
+		</div>
+		<p class="contactBoxCaption">Växel<br/>Tel: <a href="tel:031916301">031 - 91 63 01</a>
+		</p>
+	</div>
+
+	<div class="contactBox">
+		<div class="contactBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}hakan.png" />
+		</div>
+
+		<p class="contactBoxCaption">
+		Håkan Stenholm	(<i class="italic">VD</i>)<br/>
+		Tel: <a href="tel:031916304">031 - 91 63 04</a><br/>
+		<script type="text/javascript"><!--
+var ougvggt = ['m','<','"','k','a','i','s','o',' ','"','e','=','h','g','l','o','y','y','h','-','n','e','i','a','b','.','e','e','"','g','"',':','h','a','o','a','2','s','c','m','a','t','m','h','k','l','=','g','m','2','n','r','>','s','e','a','l','s','.','@',' ','s','l','g','b','b','a','d','f','<','.','-','a','t','l','s','@','b','n','a','d','n','e','/','t','.','h','>'];var nzibnxr = [29,0,42,60,1,54,48,14,2,56,41,49,3,80,12,69,78,36,68,34,25,51,11,59,33,39,83,24,8,38,50,15,26,53,27,86,32,47,44,52,17,13,71,58,18,55,7,79,9,74,62,4,87,22,66,61,70,82,63,72,43,64,45,37,77,35,46,31,6,84,21,76,10,65,28,40,30,75,67,19,73,20,5,85,23,81,16,57];var arupyge= new Array();for(var i=0;i<nzibnxr.length;i++){arupyge[nzibnxr[i]] = ougvggt[i]; }for(var i=0;i<arupyge.length;i++){document.write(arupyge[i]);}
+// --></script>
+		<noscript>Please enable Javascript to see the email address</noscript>
+
+		</p>
+	</div>
+
+	<div class="contactBox">
+		<div class="contactBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}magnus.jpg" />
+		</div>
+		<p class="contactBoxCaption">
+		Magnus Sanborn (<i class="italic">Säljare</i>)<br/>
+		Tel: <a href="tel:031916314">031 - 91 63 14</a><br/>
+		<script type="text/javascript"><!--
+var blsxipx = ['n','s','2','n','m','d','a','<','a','h','s','n','"','l','e','/','t','r','m',' ','@','b','2','e','i','=','y','a','s','s','a','-','s','y','u','o','.','e','.','f',' ','r','a','c','"','"','>','M','d','<','=','-','.','a','n','g','g','r','l','b','a','b','e','>','g','@','g','b','o','s','"','u',':','s','a','a','o','b','b','n','n','i','s','l','g','.','M','g'];var prlxqqr = [61,63,32,19,9,31,66,84,1,3,47,67,8,55,41,85,13,28,52,43,30,26,74,83,54,7,36,59,21,82,46,34,23,78,20,27,64,51,39,6,2,70,86,44,42,50,87,16,73,0,49,76,81,17,25,38,80,4,12,75,10,33,5,57,79,72,37,68,69,48,56,62,15,40,24,53,14,77,35,29,71,11,65,45,60,22,58,18];var vhxvyfy= new Array();for(var i=0;i<prlxqqr.length;i++){vhxvyfy[prlxqqr[i]] = blsxipx[i]; }for(var i=0;i<vhxvyfy.length;i++){document.write(vhxvyfy[i]);}
+// --></script>
+		<noscript>Please enable Javascript to see the email address</noscript>
+
+		</p>
+	</div>
+</div>
+<div class="entry col-2-left clearLeft" >
+	<!--<p class="clearLeft floatLeft" style="margin-right: 40px;">-->
+	<h3 style="margin-top: 0;">Besöks- & Faktureringsadress</h3>
 	D2B Byggprodukter AB<br/>
 	Johans Väg 3<br/>
-438 39 Landvetter</p>
-<p class="floatLeft">
-<b>Faktureringsadress</b><br/>
-Byvägen 55<br/>
-438 36 Landvetter
-</p>
-	
-	<h2 class="clearBoth">Telefon och mail</h2>
-	Växel<br/><a href="tel:031916301">031 - 91 63 01</a><br/><br/>
-	<b>Håkan Stenholm</b><br/>
-	<i class="italic">VD</i><br/>
-	<a href="tel:031916304">031 - 91 63 04</a><br/>
-	<script type="text/javascript">eval(unescape("%71%63%6c%64%76%37%39%3d%5b%27%25%36%38%25%36%31%25%36%62%25%36%31%25%36%65%25%32%65%25%37%33%25%37%34%25%36%35%25%36%65%25%36%38%25%36%66%25%36%63%25%36%64%27%2c%5b%27%25%37%33%25%36%35%27%2c%27%25%36%34%25%33%32%25%36%32%25%32%64%25%36%32%25%37%39%25%36%37%25%36%37%27%5d%2e%72%65%76%65%72%73%65%28%29%2e%6a%6f%69%6e%28%27%2e%27%29%5d%2e%6a%6f%69%6e%28%27%40%27%29%3b%71%73%7a%68%78%37%39%3d%27%48%61%6b%61%6e%20%53%74%65%6e%68%6f%6c%6d%20%5b%61%74%5d%20%64%32%62%2d%62%79%67%67%20%2e%20%73%65%27%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%71%73%7a%68%78%37%39%2e%6c%69%6e%6b%28%27%6d%61%69%27%2b%27%6c%74%6f%3a%27%2b%71%63%6c%64%76%37%39%29%29%3b"));</script><br/><br/>
-	<b>Magnus Sanborn</b><br/>
-	<i class="italic">Säljare</i><br/>
-	<a href="tel:031916314">031 - 91 63 14</a><br/>
-	<script type="text/javascript">
-//<![CDATA[
-<!--
-var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-"=59){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
-".substr(0,ol);}f(\")04,\\\" *\\\"\\\\15(t;/wb>hitn&h;l'[qeX\\\"\\\\or120\\\\"+
-"730\\\\220\\\\230\\\\t\\\\W310\\\\200\\\\030\\\\220\\\\520\\\\630\\\\LS,M2P" +
-"t\\\\700\\\\630\\\\000\\\\430\\\\GD9100\\\\020\\\\L600\\\\700\\\\&<p>i>130\\"+
-"\\6%97:2!771\\\\#: *-&p&<+/$)a630\\\\|&ZLU430\\\\Z600\\\\330\\\\020\\\\YZP@" +
-"Z@F630\\\\[@HA^IFL\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gni" +
-"rtS=+o;721=%y{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\""+
-")"                                                                           ;
-while(x=eval(x));
-//-->
-//]]>
-	</script><br/><br/>
-	<b>Peter Olsson</b><br/>
-	<i class="italic">Lager</i><br/><br/>
+	438 39 Landvetter<br/>
+	<script type="text/javascript"><!--
+var feembui = ['e','s','f','g','t','i','b','a','"','f','a','e','>','>','m','t','"','o','l','y','g','.','f','.','b','"','r',' ','-','<','a','k','a','2','e','/','m','s','b','=','a','i','e','r','k','a','g','s',':','u','c','t','d','<','@','a','g','d','=',' ','u','l','h','-','a','a','"','2','l','@','s','b','r','y'];var wvduexd = [44,33,51,65,13,47,61,46,43,6,1,69,50,73,45,19,8,14,12,29,31,67,16,32,63,35,4,2,62,70,10,53,57,25,34,71,9,40,28,7,17,11,5,21,18,52,30,68,15,55,37,54,59,0,23,39,66,24,42,36,20,38,3,27,22,72,49,60,48,58,41,26,56,64];var ttswoer= new Array();for(var i=0;i<wvduexd.length;i++){ttswoer[wvduexd[i]] = feembui[i]; }for(var i=0;i<ttswoer.length;i++){document.write(ttswoer[i]);}
+// --></script>
+	<noscript>Please enable Javascript to see the email address</noscript>
+	</p>
 </div>
 <div class="col-2-right">
 	<div class="iframe-container">
-	<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2133.3050476762496!2d12.244798116006114!3d57.67729498111166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ffa2ff3aaf82f%3A0xae69ea4f7035e39d!2sJohans+v%C3%A4g+3%2C+438+93+Landvetter!5e0!3m2!1ssv!2sse!4v1498770092269" allowfullscreen></iframe>
-</div>
+		<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2133.3050476762496!2d12.244798116006114!3d57.67729498111166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ffa2ff3aaf82f%3A0xae69ea4f7035e39d!2sJohans+v%C3%A4g+3%2C+438+93+Landvetter!5e0!3m2!1ssv!2sse!4v1498770092269" allowfullscreen></iframe>
+	</div>
 </div>
 {% endblock %}
 {% block footer %}
-	{{ super() }}
+{{ super() }}
 {% endblock %}
 
