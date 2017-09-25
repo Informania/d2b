@@ -1879,7 +1879,7 @@ def CreateData():
        ])
     
 
-    ## Rubberellast ##
+    ## Rubberelast ##
     pg = ProductGroup(u'Rubberelast', '85_rubberelast.png', pc, u'Rubberelast')
     db.session.add(pg)
 
@@ -1916,6 +1916,8 @@ def CreateData():
        ])
 
     
+    p = Product(u'SPA-Byglar', u'Mer information kommer.', u'91_spa_byglar.png', pg, 'spa_byglar', False)
+    db.session.add(p)
 
 
     db.session.commit()
