@@ -11,18 +11,67 @@
 	{% endif %}
 {% endblock %}
 {% block content %}
+<div id="imageControls" class="unselectable">
+	<p style="margin-bottom: 0;">Bildstorlek</p>
+	<div class="button imageSizeButton">-</div>
+	<div class="button imageSizeButton">+</div>
+	<span id="currentImageSize" style="visibility:hidden;">4</span>
+</div>
 <div class="row textCenter">
-	{% if category %}
-		<h1>{{ category }}</h1>
-	{% else %}
-	<h1>Produkter</h1>
-	{% endif %}
+	<div id="productsHeader">
+		{% if category %}
+			<h1>{{ category }}</h1>
+		{% else %}
+		<h1>Produkter</h1>
+		{% endif %}
+		<div id="top-controls-outer-wrapper">
+			<div id="top-controls-inner-wrapper">
+				<div id="productGroupsNav" class="unselectable green-button">
+					<h3>Kategorier <span id="productNavTriangle">&#x25BC;</span></h3>
+					<div id="productGroupsNavInner" class="hidden">
+						{% for group in groups %}
+						<a href="#{{ group.url }}"><label class="productGroupsNavItem">{{ group.name }}</label></a>
+						{% endfor %}
+					</div>
+				</div>
+				<div id="productCatalogButton" class="unselectable green-button" data-balloon="Ladda hem produktkataloger" data-balloon-pos="up">
+					<h3>Produktkataloger <span id="catalogNavTriangle">&#x25BC;</span></h3>
+					<div id="productCatalogInner" class="hidden">
+						<a href="{{ url_for('static', filename='D2B_produktinformation_web.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Distanser katalog</label></a>
+						<a href="{{ url_for('static', filename='D2B_fjaril_batteriform.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Fjäril instruktionsflyer</label></a>
+						<a href="{{ url_for('static', filename='D2B_infoblad_fjaril_EN.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Fjäril informationsblad</label></a>
+						<a href="{{ url_for('static', filename='D2B_Fonsterursp_2015.PDF')}}" target="_blank">
+							<label class="productGroupsNavItem">Fönsterursparing datablad</label></a>
+						<a href="{{ url_for('static', filename='D2B_igloo_certifikat.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Igloo certifikat</label></a>
+						<a href="{{ url_for('static', filename='D2B_igloo_en_web.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Igloo informationsblad</label></a>
+						<a href="{{ url_for('static', filename='D2B_Tekniskt_datablad_igloo.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Igloo datablad</label></a>
+						<a href="{{ url_for('static', filename='D2B_K-Elast_katalog.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">K-Elast katalog</label></a>
+						<a href="{{ url_for('static', filename='D2B_MagFly_katalog.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Magfly katalog</label></a>
+						<a href="{{ url_for('static', filename='D2B_Thermopin_Datablad.pdf')}}" target="_blank">
+							<label class="productGroupsNavItem">Thermopin datablad</label></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	{% for group in groups %}
 	<div class="row textLeft">
-		<h2>{{ group.name }}</h2>
+		<h2 id="{{ group.url }}">{{ group.name }}</h2>
 		{% for product in group.products %}
-		<div onclick="location.href='/produkter/Distanser/{{group.url}}/{{product.url}}'" class="card">
-			<img src="{{ url_for('static', filename='images/products/')}}{{product.image}}" />
+		<div onclick="location.href='/produkter/{{group.category.name}}/{{group.url}}/{{product.url}}'" class="card card-4">
+			<div class="card-image-outer">
+				<div class="card-image-wrapper">
+					<img src="{{ url_for('static', filename='images/products/')}}{{product.image}}" />
+				</div>
+			</div>
 			<p class="cardCaption">{{product.name}}</p>
 		</div>
 		{% endfor %}

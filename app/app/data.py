@@ -132,13 +132,13 @@ def CreateData():
         ProductInfo('50', 7, hojd, p),
         ProductInfo('60', 8, hojd, p),
         ProductInfo('70', 9, hojd, p),
-        ProductInfo('50', 1, antalForpPall, p),
+        ProductInfo('50 / 3150', 1, antalForpPall, p),
         ProductInfo('50 / 3150', 2, antalForpPall, p),
         ProductInfo('50 / 2100', 3, antalForpPall, p),
         ProductInfo('50 / 1800', 4, antalForpPall, p),
-        ProductInfo('30 / 1200', 5, antalForpPall, p),
+        ProductInfo('30 / 1260', 5, antalForpPall, p),
         ProductInfo('30 / 1200', 6, antalForpPall, p),
-        ProductInfo('30 / 720', 7, antalForpPall, p),
+        ProductInfo('30 / 840', 7, antalForpPall, p),
         ProductInfo('20', 8, antalForpPall, p),
         ProductInfo('20', 9, antalForpPall, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
@@ -271,9 +271,9 @@ def CreateData():
         ProductInfo('550', 7, antalforpSt, p),
         ProductInfo('500', 8, antalforpSt, p),
         ProductInfo('Ring oss', 1, lagerstatus, p),
-        ProductInfo('Lagervara', 2, lagerstatus, p),
-        ProductInfo('Lagervara', 3, lagerstatus, p),
-        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Ring oss', 4, lagerstatus, p),
         ProductInfo('Ring oss', 5, lagerstatus, p),
         ProductInfo('Ring oss', 6, lagerstatus, p),
         ProductInfo('Ring oss', 7, lagerstatus, p),
@@ -376,14 +376,14 @@ def CreateData():
         ProductInfo('40', 6, hojd, p),        
         ProductInfo('45', 7, hojd, p),        
         ProductInfo('50', 8, hojd, p),        
-        ProductInfo('4860 / 3240', 1, antalForpPall, p),
-        ProductInfo('4860 / 3240', 2, antalForpPall, p),
-        ProductInfo('4860 / 3240', 3, antalForpPall, p),
-        ProductInfo('4860 / 3240', 4, antalForpPall, p),
-        ProductInfo('4860 / 3240', 5, antalForpPall, p),
-        ProductInfo('4860 / 3240', 6, antalForpPall, p),
-        ProductInfo('4860 / 3240', 7, antalForpPall, p),
-        ProductInfo('4860 / 3240', 8, antalForpPall, p),
+        ProductInfo('4860', 1, antalForpPall, p),
+        ProductInfo('4860', 2, antalForpPall, p),
+        ProductInfo('4860', 3, antalForpPall, p),
+        ProductInfo('4860', 4, antalForpPall, p),
+        ProductInfo('4860', 5, antalForpPall, p),
+        ProductInfo('4860', 6, antalForpPall, p),
+        ProductInfo('4860', 7, antalForpPall, p),
+        ProductInfo('4860', 8, antalForpPall, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
@@ -458,54 +458,56 @@ def CreateData():
     p = Product(u'Armeringsstege KOBRA', u'Sinusformad armeringsstege, består av två längsgående vågformade armeringsjärn som hålls samman av vertikal tråd.<br/>Används vid dubbelarmering, läggs ovanpå lägsta armeringsnätet, nästa nät läggs ovanpå armeringsstegen. Rekommenderat är att armeringsstegen surras fast med najtråd i det undre nätet.<br/>Rekommenderat antal är 1 meter per kvadratmeter. Levereras i längder om 2 meter.', '40_armeringsstege_kobra.png', pg, 'Armeringsstege_kobra', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('30', 1, hojd, p),        
-        ProductInfo('40', 2, hojd, p),        
-        ProductInfo('50', 3, hojd, p),        
-        ProductInfo('60', 4, hojd, p),        
-        ProductInfo('70', 5, hojd, p),        
-        ProductInfo('80', 6, hojd, p),        
-        ProductInfo('90', 7, hojd, p),        
-        ProductInfo('100', 8, hojd, p),        
-        ProductInfo('110', 9, hojd, p),        
-        ProductInfo('120', 10, hojd, p),        
-        ProductInfo('130', 11, hojd, p),        
-        ProductInfo('140', 12, hojd, p),        
-        ProductInfo('150', 13, hojd, p),        
-        ProductInfo('160', 14, hojd, p),        
-        ProductInfo('170', 15, hojd, p),        
-        ProductInfo('180', 16, hojd, p),        
-        ProductInfo('190', 17, hojd, p),        
-        ProductInfo('200', 18, hojd, p),        
-        ProductInfo('220', 19, hojd, p),        
-        ProductInfo('240', 20, hojd, p),        
-        ProductInfo('260', 21, hojd, p),        
-        ProductInfo('280', 22, hojd, p),        
-        ProductInfo('300', 23, hojd, p),        
-        ProductInfo('400', 24, hojd, p),        
+        ProductInfo('20', 1, hojd, p),        
+        ProductInfo('30', 2, hojd, p),        
+        ProductInfo('40', 3, hojd, p),        
+        ProductInfo('50', 4, hojd, p),        
+        ProductInfo('60', 5, hojd, p),        
+        ProductInfo('70', 6, hojd, p),        
+        ProductInfo('80', 7, hojd, p),        
+        ProductInfo('90', 8, hojd, p),        
+        ProductInfo('100', 9, hojd, p),        
+        ProductInfo('110', 10, hojd, p),        
+        ProductInfo('120', 11, hojd, p),        
+        ProductInfo('130', 12, hojd, p),        
+        ProductInfo('140', 13, hojd, p),        
+        ProductInfo('150', 14, hojd, p),        
+        ProductInfo('160', 15, hojd, p),        
+        ProductInfo('170', 16, hojd, p),        
+        ProductInfo('180', 17, hojd, p),        
+        ProductInfo('190', 18, hojd, p),        
+        ProductInfo('200', 19, hojd, p),        
+        ProductInfo('220', 20, hojd, p),        
+        ProductInfo('240', 21, hojd, p),        
+        ProductInfo('260', 22, hojd, p),        
+        ProductInfo('280', 23, hojd, p),        
+        ProductInfo('300', 24, hojd, p),        
+        ProductInfo('400', 25, hojd, p),        
         ProductInfo('25 / 2000', 1, antalforpSt, p),
         ProductInfo('25 / 2000', 2, antalforpSt, p),
-        ProductInfo('25 / 1500', 3, antalforpSt, p),
+        ProductInfo('25 / 2000', 3, antalforpSt, p),
         ProductInfo('25 / 1500', 4, antalforpSt, p),
-        ProductInfo('25 / 1000', 5, antalforpSt, p),
+        ProductInfo('25 / 1500', 5, antalforpSt, p),
         ProductInfo('25 / 1000', 6, antalforpSt, p),
         ProductInfo('25 / 1000', 7, antalforpSt, p),
-        ProductInfo('25 / 900', 8, antalforpSt, p),
-        ProductInfo('25 / 800', 9, antalforpSt, p),
-        ProductInfo('25 / 700', 10, antalforpSt, p),
-        ProductInfo('25 / 600', 11, antalforpSt, p),
+        ProductInfo('25 / 1000', 8, antalforpSt, p),
+        ProductInfo('25 / 900', 9, antalforpSt, p),
+        ProductInfo('25 / 800', 10, antalforpSt, p),
+        ProductInfo('25 / 700', 11, antalforpSt, p),
         ProductInfo('25 / 600', 12, antalforpSt, p),
         ProductInfo('25 / 600', 13, antalforpSt, p),
-        ProductInfo('25 / 500', 14, antalforpSt, p),
+        ProductInfo('25 / 600', 14, antalforpSt, p),
         ProductInfo('25 / 500', 15, antalforpSt, p),
         ProductInfo('25 / 500', 16, antalforpSt, p),
         ProductInfo('25 / 500', 17, antalforpSt, p),
-        ProductInfo('25 / 400', 18, antalforpSt, p),
+        ProductInfo('25 / 500', 18, antalforpSt, p),
         ProductInfo('25 / 400', 19, antalforpSt, p),
-        ProductInfo('25 / 300', 20, antalforpSt, p),
+        ProductInfo('25 / 400', 20, antalforpSt, p),
         ProductInfo('25 / 300', 21, antalforpSt, p),
         ProductInfo('25 / 300', 22, antalforpSt, p),
         ProductInfo('25 / 300', 23, antalforpSt, p),
-        ProductInfo('25 / 200', 24, antalforpSt, p),
+        ProductInfo('25 / 300', 24, antalforpSt, p),
+        ProductInfo('25 / 200', 25, antalforpSt, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
@@ -522,14 +524,15 @@ def CreateData():
         ProductInfo('Lagervara', 14, lagerstatus, p),
         ProductInfo('Lagervara', 15, lagerstatus, p),
         ProductInfo('Lagervara', 16, lagerstatus, p),
-        ProductInfo('Ring oss', 17, lagerstatus, p),
-        ProductInfo('Lagervara', 18, lagerstatus, p),
-        ProductInfo('Ring oss', 19, lagerstatus, p),
+        ProductInfo('Lagervara', 17, lagerstatus, p),
+        ProductInfo('Ring oss', 18, lagerstatus, p),
+        ProductInfo('Lagervara', 19, lagerstatus, p),
         ProductInfo('Ring oss', 20, lagerstatus, p),
         ProductInfo('Ring oss', 21, lagerstatus, p),
         ProductInfo('Ring oss', 22, lagerstatus, p),
         ProductInfo('Ring oss', 23, lagerstatus, p),
         ProductInfo('Ring oss', 24, lagerstatus, p),
+        ProductInfo('Ring oss', 25, lagerstatus, p),
     ])
 
     # Nätstöd typ A # 
@@ -569,22 +572,22 @@ def CreateData():
         ProductInfo('50', 14, antalforpSt, p),
         ProductInfo('50', 15, antalforpSt, p),
         ProductInfo('50', 16, antalforpSt, p),
-        ProductInfo('Lagervara', 1, lagerstatus, p),
-        ProductInfo('Lagervara', 2, lagerstatus, p),
-        ProductInfo('Lagervara', 3, lagerstatus, p),
-        ProductInfo('Lagervara', 4, lagerstatus, p),
-        ProductInfo('Lagervara', 5, lagerstatus, p),
-        ProductInfo('Lagervara', 6, lagerstatus, p),
-        ProductInfo('Lagervara', 7, lagerstatus, p),
-        ProductInfo('Lagervara', 8, lagerstatus, p),
-        ProductInfo('Lagervara', 9, lagerstatus, p),
-        ProductInfo('Lagervara', 10, lagerstatus, p),
-        ProductInfo('Lagervara', 11, lagerstatus, p),
-        ProductInfo('Lagervara', 12, lagerstatus, p),
-        ProductInfo('Lagervara', 13, lagerstatus, p),
-        ProductInfo('Lagervara', 14, lagerstatus, p),
-        ProductInfo('Lagervara', 15, lagerstatus, p),
-        ProductInfo('Lagervara', 16, lagerstatus, p),
+        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Ring oss', 2, lagerstatus, p),
+        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
+        ProductInfo('Ring oss', 8, lagerstatus, p),
+        ProductInfo('Ring oss', 9, lagerstatus, p),
+        ProductInfo('Ring oss', 10, lagerstatus, p),
+        ProductInfo('Ring oss', 11, lagerstatus, p),
+        ProductInfo('Ring oss', 12, lagerstatus, p),
+        ProductInfo('Ring oss', 13, lagerstatus, p),
+        ProductInfo('Ring oss', 14, lagerstatus, p),
+        ProductInfo('Ring oss', 15, lagerstatus, p),
+        ProductInfo('Ring oss', 16, lagerstatus, p),
     ])
 
      # Distanslister för valv # 
@@ -599,26 +602,20 @@ def CreateData():
         ProductInfo('35', 5, hojd, p),        
         ProductInfo('40', 6, hojd, p),        
         ProductInfo('50', 7, hojd, p),        
-        ProductInfo('60', 8, hojd, p),        
-        ProductInfo('70', 9, hojd, p),        
-        ProductInfo('50', 1, antalForpPall, p),
+        ProductInfo('50 / 3150', 1, antalForpPall, p),
         ProductInfo('50 / 3150', 2, antalForpPall, p),
         ProductInfo('50 / 2100', 3, antalForpPall, p),
         ProductInfo('50 / 1800', 4, antalForpPall, p),
-        ProductInfo('30 / 1200', 5, antalForpPall, p),
+        ProductInfo('30 / 1260', 5, antalForpPall, p),
         ProductInfo('30 / 1200', 6, antalForpPall, p),
-        ProductInfo('30 / 720', 7, antalForpPall, p),
-        ProductInfo('20', 8, antalForpPall, p),
-        ProductInfo('20', 9, antalForpPall, p),
+        ProductInfo('30 / 840', 7, antalForpPall, p),
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
         ProductInfo('Lagervara', 4, lagerstatus, p),
         ProductInfo('Lagervara', 5, lagerstatus, p),
-        ProductInfo('Lagervara', 6, lagerstatus, p),
-        ProductInfo('Lagervara', 7, lagerstatus, p),
-        ProductInfo('Ring oss', 8, lagerstatus, p),
-        ProductInfo('Ring oss', 9, lagerstatus, p),
+        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Ring oss', 7, lagerstatus, p),
     ])
 
     # Distansspiral # 
@@ -763,11 +760,11 @@ def CreateData():
         ProductInfo('250', 3, antalforpSt, p),
         ProductInfo('250', 4, antalforpSt, p),
         ProductInfo('250', 5, antalforpSt, p),
-        ProductInfo('Ring oss', 1, lagerstatus, p),
-        ProductInfo('Ring oss', 2, lagerstatus, p),
-        ProductInfo('Ring oss', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
         ProductInfo('Ring oss', 4, lagerstatus, p),
-        ProductInfo('Ring oss', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
     ])
 
     # Isolerstiftsring #
@@ -835,18 +832,6 @@ def CreateData():
     p = Product(u'Dinkihjul', u'Allroundhjul framtaget för att passa på era olika järndimensioner, 4-12 mm. Detta för att minska antalet hjul som behövs hållas i lager, framförallt hos användaren.<br/>Hjulet har vågformade toppar för att ligga bra i handen och gör inte ont i handen för den som monterar.<br/>Finns för de esta olika järndimensionerna och med olika täckskikt. Fråga gärna efter det hjul som just ni behöver. OBS: Vi har mycket bra priser på dessa, förmodligen det lägsta på hela marknaden. Höjderna 20 25 och 30 finns även i nymaterial (vita) och är lagervaror.', '15_dinkihjul.png', pg, 'Dinkhjul', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('4-12', 1, jarn, p),        
-        ProductInfo('4-12', 2, jarn, p), 
-        ProductInfo('4-12', 3, jarn, p),        
-        ProductInfo('4-12', 4, jarn, p),        
-        ProductInfo('4-12', 5, jarn, p),        
-        ProductInfo('4-12', 6, jarn, p),        
-        ProductInfo('4-12', 7, jarn, p),        
-        ProductInfo('8-20', 8, jarn, p),        
-        ProductInfo('8-20', 9, jarn, p),        
-        ProductInfo('8-20', 10, jarn, p),        
-        ProductInfo('8-20', 11, jarn, p),        
-        ProductInfo('8-20', 12, jarn, p),        
         ProductInfo('15', 1, tackskikt, p),
         ProductInfo('20', 2, tackskikt, p),
         ProductInfo('25', 3, tackskikt, p),
@@ -859,6 +844,18 @@ def CreateData():
         ProductInfo('35', 10, tackskikt, p),
         ProductInfo('40', 11, tackskikt, p),
         ProductInfo('50', 12, tackskikt, p),
+        ProductInfo('4-12', 1, jarn, p),        
+        ProductInfo('4-12', 2, jarn, p), 
+        ProductInfo('4-12', 3, jarn, p),        
+        ProductInfo('4-12', 4, jarn, p),        
+        ProductInfo('4-12', 5, jarn, p),        
+        ProductInfo('4-12', 6, jarn, p),        
+        ProductInfo('4-12', 7, jarn, p),        
+        ProductInfo('8-20', 8, jarn, p),        
+        ProductInfo('8-20', 9, jarn, p),        
+        ProductInfo('8-20', 10, jarn, p),        
+        ProductInfo('8-20', 11, jarn, p),        
+        ProductInfo('8-20', 12, jarn, p),        
         ProductInfo('1000', 1, antalforpSt, p),
         ProductInfo('1000', 2, antalforpSt, p),
         ProductInfo('500', 3, antalforpSt, p),
@@ -889,18 +886,6 @@ def CreateData():
     p = Product(u'SNOK', u'Snoken är vår modell av twisthjulet. <br/>Ett speciellt hjul, anpassat för mindre järn och låga täckskickt. <br/>Sitter mycket bra fast på järnen, speciellt lämplig vid gjutning där man gör armeringskorgarna innan, exempelvis kabelrännor och dyl. Speciell låsning, träs parallellt på järnen och vrids därefter 90 grader.', '4_snok.png', pg, 'Snok', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('4', 1, jarn, p),        
-        ProductInfo('5', 2, jarn, p), 
-        ProductInfo('6', 3, jarn, p),        
-        ProductInfo('5', 4, jarn, p),        
-        ProductInfo('6', 5, jarn, p),        
-        ProductInfo('8', 6, jarn, p),        
-        ProductInfo('12', 7, jarn, p),        
-        ProductInfo('5', 8, jarn, p),        
-        ProductInfo('6', 9, jarn, p),        
-        ProductInfo('8', 10, jarn, p),        
-        ProductInfo('4-6', 11, jarn, p),        
-        ProductInfo('4-6', 12, jarn, p),        
         ProductInfo('10', 1, tackskikt, p),
         ProductInfo('10', 2, tackskikt, p),
         ProductInfo('10', 3, tackskikt, p),
@@ -913,6 +898,18 @@ def CreateData():
         ProductInfo('20', 10, tackskikt, p),
         ProductInfo('25', 11, tackskikt, p),
         ProductInfo('30', 12, tackskikt, p),
+        ProductInfo('4', 1, jarn, p),        
+        ProductInfo('5', 2, jarn, p), 
+        ProductInfo('6', 3, jarn, p),        
+        ProductInfo('5', 4, jarn, p),        
+        ProductInfo('6', 5, jarn, p),        
+        ProductInfo('8', 6, jarn, p),        
+        ProductInfo('12', 7, jarn, p),        
+        ProductInfo('5', 8, jarn, p),        
+        ProductInfo('6', 9, jarn, p),        
+        ProductInfo('8', 10, jarn, p),        
+        ProductInfo('4-6', 11, jarn, p),        
+        ProductInfo('4-6', 12, jarn, p),        
         ProductInfo('15000', 1, antalforpSt, p),
         ProductInfo('15000', 2, antalforpSt, p),
         ProductInfo('15000', 3, antalforpSt, p),
@@ -946,18 +943,18 @@ def CreateData():
     p = Product(u'Änddistans', u'Änddistansen används för att hålla rätt täckskikt på armeringsjärnets ändar.<br/>Tillverkad i ljusgrå LD-Polyeten.', '11_anddistans.png', pg, 'Anddistans', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('4-8', 1, jarn, p),        
-        ProductInfo('4-8', 2, jarn, p), 
-        ProductInfo('4-8', 3, jarn, p),        
-        ProductInfo('8-12', 4, jarn, p),        
-        ProductInfo('8-12', 5, jarn, p),        
-        ProductInfo('8-12', 6, jarn, p),        
         ProductInfo('20', 1, tackskikt, p),
         ProductInfo('25', 2, tackskikt, p),
         ProductInfo('30', 3, tackskikt, p),
         ProductInfo('20', 4, tackskikt, p),
         ProductInfo('25', 5, tackskikt, p),
         ProductInfo('30', 6, tackskikt, p),
+        ProductInfo('4-8', 1, jarn, p),        
+        ProductInfo('4-8', 2, jarn, p), 
+        ProductInfo('4-8', 3, jarn, p),        
+        ProductInfo('8-12', 4, jarn, p),        
+        ProductInfo('8-12', 5, jarn, p),        
+        ProductInfo('8-12', 6, jarn, p),        
         ProductInfo('1000', 1, antalforpSt, p),
         ProductInfo('1000', 2, antalforpSt, p),
         ProductInfo('1000', 3, antalforpSt, p),
@@ -967,9 +964,9 @@ def CreateData():
         ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Lagervara', 2, lagerstatus, p),
         ProductInfo('Lagervara', 3, lagerstatus, p),
-        ProductInfo('Ring oss', 4, lagerstatus, p),
-        ProductInfo('Ring oss', 5, lagerstatus, p),
-        ProductInfo('Ring oss', 6, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 5, lagerstatus, p),
+        ProductInfo('Lagervara', 6, lagerstatus, p),
     ])
     
     ## Gängade brickor ##
@@ -1042,14 +1039,14 @@ def CreateData():
         ProductInfo(u'Vit, spikhål', 2, utforande, p),
         ProductInfo(u'Spikhål', 3, utforande, p),
         ProductInfo(u'Spikhål', 4, utforande, p),
-        ProductInfo('Ring oss', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
         ProductInfo('Ring oss', 2, lagerstatus, p),
-        ProductInfo('Ring oss', 3, lagerstatus, p),
-        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
     ])
 
     # Ståltrekantslist #
-    p = Product(u'Ståltrekantslist', u'Används för att få en snygg fas på stålformar. Svetsbar.', 'missing.png', pg, 'Staltrekantslist', False)
+    p = Product(u'Ståltrekantslist', u'Används för att få en snygg fas på stålformar. Svetsbar.', '80_trekantslist.jpg', pg, 'Staltrekantslist', False)
     db.session.add(p)
     db.session.add_all([
         ProductInfo(u'22 x 10 x 5', 1, abc, p), 
@@ -1083,15 +1080,15 @@ def CreateData():
     db.session.add(p)
     
     # Dubbursparing KORP #
-    p = Product(u'Dubbursparing KORP', u'En ny modell av dubbursparing, i första hand för 20 mm dubb. Den är tvådelad, det förenklar vid fastsättandet i formen.<br/>Locket monteras i formsidan. När huvudarmeringen och tilläggsarmeringen är nedlagda i formen sätts rördelen dit. Detta innebär att den inte rivs bort eller hamnar snett. Den har en täckande plasthinna som förhindrar att det kommer in grus och vatten.<br/>Locket: 75x75 mm<br/>Rördelen: 160 mm<br/>Antal/förpackning: 450 st','41_dubbsparing_korp.png', pg, 'Dubbursparing_korp', False)
+    p = Product(u'Dubbursparing KORP', u'En ny modell av dubbursparing, i första hand för 20 mm dubb. Den är tvådelad, det förenklar vid fastsättandet i formen.<br/>Locket monteras i formsidan. När huvudarmeringen och tilläggsarmeringen är nedlagda i formen sätts rördelen dit. Detta innebär att den inte rivs bort eller hamnar snett. Den har en täckande plasthinna som förhindrar att det kommer in grus och vatten.<br/>Locket: 75x75 mm<br/>Rördelen: 160 mm<br/>Antal/förpackning: 450 st<br/>Lagervara','41_dubbsparing_korp.png', pg, 'Dubbursparing_korp', False)
     db.session.add(p)
 
     # Dubbursparing GÖK #
-    p = Product(u'Dubbursparing GÖK', u'Samma användningsområde och specifikationer som Dubbursparing KORP, med skillnaden att den är anpassad för rör på 100mm.', '31_dubbsparing_gok.png', pg, 'Dubbursparing_gok', False)
+    p = Product(u'Dubbursparing GÖK', u'Samma användningsområde och specifikationer som Dubbursparing KORP, med skillnaden att den är anpassad för rör på 100mm.<br/>Lagervara', '31_dubbsparing_gok.png', pg, 'Dubbursparing_gok', False)
     db.session.add(p)
 
     # KAMEL #
-    p = Product(u'Kraftfogsursparing KAMEL', u'Kamelen är en list för att skapa en fog för kraftöverföring mellan prefabväggar och liknande konstruktioner. Den har många andra benämningar, varav hönstrappa, puckelpist och förtagningslist är de vanligaste. Kamelen kan med fördel ersätta befintliga lister i trä, cellplast eller gummi då den är billigare än en trälist och tål att användas flera gånger.<br/>Kan monteras mot träform med spik eller skruv, mot stålform med magnet eller vår egna list, Kamelspåret.<br/>Har en mycket slät och fin yta vilket gör den lätt att ta bort.<br/>Mycket tålig vid varsam hantering.<br/>Tål alla former av formoljor, formvax mm.<br/>Längd: 615 mm<br/>Bredd: 72 mm<br/>Höjd: 20/38 mm<br/>Antal/förpackning: 50 st (30 meter)', '39_kraftfogsursparing_kamel.png', pg, 'Kraftfogsursparing_kamel', False)
+    p = Product(u'Kraftfogsursparing KAMEL', u'Kamelen är en list för att skapa en fog för kraftöverföring mellan prefabväggar och liknande konstruktioner. Den har många andra benämningar, varav hönstrappa, puckelpist och förtagningslist är de vanligaste. Kamelen kan med fördel ersätta befintliga lister i trä, cellplast eller gummi då den är billigare än en trälist och tål att användas flera gånger.<br/>Kan monteras mot träform med spik eller skruv, mot stålform med magnet eller vår egna list, Kamelspåret.<br/>Har en mycket slät och fin yta vilket gör den lätt att ta bort.<br/>Mycket tålig vid varsam hantering.<br/>Tål alla former av formoljor, formvax mm.<br/>Längd: 615 mm<br/>Bredd: 72 mm<br/>Höjd: 20/38 mm<br/>Antal/förpackning: 50 st (30 meter)<br/>Lagervara', '39_kraftfogsursparing_kamel.png', pg, 'Kraftfogsursparing_kamel', False)
     db.session.add(p)
 
      # KAMELSPÅRET #
@@ -1115,10 +1112,10 @@ def CreateData():
         ProductInfo('200', 2, antalforpSt, p),
         ProductInfo('400', 3, antalforpSt, p),
         ProductInfo('400', 4, antalforpSt, p),
-        ProductInfo('Ring oss', 1, lagerstatus, p),
-        ProductInfo('Ring oss', 2, lagerstatus, p),
-        ProductInfo('Ring oss', 3, lagerstatus, p),
-        ProductInfo('Ring oss', 4, lagerstatus, p),
+        ProductInfo('Lagervara', 1, lagerstatus, p),
+        ProductInfo('Lagervara', 2, lagerstatus, p),
+        ProductInfo('Lagervara', 3, lagerstatus, p),
+        ProductInfo('Lagervara', 4, lagerstatus, p),
     ])
     
     # T-List #
@@ -1126,7 +1123,7 @@ def CreateData():
     db.session.add(p)
 
     # Plaströr #
-    p = Product(u'Dubbursparing', u'Lettrade, runda rör i längder om 2000 mm.<br/>Har flera användningsområden men används vanligast som distans mellan väggformar då den kapas i rätt längd och används tillsammans med invändig kona RIK samt tätningsplugg RTP.', '57_plastror.png', pg, 'Plastror', False)
+    p = Product(u'Plaströr', u'Lettrade, runda rör i längder om 2000 mm.<br/>Har flera användningsområden men används vanligast som distans mellan väggformar då den kapas i rätt längd och används tillsammans med invändig kona RIK samt tätningsplugg RTP.', '57_plastror.png', pg, 'Plastror', False)
     db.session.add(p)
     db.session.add_all([
         ProductInfo('260', 1, typ, p), 
@@ -1246,7 +1243,7 @@ def CreateData():
     db.session.add(p)
 
     # Dubbar #
-    p = Product(u'Brodubb, Loddubb och Rostfri dubb', u'<b>Brodubb:</b> Avvägningsdubb av mässing med rundad topp. Ingjutes eller inborras i kantbalk som punkt. Godkänd av vägverket. Dimension 100x10 mm.<br/><br/><b>Loddubb:</b> Diameter 10 mm, längd 125 mm. Med spår för lodlina.<br/><br/><b>Rostfri dubb:</b> Diameter 10 mm, längd 100 mm. Används till elektrokemisk potentialmätning.', 'missing.png', pg, 'Dubbar', False)
+    p = Product(u'Brodubb, Loddubb och Rostfri dubb', u'<b>Brodubb:</b> Avvägningsdubb av mässing med rundad topp. Ingjutes eller inborras i kantbalk som punkt. Godkänd av vägverket. Dimension 100x10 mm.<br/><br/><b>Loddubb:</b> Diameter 10 mm, längd 125 mm. Med spår för lodlina.<br/><br/><b>Rostfri dubb:</b> Diameter 10 mm, längd 100 mm. Används till elektrokemisk potentialmätning.', '68_brodubb.png', pg, 'Dubbar', False)
     db.session.add(p)
 
     # Pappursparing #
@@ -1262,14 +1259,14 @@ def CreateData():
     db.session.add(p)
 
     
-    ###### -- Magneter -- ######
-    pc = ProductCategory('Magneter')
+    ###### -- Formsättning -- ######
+    pc = ProductCategory(u'Formsättning')
     db.session.add(pc)
    
     pg = ProductGroup(u'Magfly', 'Missing.png', pc, u'Magfly')
     db.session.add(pg)
     
-    p = Product('Magnet typ K', u'', 'missing.png', pg, 'Magfly_k', False)
+    p = Product('Formbordsmagnet typ K', u'Även populärt kallad våffelmagnet.<br/>Allroundmagnet, går att tillsammans med lika applikationer att använda till det mesta som kan behöver på ett stålbord, applikationerna kan ni köpa av oss, eller tillverka er egen speciallösning. Fungerar naturligtvis alldeles utmärkt som bara magnet, är bra på att sitta i vägen', '70_magnet_typ_k.png', pg, 'Magfly_k', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1289,8 +1286,12 @@ def CreateData():
         ProductInfo('12.5', 4, viktKg, p),
         ProductInfo('15', 5, viktKg, p),
        ])
-    
-    p = Product(u'Magnetfot för gängtapp', u'', 'missing.png', pg, 'Magnetfot_gangtapp', False)
+
+    p = Product(u'Adaptrar för formbordsmagnet typ K', u'Det finns många färdiga adaptrar för formbordssmaget typ K, alla ger möjligheter att använda K magneten på de mest olika sätt.<br/>Här finner ni bilder och beskrivning på ett urval av dem. Det finns fler, så fråga oss alltid om ni behöver någon speciallösning. Vi och vår leverantör är mycket positiva till att ta fram kundanpassade lösningar.', '71_adapter_multiform.jpg', pg, 'Magfly_k_adaptrar', False)
+    db.session.add(p)
+ 
+        
+    p = Product(u'Magnetfot typ GB', u'<b>Magnetfäste för gängad infästning typ GB.</b><br/>Vår magnet för gängat är av stål, det finns för och nackdelar med stål kontra gummi, fördelen är hållbarheten, en i stål klarar betydligt fler gjutningar än en i gummi, en nackdel är att ytorna i ursparingen inte är lika fina, om det nu har någon betydelse.<br/>Andra fördelar med vår magnet är att det är enkelt att byta gängstorlek på dem, gängtapparna sitter fast med en segersäkring på undersidan, ta bara bort den, så lossa gängtappen och kan bytas till annan dimension, alla olika gängdimensioner passa i samma magnet.<br/>Magnetplattorna finns i fyra olika storlekar, med olika magnetkraft. Plattorna och tapparna kan paras ihop efter eget önskemål.<br/>Lätta att hålla rena, tål alla sorter av formsläppingsmedel. Är lätta att lossa efter användandet.', '72_magnet_typ_gb.png', pg, 'Magnetfot_gangtapp', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1298,62 +1299,106 @@ def CreateData():
         ProductInfo('MFGB64', 2, artnr, p),
         ProductInfo('MFGB80', 3, artnr, p),
         ProductInfo('MFGB106', 4, artnr, p),
+        ProductInfo('MFGB5010', 5, artnr, p),
+        ProductInfo('MFGB5012', 6, artnr, p),
+        ProductInfo('MFGB5016', 7, artnr, p),
+        ProductInfo('MFGB5020', 8, artnr, p),
+        ProductInfo('MFGB5024', 9, artnr, p),
+        ProductInfo('MFGB5030', 10, artnr, p),
+        ProductInfo('MFGB5036', 11, artnr, p),
+        ProductInfo(u'', 1, ganga, p),
+        ProductInfo(u'', 2, ganga, p),
+        ProductInfo(u'', 3, ganga, p),
+        ProductInfo(u'', 4, ganga, p),
+        ProductInfo(u'M10', 5, ganga, p),
+        ProductInfo(u'M12', 6, ganga, p),
+        ProductInfo(u'M16', 7, ganga, p),
+        ProductInfo(u'M20', 8, ganga, p),
+        ProductInfo(u'M24', 9, ganga, p),
+        ProductInfo(u'M30', 10, ganga, p),
+        ProductInfo(u'M36', 11, ganga, p),
+        ProductInfo(u'', 1, tapphojd, p),
+        ProductInfo(u'', 2, tapphojd, p),
+        ProductInfo(u'', 3, tapphojd, p),
+        ProductInfo(u'', 4, tapphojd, p),
+        ProductInfo(u'20', 5, tapphojd, p),
+        ProductInfo(u'20', 6, tapphojd, p),
+        ProductInfo(u'20', 7, tapphojd, p),
+        ProductInfo(u'20', 8, tapphojd, p),
+        ProductInfo(u'20', 9, tapphojd, p),
+        ProductInfo(u'20', 10, tapphojd, p),
+        ProductInfo(u'20', 11, tapphojd, p),
         ProductInfo('650', 1, magnetKraft, p),
         ProductInfo('1000', 2, magnetKraft, p),
         ProductInfo('1500', 3, magnetKraft, p),
         ProductInfo('1900', 4, magnetKraft, p),
+        ProductInfo('', 5, magnetKraft, p),
+        ProductInfo('', 6, magnetKraft, p),
+        ProductInfo('', 7, magnetKraft, p),
+        ProductInfo('', 8, magnetKraft, p),
+        ProductInfo('', 9, magnetKraft, p),
+        ProductInfo('', 10, magnetKraft, p),
+        ProductInfo('', 11, magnetKraft, p),
         ProductInfo('0.13', 1, viktKg, p),
         ProductInfo('0.23', 2, viktKg, p),
         ProductInfo('0.4', 3, viktKg, p),
         ProductInfo('0.75', 4, viktKg, p),
+        ProductInfo('', 5, viktKg, p),
+        ProductInfo('', 6, viktKg, p),
+        ProductInfo('', 7, viktKg, p),
+        ProductInfo('', 8, viktKg, p),
+        ProductInfo('', 9, viktKg, p),
+        ProductInfo('', 10, viktKg, p),
+        ProductInfo('', 11, viktKg, p),
         ProductInfo('50', 1, breddBotten, p),
         ProductInfo('64', 2, breddBotten, p),
         ProductInfo('80', 3, breddBotten, p),
         ProductInfo('106', 4, breddBotten, p),
+        ProductInfo('', 5, breddBotten, p),
+        ProductInfo('', 6, breddBotten, p),
+        ProductInfo('', 7, breddBotten, p),
+        ProductInfo('', 8, breddBotten, p),
+        ProductInfo('', 9, breddBotten, p),
+        ProductInfo('', 10, breddBotten, p),
+        ProductInfo('', 11, breddBotten, p),
         ProductInfo('47', 1, breddToppen, p),
         ProductInfo('61', 2, breddToppen, p),
         ProductInfo('77', 3, breddToppen, p),
         ProductInfo('103', 4, breddToppen, p),
+        ProductInfo('', 5, breddToppen, p),
+        ProductInfo('', 6, breddToppen, p),
+        ProductInfo('', 7, breddToppen, p),
+        ProductInfo('', 8, breddToppen, p),
+        ProductInfo('', 9, breddToppen, p),
+        ProductInfo('', 10, breddToppen, p),
+        ProductInfo('', 11, breddToppen, p),
         ProductInfo('12', 1, hojdLateOrder, p),
         ProductInfo('12', 2, hojdLateOrder, p),
         ProductInfo('12', 3, hojdLateOrder, p),
         ProductInfo('12', 4, hojdLateOrder, p),
+        ProductInfo('', 5, hojdLateOrder, p),
+        ProductInfo('', 6, hojdLateOrder, p),
+        ProductInfo('', 7, hojdLateOrder, p),
+        ProductInfo('', 8, hojdLateOrder, p),
+        ProductInfo('', 9, hojdLateOrder, p),
+        ProductInfo('', 10, hojdLateOrder, p),
+        ProductInfo('', 11, hojdLateOrder, p),
         ProductInfo('M10 - M16', 1, rekTappstrlk, p),
         ProductInfo('M12 - M24', 2, rekTappstrlk, p),
         ProductInfo('M16 - M30', 3, rekTappstrlk, p),
         ProductInfo('M20 - M36', 4, rekTappstrlk, p),
+        ProductInfo('', 5, rekTappstrlk, p),
+        ProductInfo('', 6, rekTappstrlk, p),
+        ProductInfo('', 7, rekTappstrlk, p),
+        ProductInfo('', 8, rekTappstrlk, p),
+        ProductInfo('', 9, rekTappstrlk, p),
+        ProductInfo('', 10, rekTappstrlk, p),
+        ProductInfo('', 11, rekTappstrlk, p),
        ])
 
      
-    p = Product(u'Gängtapp för magnetfot', u'', 'missing.png', pg, 'gangtapp_magnetfot', False)
-    db.session.add(p)
- 
-    db.session.add_all([
-        ProductInfo('MFGB5010', 1, artnr, p),
-        ProductInfo('MFGB5012', 2, artnr, p),
-        ProductInfo('MFGB5016', 3, artnr, p),
-        ProductInfo('MFGB5020', 4, artnr, p),
-        ProductInfo('MFGB5024', 5, artnr, p),
-        ProductInfo('MFGB5030', 6, artnr, p),
-        ProductInfo('MFGB5036', 7, artnr, p),
-        ProductInfo(u'M10', 1, ganga, p),
-        ProductInfo(u'M12', 2, ganga, p),
-        ProductInfo(u'M16', 3, ganga, p),
-        ProductInfo(u'M20', 4, ganga, p),
-        ProductInfo(u'M24', 5, ganga, p),
-        ProductInfo(u'M30', 6, ganga, p),
-        ProductInfo(u'M36', 7, ganga, p),
-        ProductInfo(u'20', 1, tapphojd, p),
-        ProductInfo(u'20', 2, tapphojd, p),
-        ProductInfo(u'20', 3, tapphojd, p),
-        ProductInfo(u'20', 4, tapphojd, p),
-        ProductInfo(u'20', 5, tapphojd, p),
-        ProductInfo(u'20', 6, tapphojd, p),
-        ProductInfo(u'20', 7, tapphojd, p),
-       ])
 
-
-    p = Product(u'Magnetfot för kulankare', u'', 'missing.png', pg, 'Magnetfot_kulankare', False)
+    p = Product(u'Magnetfäste för kulankare typ KU', u'Vår magnet för gängat är av stål, det finns för och nackdelar med stål kontra gummi, fördelen är hållbarheten, en i stål klarar betydligt fler gjutningar än en i gummi, en nackdel är att ytorna i ursparingen inte är lika fina, om det nu har någon betydelse.<br/>Lätta att hålla rena, tål alla sorter av formsläppingsmedel. Är lätta att lossa efter användandet.<br>Artikelnummer som slutar på G är tillhörande gummiringar.', '73_magnet_typ_ku.png', pg, 'Magnetfot_kulankare', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1362,55 +1407,74 @@ def CreateData():
         ProductInfo('MFKU35', 3, artnr, p),
         ProductInfo('MFKU75', 4, artnr, p),
         ProductInfo('MFKU10', 5, artnr, p),
+        ProductInfo('MFKU13G', 6, artnr, p),
+        ProductInfo('MFKU25G', 7, artnr, p),
+        ProductInfo('MFKU35G', 8, artnr, p),
+        ProductInfo('MFKU75G', 9, artnr, p),
+        ProductInfo('MFKU10G', 10, artnr, p),
         ProductInfo('100', 1, magnetKraft, p),
         ProductInfo('100', 2, magnetKraft, p),
         ProductInfo('150', 3, magnetKraft, p),
         ProductInfo('200', 4, magnetKraft, p),
         ProductInfo('220', 5, magnetKraft, p),
+        ProductInfo('', 6, magnetKraft, p),
+        ProductInfo('', 7, magnetKraft, p),
+        ProductInfo('', 8, magnetKraft, p),
+        ProductInfo('', 9, magnetKraft, p),
+        ProductInfo('', 10, magnetKraft, p),
         ProductInfo('0.49', 1, viktKg, p),
         ProductInfo('0.65', 2, viktKg, p),
         ProductInfo('2.5', 3, viktKg, p),
         ProductInfo('3.3', 4, viktKg, p),
         ProductInfo('3.3', 5, viktKg, p),
+        ProductInfo('', 6, viktKg, p),
+        ProductInfo('', 7, viktKg, p),
+        ProductInfo('', 8, viktKg, p),
+        ProductInfo('', 9, viktKg, p),
+        ProductInfo('', 10, viktKg, p),
         ProductInfo('66', 1, breddBotten, p),
         ProductInfo('74', 2, breddBotten, p),
         ProductInfo('104', 3, breddBotten, p),
         ProductInfo('118', 4, breddBotten, p),
         ProductInfo('118', 5, breddBotten, p),
+        ProductInfo('', 6, breddBotten, p),
+        ProductInfo('', 7, breddBotten, p),
+        ProductInfo('', 8, breddBotten, p),
+        ProductInfo('', 9, breddBotten, p),
+        ProductInfo('', 10, breddBotten, p),
         ProductInfo('20.5', 1, breddToppen, p),
         ProductInfo('27.5', 2, breddToppen, p),
         ProductInfo('38.5', 3, breddToppen, p),
         ProductInfo('48.5', 4, breddToppen, p),
         ProductInfo('48.5', 5, breddToppen, p),
+        ProductInfo('', 6, breddToppen, p),
+        ProductInfo('', 7, breddToppen, p),
+        ProductInfo('', 8, breddToppen, p),
+        ProductInfo('', 9, breddToppen, p),
+        ProductInfo('', 10, breddToppen, p),
         ProductInfo('30.8', 1, hojdLateOrder, p),
         ProductInfo('33', 2, hojdLateOrder, p),
         ProductInfo('50.5', 3, hojdLateOrder, p),
         ProductInfo('53', 4, hojdLateOrder, p),
         ProductInfo('54', 5, hojdLateOrder, p),
+        ProductInfo('', 6, hojdLateOrder, p),
+        ProductInfo('', 7, hojdLateOrder, p),
+        ProductInfo('', 8, hojdLateOrder, p),
+        ProductInfo('', 9, hojdLateOrder, p),
+        ProductInfo('', 10, hojdLateOrder, p),
         ProductInfo('1.3 ton', 1, tillAnkare, p),
         ProductInfo('2.5 ton', 2, tillAnkare, p),
         ProductInfo('3/5 ton', 3, tillAnkare, p),
         ProductInfo('7.5 ton', 4, tillAnkare, p),
         ProductInfo('10 ton', 5, tillAnkare, p),
+        ProductInfo('1.3 ton', 6, tillAnkare, p),
+        ProductInfo('2.5 ton', 7, tillAnkare, p),
+        ProductInfo('3/5 ton', 8, tillAnkare, p),
+        ProductInfo('7.5 ton', 9, tillAnkare, p),
+        ProductInfo('10 ton', 10, tillAnkare, p),
        ])
 
-    p = Product(u'Gummitätning för magnetfot', u'', 'missing.png', pg, 'Gummitatning_magnetfot', False)
-    db.session.add(p)
- 
-    db.session.add_all([
-        ProductInfo('MFKU13G', 1, artnr, p),
-        ProductInfo('MFKU25G', 2, artnr, p),
-        ProductInfo('MFKU35G', 3, artnr, p),
-        ProductInfo('MFKU75G', 4, artnr, p),
-        ProductInfo('MFKU10G', 5, artnr, p),
-        ProductInfo('1.3 ton', 1, tillAnkare, p),
-        ProductInfo('2.5 ton', 2, tillAnkare, p),
-        ProductInfo('3/5 ton', 3, tillAnkare, p),
-        ProductInfo('7.5 ton', 4, tillAnkare, p),
-        ProductInfo('10 ton', 5, tillAnkare, p),
-       ])
-
-    p = Product('Magnet typ BR', u'', 'missing.png', pg, 'Magfly_br', False)
+    p = Product('Formbordsmagnet typ BR', u'Även populärt kallad våffelmagnet.<br/>Är i första hand avsedd att sitta inne i en U-stålprofil med måtten 60x70 mm.<br/>Naturligtvis går BR magneten att använda till annat också, det är nog bara fantasin som sätter gränser på de olika användningsområdena', '74_magnet_typ_br.png', pg, 'Magfly_br', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1445,7 +1509,7 @@ def CreateData():
        ])
 
 
-    p = Product('Magnet typ FP', u'', 'missing.png', pg, 'Magfly_fp', False)
+    p = Product('Formbordsmagnet typ FP', u'Magnetsystem huvudsakligen avsedd för kvarsittande formsida, men fungerar även vid fastsättning av andra typer av formsidor.<br/> Levereras komplett, men delarna går att köpa var för sig', '75_magnet_typ_fp.png', pg, 'Magfly_fp', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1463,13 +1527,45 @@ def CreateData():
         ProductInfo('10', 3, viktKg, p),
        ])
 
+    p = Product('Formsidesmagnet AP2200', u'Vår mest sålda magnet, designad för att klara den tuffa miljön i en prefabfabrik, de få rörliga delar som finns är väl skyddade, och går ändå lätt att rengöra. Tål betongdamm och betongspill bra. Inget separat avformningsverktyg behövs, det är inkluderat i magneten.<br/>Är anpassad för användning tillsammans med Multiform formsidesadaptrar system, men går utmärkt att använda med andra formsidor med en adapter typ 1, vilken kan antingen skruvas eller svetsas i befintlig formsida.<br/><br/>Dragkraft 2200 kn<br/>Vikt 5,4 kg<br/>Total höjd inklusive avformningsarm (h2) = 100 mm<br/>Höjd exklusive avformningsarm (h1) = 76 mm<br/>Total bredd inklusive avformningsarm (b2) = 130 mm<br/>Bredd vid anslutning till stålbord (b1) = 96 mm<br/>Total längd inklusive avformningsarm  (l2) =  385 mm<br/>Längd vid anslutning till stålbord (l1) = 260 mm', '69_ap_magnet.jpg', pg, 'Formsidesmaget_ap2200', False)
+    db.session.add(p)
     
+    p = Product('Formsidesmagnet AP2000', u'AP2200 får en lillebror med namn AP2000. Den största skillnaden är dess låga höjd och smala bredd. AP2000 är fortfarande i prototypstadiet, alla mått är inte helt klara än, men efterhand som de är klara kommer vi att uppdatera detta produktblad.<br/>Den har samma fördelar som AP när det gäller tålighet och praktisk användning, den är dock inte anpassad efter vår formsidessystem Multiform typ 2 utan skall användas med Multiform adapter typ 1.<br/><br/>Dragkraft 2000 kn<br/>Vikt ?<br/>Total höjd inklusive avformningsarm = 75 mm<br/>Höjd exklusive avformningsarm = ?<br/>Total bredd inklusive avformningsarm = 65 mm<br/>Total längd inklusive avformningsarm (i2) = ?<br/>Längd vid anslutning till stålbord (i1) = ?', '86_AP_2000.png', pg, 'Formsidesmaget_ap2000', False)
+    db.session.add(p)
+
+    p = Product('Formbordsmagnet typ PL/E', u'Enkel magnet vars enda funktion är att sitta fast på en stålyta. Mycket flexibel flera användningsområde, ex fönsterursparingar, i sibbformar, m.m. Ett prisvärt och flexibelt alternativ.<br/>Finns med olika magnetkraft, se tabell.', '82_magnet_typ_ple.jpg', pg, 'Formbordsmagnet_typ_pl-e', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('MFPLE400', 1, artnr, p),
+        ProductInfo('MFPLE650', 2, artnr, p),
+        ProductInfo('MFPLE850', 3, artnr, p),
+		ProductInfo('Magnet typ PL/E', 1, benamning, p),
+        ProductInfo('Magnet typ PL/E', 2, benamning, p),
+        ProductInfo('Magnet typ PL/E', 3, benamning, p),
+        ProductInfo(u'252 x 180 x 160', 1, blh, p),
+        ProductInfo(u'252 x 180 x 160', 2, blh, p),
+        ProductInfo(u'252 x 180 x 160', 3, blh, p),
+        ProductInfo('400', 1, magnetKraft, p),
+        ProductInfo('650', 2, magnetKraft, p),
+        ProductInfo('850', 3, magnetKraft, p),
+        ProductInfo('3.7', 1, viktKg, p),
+        ProductInfo('3.7', 2, viktKg, p),
+        ProductInfo('3.7', 3, viktKg, p),
+       ])
+
+    p = Product(u'Magnet för eldosor Typ E', u'Magnet för elektriska dosor. Ny modell som är under utveckling, ring oss för mer information!', '87_eldosemagnet.png', pg, 'Magnet_eldosor_typ_e', False)
+    db.session.add(p)
+
+    p = Product(u'Magnet för rör Typ A', u'Magnet för rör. Ny modell som är under utveckling, ring oss för mer information!', '87_eldosemagnet.png', pg, 'Magnet_eldosor_typ_a', False)
+    db.session.add(p)
+
     ###### LISTER MAGNETER ######
 
     pg = ProductGroup(u'Magnetlister', 'Missing.png', pc, u'Magnetlister')
     db.session.add(pg)
     
-    p = Product('Magnetlist typ trekantig', u'', 'missing.png', pg, 'magnetlist_trekant', False)
+    p = Product('Magnetlister', u'Finns i olika storlekar och med olika magnetkraft. Kan även fås med magnet på två sidor eller andra dimensioner på förfrågan.', '76_trekantslist.jpg', pg, 'Magnetlister', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1477,51 +1573,50 @@ def CreateData():
         ProductInfo('MCS1010D', 2, artnr, p),
         ProductInfo('MCS1515E', 3, artnr, p),
         ProductInfo('MCS1515D', 4, artnr, p),
+        ProductInfo('', 5, artnr, p),
+        ProductInfo('MTT101515', 6, artnr, p),
+        ProductInfo('MTT201010', 7, artnr, p),
+        ProductInfo('MTT301020', 8, artnr, p),
+        ProductInfo('MTT32106', 9, artnr, p),
+        ProductInfo('MTT402020', 10, artnr, p),
         ProductInfo(u'Trekantslist av stål med en sida magnetisk', 1, benamning, p),
         ProductInfo(u'Trekantslist av stål med två sidor magnetiska', 2, benamning, p),
         ProductInfo(u'Trekantslist av stål med en sida magnetisk', 3, benamning, p),
         ProductInfo(u'Trekantslist av stål med två sidor magnetiska', 4, benamning, p),
+        ProductInfo(u'', 5, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 6, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 7, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 8, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 9, benamning, p),
+        ProductInfo(u'Blindfogslist magnetisk', 10, benamning, p),
         ProductInfo(u'10 x 10 x 20', 1, blh, p),
         ProductInfo(u'10 x 10 x 20', 2, blh, p),
         ProductInfo(u'15 x 15 x 20', 3, blh, p),
         ProductInfo(u'15 x 15 x 20', 4, blh, p),
+        ProductInfo(u'', 5, blh, p),
+        ProductInfo(u'10 x 10 x 15', 6, blh, p),
+        ProductInfo(u'10 x 10 x 20', 7, blh, p),
+        ProductInfo(u'10 x 20 x 30', 8, blh, p),
+        ProductInfo(u'16 x 10 x 32', 9, blh, p),
+        ProductInfo(u'20 x 20 x 40', 10, blh, p),
         ProductInfo(u'3000', 1, langdMm, p),
         ProductInfo(u'3000', 2, langdMm, p),
         ProductInfo(u'3000', 3, langdMm, p),
         ProductInfo(u'3000', 4, langdMm, p),
+        ProductInfo(u'', 5, langdMm, p),
+        ProductInfo(u'3000', 6, langdMm, p),
+        ProductInfo(u'3000', 7, langdMm, p),
+        ProductInfo(u'3000', 8, langdMm, p),
+        ProductInfo(u'3000', 9, langdMm, p),
+        ProductInfo(u'3000', 10, langdMm, p),
        ])
 
-    p = Product('Magnetlist typ blindfogslist', u'', 'missing.png', pg, 'magnetlist_blindfog', False)
-    db.session.add(p)
- 
-    db.session.add_all([
-        ProductInfo('MTT101515', 1, artnr, p),
-        ProductInfo('MTT201010', 2, artnr, p),
-        ProductInfo('MTT301020', 3, artnr, p),
-        ProductInfo('MTT32106', 4, artnr, p),
-        ProductInfo('MTT402020', 5, artnr, p),
-        ProductInfo(u'Blindfogslist magnetisk', 1, benamning, p),
-        ProductInfo(u'Blindfogslist magnetisk', 2, benamning, p),
-        ProductInfo(u'Blindfogslist magnetisk', 3, benamning, p),
-        ProductInfo(u'Blindfogslist magnetisk', 4, benamning, p),
-        ProductInfo(u'Blindfogslist magnetisk', 5, benamning, p),
-        ProductInfo(u'10 x 10 x 15', 1, blh, p),
-        ProductInfo(u'10 x 10 x 20', 2, blh, p),
-        ProductInfo(u'10 x 20 x 30', 3, blh, p),
-        ProductInfo(u'16 x 10 x 32', 4, blh, p),
-        ProductInfo(u'20 x 20 x 40', 5, blh, p),
-        ProductInfo(u'3000', 1, langdMm, p),
-        ProductInfo(u'3000', 2, langdMm, p),
-        ProductInfo(u'3000', 3, langdMm, p),
-        ProductInfo(u'3000', 4, langdMm, p),
-        ProductInfo(u'3000', 5, langdMm, p),
-       ])
-
-    ###### Formsidesadapters ######
+    
+    ###### Formsidesadaptrar ######
     pg = ProductGroup(u'Formsidesadaptrar', 'Missing.png', pc, u'Formsidesadaptrar')
     db.session.add(pg)
     
-    p = Product('Multiform typ 1', u'', 'missing.png', pg, 'multiform_typ_1', False)
+    p = Product('Multiform typ 1', u'Formsidesadapter för bland annat AP magneten, när man har egna formsidor i trä eller stål.Utförande blankförzinkat stål', '78_multiform_typ_1.jpg', pg, 'multiform_typ_1', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1539,12 +1634,77 @@ def CreateData():
         ProductInfo(u'110 x 284 x 248', 6, blh, p),
        ])
 
+    p = Product('Multiform typ 2', u'Formsidesadapter i stål för i huvudsak AP magneten men magnet typ K med adapter fungerar också. Går oftast lätt att modifiera för att passa till andra modeller av formsidesmagneter.<br/>Låg vikt, mycket vridstyv och lätt att skruva plyfa mot då inga extra höjdstöd behövs oavsett höjd. Standardlängd 3050 mm, men det går enkelt att koppla ihop flera längder.', '83_multiform_typ_2.png', pg, 'multiform_typ_2', False)
+    db.session.add(p)
 
+
+    db.session.add_all([
+        ProductInfo('MFT2983000', 1, artnr, p),
+        ProductInfo('MFT21483000', 2, artnr, p),
+        ProductInfo('MFT21983000', 3, artnr, p),
+        ProductInfo('MFT22483000', 4, artnr, p),
+        ProductInfo('MFT22983000', 5, artnr, p),
+        ProductInfo('MFT23483000', 6, artnr, p),
+        ProductInfo('MFT23983000', 7, artnr, p),
+        ProductInfo('MFT24483000', 8, artnr, p),
+        ProductInfo('MFT24983000', 9, artnr, p),
+        ProductInfo('MFT25483000', 10, artnr, p),
+        ProductInfo('MFT25983000', 11, artnr, p),
+        ProductInfo('MFT26483000', 12, artnr, p),
+        ProductInfo('MFT26983000', 13, artnr, p),
+        ProductInfo(u'150 x 3050 x 65', 1, blh, p),
+        ProductInfo(u'150 x 3050 x 70', 2, blh, p),
+        ProductInfo(u'150 x 3050 x 90', 3, blh, p),
+        ProductInfo(u'200 x 3050 x 148', 4, blh, p),
+        ProductInfo(u'200 x 3050 x 190', 5, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 6, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 7, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 8, blh, p),
+        ProductInfo(u'250 x 3050 x 248', 9, blh, p),
+        ProductInfo(u'* x 3050 x 548', 10, blh, p),
+        ProductInfo(u'* x 3050 x 598', 11, blh, p),
+        ProductInfo(u'* x 3050 x 648', 12, blh, p),
+        ProductInfo(u'* x 3050 x 698', 13, blh, p),
+        ProductInfo('12.9', 1, viktKg, p),
+        ProductInfo('17.8', 2, viktKg, p),
+        ProductInfo('19.4', 3, viktKg, p),
+        ProductInfo('23.6', 4, viktKg, p),
+        ProductInfo('25.0', 5, viktKg, p),
+        ProductInfo('29.7', 6, viktKg, p),
+        ProductInfo('32.8', 7, viktKg, p),
+        ProductInfo('35.4', 8, viktKg, p),
+        ProductInfo('38.5', 9, viktKg, p),
+        ProductInfo('*', 10, viktKg, p),
+        ProductInfo('*', 11, viktKg, p),
+        ProductInfo('*', 12, viktKg, p),
+        ProductInfo('*', 13, viktKg, p),
+
+       ])
+ 
+    p = Product('Multiform typ Flyframe', u'Formsidesadapter i aluminium, samma fördelar som typ 2, men endast halva vikten', '84_multiform_typ_flyframe.png', pg, 'multiform_typ_flyframe', False)
+    db.session.add(p)
+
+    db.session.add_all([
+        ProductInfo('MFFF98', 1, artnr, p),
+        ProductInfo('MFFF198', 2, artnr, p),
+        ProductInfo('MFFF298', 3, artnr, p),
+        ProductInfo(u'180 x 3050 x 98', 1, blh, p),
+        ProductInfo(u'180 x 3050 x 198', 2, blh, p),
+        ProductInfo(u'180 x 3050 x 298', 3, blh, p),
+        ProductInfo('8.1', 1, viktKg, p),
+        ProductInfo('9.7', 2, viktKg, p),
+        ProductInfo('11.3', 3, viktKg, p),
+       ])
+    
+    p = Product(u'Tillbehör multiform', u'Det finns många olika tillbehör till Multiformsystemet. Nedan finns de vanligaste.<br/>Det finns fler och vi skräddarsyr gärna kundanpassade lösningar, kontakta oss för mer information.', 'multiform_toppformstag.jpg', pg, 'Tillbehor_multiform', False)
+    db.session.add(p)
+
+    
     ###### Färdiga adaptrar med magneter ######
     pg = ProductGroup(u'Färdiga adaptrar med magneter', 'Missing.png', pc, u'Adaptrar_med_magneter')
     db.session.add(pg)
     
-    p = Product('MagPin', u'Magpin 70x60 mm', 'missing.png', pg, 'Magpin', False)
+    p = Product('MagPin', u'U-profilssystem med integrerade magneter.<br/>Lämplig vid gjutning av skalväggar och plattbärlag, även kallat filigranbärlag.<br/>Standarddimension, bredd 60 mm, höjd 70 mm, möjlig att få faser på en eller två sidor. Standard maxlängd 3000 mm.<br/>Går att få i andra dimensioner, och längder på beställning.<br/>Två olika magneter med olika dragkraft finns. Tabellen nedan visar standardlängder.', '79_magpin.png', pg, 'Magpin', False)
     db.session.add(p)
  
     db.session.add_all([
@@ -1555,6 +1715,19 @@ def CreateData():
         ProductInfo('MP60702000', 5, artnr, p),
         ProductInfo('MP60702500', 6, artnr, p),
         ProductInfo('MP60703000', 7, artnr, p),
+		ProductInfo('', 8, artnr, p),
+		ProductInfo('MPM1054030', 9, artnr, p),
+        ProductInfo('MPM2104030', 10, artnr, p),
+        ProductInfo('MagPin 70x60 mm', 1, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 2, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 3, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 4, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 5, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 6, benamning, p),
+        ProductInfo('MagPin 70x60 mm', 7, benamning, p),
+        ProductInfo('', 8, benamning, p),
+        ProductInfo(u'Magnet för magpin', 9, benamning, p),
+        ProductInfo(u'Magnet för magpin', 10, benamning, p),
         ProductInfo(u'1', 1, antMagneter, p),
         ProductInfo(u'1', 2, antMagneter, p),
         ProductInfo(u'2', 3, antMagneter, p),
@@ -1562,6 +1735,9 @@ def CreateData():
         ProductInfo(u'2', 5, antMagneter, p),
         ProductInfo(u'2', 6, antMagneter, p),
         ProductInfo(u'3', 7, antMagneter, p),
+        ProductInfo(u'', 8, antMagneter, p),
+        ProductInfo(u'', 9, antMagneter, p),
+        ProductInfo(u'', 10, antMagneter, p),
         ProductInfo(u'500', 1, langdMm, p),
         ProductInfo(u'750', 2, langdMm, p),
         ProductInfo(u'1000', 3, langdMm, p),
@@ -1569,6 +1745,19 @@ def CreateData():
         ProductInfo(u'2000', 5, langdMm, p),
         ProductInfo(u'2500', 6, langdMm, p),
         ProductInfo(u'3000', 7, langdMm, p),
+        ProductInfo(u'', 8, langdMm, p),
+        ProductInfo(u'', 9, langdMm, p),
+        ProductInfo(u'', 10, langdMm, p),
+		ProductInfo(u'', 1, blh, p),
+		ProductInfo(u'', 2, blh, p),
+		ProductInfo(u'', 3, blh, p),
+		ProductInfo(u'', 4, blh, p),
+		ProductInfo(u'', 5, blh, p),
+		ProductInfo(u'', 6, blh, p),
+		ProductInfo(u'', 7, blh, p),
+		ProductInfo(u'', 8, blh, p),
+		ProductInfo(u'40 x 105 x 30', 9, blh, p),
+        ProductInfo(u'40 x 210 x 30', 10, blh, p),
         ProductInfo(u'8.5', 1, viktInklMagnet, p),
         ProductInfo(u'9.7', 2, viktInklMagnet, p),
         ProductInfo(u'17.0', 3, viktInklMagnet, p),
@@ -1576,30 +1765,39 @@ def CreateData():
         ProductInfo(u'22.0', 5, viktInklMagnet, p),
         ProductInfo(u'24.5', 6, viktInklMagnet, p),
         ProductInfo(u'33.0', 7, viktInklMagnet, p),
-       ])
-    
-    p = Product(u'Magnet för MagPin', u'', 'missing.png', pg, 'Magnet_magpin', False)
-    db.session.add(p)
- 
-    db.session.add_all([
-        ProductInfo('MPM1054030', 1, artnr, p),
-        ProductInfo('MPM2104030', 2, artnr, p),
-        ProductInfo(u'600', 1, magnetKraft, p),
-        ProductInfo(u'1200', 2, magnetKraft, p),
-        ProductInfo(u'40 x 105 x 30', 1, blh, p),
-        ProductInfo(u'40 x 210 x 30', 2, blh, p),
-       ])
+        ProductInfo(u'', 8, viktInklMagnet, p),
+        ProductInfo(u'', 9, viktInklMagnet, p),
+        ProductInfo(u'', 10, viktInklMagnet, p),
+		ProductInfo(u'', 1, magnetKraft, p),
+		ProductInfo(u'', 2, magnetKraft, p),
+		ProductInfo(u'', 3, magnetKraft, p),
+		ProductInfo(u'', 4, magnetKraft, p),
+		ProductInfo(u'', 5, magnetKraft, p),
+		ProductInfo(u'', 6, magnetKraft, p),
+		ProductInfo(u'', 7, magnetKraft, p),
+		ProductInfo(u'', 8, magnetKraft, p),
+		ProductInfo(u'600', 9, magnetKraft, p),
+        ProductInfo(u'1200', 10, magnetKraft, p),	       
+    ])
 
-   
-    ###### -- Magneter -- ######
-    pc = ProductCategory(u'Vägginfästning')
+    p = Product('Formsidor olika profiler m.m.', u'Formsidor med exempelvis H-profil, kan levereras både med och utan integrerad magnet. Även specialavstängare för plattbjälklag finns. <br/>Hittar ni inte det ni vill ha på bilden, ring oss det finns många fler modeller och vi skräddarsyr gärna enligt kundönskemål', '81_formsidor_olika_profiler.png', pg, 'Formsidor_profiler', False)
+    db.session.add(p)
+    ## Fjäril ##
+    pg = ProductGroup(u'Fjäril för batteriformar', '90_fjaril.png', pc, u'Fjaril_batteriformar')
+    db.session.add(pg)
+
+    p = Product(u'Fjäril för batteriformar', u'Produktionen av prefabricerade element sker idag ibland med batteriform. Med hjälp av detta system, som är en ny lösning på hur man hanterar formsättningen i en batteriform, sparas både tid och arbetsbelastning.<br/><br/> Fördelar:<br/>Produktionen är snabb och enkel att använda. Ytan är slät på båda sidor så att ingen ytterligare efterbehandling krävs.<br/> Mängd element producerade i en batteriform ökar rejält med litet krav på extra utrymme.<br/>Ger flexibilitet när det gäller lämplig plats', '90_fjaril.png', pg, 'Fjaril_batteriformar', False)
+    db.session.add(p)
+
+    ###### -- ELEMENTINFÄSTNING  -- ######
+    pc = ProductCategory(u'Elementinfästning')
     db.session.add(pc)
     
-    pg = ProductGroup(u'Igloo', 'Missing.png', pc, u'Igloo')
+    pg = ProductGroup(u'Igloo', '88_igloo.png', pc, u'Igloo')
     db.session.add(pg)
 
 
-    p = Product(u'Skruvkoppling IGLOO', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', 'missing.png', pg, 'Skruvkoppling_igloo', False)
+    p = Product(u'Skruvkoppling IGLOO', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss eller se den tekniska specifikationen längst ner (.PDF)', '88_igloo.png', pg, 'Skruvkoppling_igloo', False)
     db.session.add(p)
 
     db.session.add_all([
@@ -1641,7 +1839,7 @@ def CreateData():
         ProductInfo(u'Komplett med bultar och brickor 10 st per frp', 12, utokadBeskr, p),
        ])
 
-    p = Product(u'Ursparing för IGLOO', u'Fler modeller finns, kontakta oss för mer information.', 'missing.png', pg, 'Ursparing_igloo', False)
+    p = Product(u'Ursparing för IGLOO', u'Fler modeller finns, kontakta oss för mer information.', '89_igloo_2.png', pg, 'Ursparing_igloo', False)
     db.session.add(p)
 
     db.session.add_all([
@@ -1680,11 +1878,13 @@ def CreateData():
         ProductInfo(u'Utan Magneter', 11, utokadBeskr, p),
        ])
     
-    pg = ProductGroup(u'Rubberelast', 'Missing.png', pc, u'Rubberelast')
+
+    ## Rubberelast ##
+    pg = ProductGroup(u'Rubberelast', '85_rubberelast.png', pc, u'Rubberelast')
     db.session.add(pg)
 
 
-    p = Product(u'Rubberelast', u'För vidare teknisk information, mått, kraftupptagning osv: kontakta oss', 'missing.png', pg, 'Rubberelast', False)
+    p = Product(u'Rubberelast', u'RubberElast® är ett material som enkelt och snabbt tillämpas överallt, nästan helt oberoende på temperatur. Materialet blir vattentät omedelbart efter applicering, eftersom det är stadigt limmat mot de prefabricerade ytorna genom tryck. Materialet förblir tixotrop. Det är motståndskraftigt mot aggressiva miljöer. Detta gör att RubberElast® passar i miljöer där avloppsvatten förekommer. Testcertifikat utfärdas av Material Testing Institut i Braunschweig, Tyskland.<br/>Enkelt att applicera, extremt hög motståndskraft mot vatten och gas. <br/>Mycket god vidhäftnings kapacitet.  Snabbarbetat, inga verktyg behövs.<br/>Blir vattentät omedelbart efter applicering. Fungerar även vid låga temperaturer.<br/>Resistent mot syror, alkalier, salter och betongslam.', '85_rubberelast.png', pg, 'Rubberelast', False)
     db.session.add(p)
 
     db.session.add_all([
@@ -1715,5 +1915,108 @@ def CreateData():
         ProductInfo(u'2.87', 5, viktPerMeter, p),
        ])
 
+    
+    p = Product(u'SPA-Byglar', u' ', u'91_spa_byglar.png', pg, 'spa_byglar', False)
+    db.session.add(p)
+    db.session.add_all([
+        ProductInfo(u'ÖVB4180A2', 1, artnr, p),
+        ProductInfo(u'ÖVB4300A2', 2, artnr, p),
+        ProductInfo(u'ÖVB4320A2', 3, artnr, p),
+        ProductInfo(u'ÖVB4230A4', 4, artnr, p),
+        ProductInfo(u'ÖVB4300A4', 5, artnr, p),
+        ProductInfo(u'ÖVB5320A4', 6, artnr, p),
+        ProductInfo(u'UVB4180A2', 7, artnr, p),
+        ProductInfo(u'UVB4260A2', 8, artnr, p),
+        ProductInfo(u'UVB4280A2', 9, artnr, p),
+        ProductInfo(u'UVB4300A2', 10, artnr, p),
+        ProductInfo(u'UVB4320A2', 11, artnr, p),
+        ProductInfo(u'UVB5300A2', 12, artnr, p),
+        ProductInfo(u'UVB5320A2', 13, artnr, p),
+        ProductInfo(u'UVBV4200A2', 14, artnr, p),
+        ProductInfo(u'UVBV4220A2', 15, artnr, p),
+        ProductInfo(u'UVBV4260A2', 16, artnr, p),
+        ProductInfo(u'UVBV4280A2', 17, artnr, p),
+        ProductInfo(u'Överbygel A2', 1, benamning, p),
+        ProductInfo(u'Överbygel A2', 2, benamning, p),
+        ProductInfo(u'Överbygel A2', 3, benamning, p),
+        ProductInfo(u'Överbygel A4', 4, benamning, p),
+        ProductInfo(u'Överbygel A4', 5, benamning, p),
+        ProductInfo(u'Överbygel A4', 6, benamning, p),
+        ProductInfo(u'Underbygel A2', 7, benamning, p),
+        ProductInfo(u'Underbygel A2', 8, benamning, p),
+        ProductInfo(u'Underbygel A2', 9, benamning, p),
+        ProductInfo(u'Underbygel A2', 10, benamning, p),
+        ProductInfo(u'Underbygel A2', 11, benamning, p),
+        ProductInfo(u'Underbygel A2', 12, benamning, p),
+        ProductInfo(u'Underbygel A2', 13, benamning, p),
+        ProductInfo(u'Underbygel A2', 14, benamning, p),
+        ProductInfo(u'Underbygel A2', 15, benamning, p),
+        ProductInfo(u'Underbygel A2', 16, benamning, p),
+        ProductInfo(u'Underbygel A2', 17, benamning, p),
+        ProductInfo(u'180', 1, langdMm, p),
+        ProductInfo(u'300', 2, langdMm, p),
+        ProductInfo(u'320', 3, langdMm, p),
+        ProductInfo(u'230', 4, langdMm, p),
+        ProductInfo(u'300', 5, langdMm, p),
+        ProductInfo(u'320', 6, langdMm, p),
+        ProductInfo(u'180', 7, langdMm, p),
+        ProductInfo(u'260', 8, langdMm, p),
+        ProductInfo(u'280', 9, langdMm, p),
+        ProductInfo(u'300', 10, langdMm, p),
+        ProductInfo(u'320', 11, langdMm, p),
+        ProductInfo(u'300', 12, langdMm, p),
+        ProductInfo(u'320', 13, langdMm, p),
+        ProductInfo(u'200', 14, langdMm, p),
+        ProductInfo(u'220', 15, langdMm, p),
+        ProductInfo(u'260', 16, langdMm, p),
+        ProductInfo(u'280', 17, langdMm, p),
+        ProductInfo(u'4', 1, diameter, p),
+        ProductInfo(u'4', 2, diameter, p),
+        ProductInfo(u'4', 3, diameter, p),
+        ProductInfo(u'4', 4, diameter, p),
+        ProductInfo(u'4', 5, diameter, p),
+        ProductInfo(u'5', 6, diameter, p),
+        ProductInfo(u'4', 7, diameter, p),
+        ProductInfo(u'4', 8, diameter, p),
+        ProductInfo(u'4', 9, diameter, p),
+        ProductInfo(u'4', 10, diameter, p),
+        ProductInfo(u'4', 11, diameter, p),
+        ProductInfo(u'5', 12, diameter, p),
+        ProductInfo(u'5', 13, diameter, p),
+        ProductInfo(u'4', 14, diameter, p),
+        ProductInfo(u'4', 15, diameter, p),
+        ProductInfo(u'4', 16, diameter, p),
+        ProductInfo(u'4', 17, diameter, p),
+        ProductInfo(u'SPA-N', 1, typ, p),
+        ProductInfo(u'SPA-N', 2, typ, p),
+        ProductInfo(u'SPA-N', 3, typ, p),
+        ProductInfo(u'SPA-N', 4, typ, p),
+        ProductInfo(u'SPA-N', 5, typ, p),
+        ProductInfo(u'SPA-N', 6, typ, p),
+        ProductInfo(u'SPA-AA', 7, typ, p),
+        ProductInfo(u'SPA-AA', 8, typ, p),
+        ProductInfo(u'SPA-AA', 9, typ, p),
+        ProductInfo(u'SPA-AA', 10, typ, p),
+        ProductInfo(u'SPA-AA', 11, typ, p),
+        ProductInfo(u'SPA-A', 12, typ, p),
+        ProductInfo(u'SPA-A', 13, typ, p),
+        ProductInfo(u'SPA-AA', 14, typ, p),
+        ProductInfo(u'SPA-AA', 15, typ, p),
+        ProductInfo(u'SPA-AA', 16, typ, p),
+        ProductInfo(u'SPA-AA', 17, typ, p),
+       ]) 
+          
+          
     db.session.commit()
-
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          

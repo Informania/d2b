@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block header %}
+{{ super() }}
+{% endblock %}
+{% block crumbs %}
+{{ super() }}
+/ <a href="/om">Om D2B</a>{% endblock %}
+{% block content %}
+<div class="entry">
+	<h2 class="textCenter">Lite om D2B</h2>
+	<p class="clearBoth">D2B är nu inne på sitt sjunde verksamhetsår, och fortsätter att expandera på marknaden, både med befintliga och nya produkter.	Vi finns numera i lite modernare lokaler än den husvagn vi startade i. Vi har också ett lager på 700 kvm och ett nybyggt litet kontor. <br/>
+	Våran huvudinriktning är att förse, i första hand prefabmarknaden, med bra produkter som exempelvis plastdistanser, formutrusning med magneter och en hel del annat. </p>
+</div>
+<div class="entry floatLeft" style="width: 100%;">
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}hakan.png" />
+		</div>
+		<p class="pictureBoxCaption">Håkan Stenholm</p>
+	</div>
+
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}magnus.jpg" />
+		</div>
+		<p class="pictureBoxCaption">Magnus Sanborn</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}peter.jpg" />
+		</div>
+		<p class="pictureBoxCaption">Peter Olsson</p>
+	</div>
+
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/') }}grupp.jpg" />
+		</div>
+		<p class="pictureBoxCaption">Gruppbild</p>
+	</div>
+</div>
+<div class="entry floatLeft" style="margin-top: 20px">
+	<h2 class="textCenter">Samarbetspartners</h2>
+	<h3>BT Innovation GmbH</h3>
+	<p><a href="http://www.bt-innovation.de/en/">http://www.bt-innovation.de/en/</a><br/>
+	BT är ett av det ledande företagen i världen inom formutrustning, tätningssystem, ankare för sandwichelement och sammanfogning av prefabricerade betongelement.<br/>
+	MagFly, Magnet och formsystem för prefabriceringsindustrin Igloo, ett system för att enkelt och effektivt fixera prefabricerade betongelement med varandra utan svetsning.<br/>
+	Spannschloss ”IGLOO” monteringssystem för hopsättning av prefabricerade element TermoPin, Förbindelsesystem för sandwichelement GFK, nytt kreativt system för att fixera olika typer av isolering mot brunnen betong. Tätningar, tätningssystem för alla vanligen förkommande ändamål med betong.<br/>
+	Butterfly. Ett nytt lite revolterande sätt att gjuta i Batteriform.<br/>
+	Lite kort, alla förberedelser och efterarbete sker vi sidan av batteriformen, vilket ökar den producerbara mängden och ger en mycket bättre arbetsmiljö<br/>
+	</p>
+	<h3>H-Bau GmbH</h3>
+	<p><a href="http://www.h-bau.de/">http://www.h-bau.de/</a><br/>
+	En av Europas ledande tillverkare och leverantör av distanseringsmaterial av plast och andra produkter till byggindustrin.<br/>
+	H-Bau har funnits i snart 90 år, och utvecklat flertalet nya produkter och skaffat sig stor kunskap inom flertalet område inom byggteknikbranschen.<br/>
+	</p>
+</div>
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
+

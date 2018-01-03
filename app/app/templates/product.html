@@ -7,12 +7,12 @@
 	/ <a href="/produkter">Produkter</a> / <a href="/produkter/{{product.productgroup.category.name}}">{{product.productgroup.category.name}}</a> / {# should this be here? How to handle the link? {{product.productgroup.name}} /#} <a href="/produkter/{{product.productgroup.category.name}}/{{product.productgroup.url}}/{{product.url}}">{{product.name}}</a>
 	{% endblock %}
 {% block content %}
-    <h2>{{ product.name }}</h2>
-    <p class="productInfo textLeft">{{ product.description|safe }}</p>
-    <div class="productImgContainer">
-        <img src='{{ url_for('static', filename='images/products/') }}{{ product.image }}'/>
+<h2>{{ product.name }}{% if product.ownmade %} <span class="italic" style="font-size: .7em;">(Egentillverkad)</span>{%endif%} </h2>
+	<div class="productImgContainer" data-balloon="Klicka för att visa full storlek" data-balloon-pos="up">
+		<a href="{{ url_for('static', filename='images/products/') }}{{ product.image }}" data-lightbox="image-1"><img src='{{ url_for('static', filename='images/products/') }}{{ product.image }}'/></a>
     </div>
-    <table class="productSpecs">
+    <p class="productInfo textLeft">{{ product.description|safe }}</p>
+        <table class="productSpecs">
         <thead>
             <tr>
                 {% for header in tableHeaders %}
@@ -38,10 +38,27 @@
                </tr>
         </tbody>
     </table>
-    {# (hopefully) temporary hack! #}
-    {% if product.name == 'Markdistans typ VARG' %}
-        <p class="floatLeft">* 400 eller 250 anges vid beställning</p>
-    {% endif %}
+	<div class="productSpecsSmall">
+	{% for row in tableRows %}
+		{% if (loop.index % 2) != 1 %}
+			<div class="smallProduct">
+		{% else %}
+			<div class="smallProduct alternate">
+		{% endif %}
+			<div class="smallProductLeftCol">
+				{% for header in tableHeaders %}
+					<label class="header-label">{{ header.name }}</label>
+				{% endfor %}
+			</div>
+			<div class="smallProductRightCol">
+				{% for prodInfo in row %}
+				<label>{{ prodInfo }}</label>	
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</div>
+	{% include "products_addons.html" with context %} 
 {% endblock %}
 {% block footer %}
 	{{ super() }}

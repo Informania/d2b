@@ -1,0 +1,195 @@
+{% if product.name == 'Markdistans typ VARG' %}
+        <p class="floatLeft">* 400 eller 250 anges vid beställning</p>
+{% endif %}
+{% if product.name == 'Adaptrar för formbordsmagnet typ K' %}
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_horn.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för hörn</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_multiform.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för multiform</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_plyfa.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för plyfa</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_skalvagg.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter för skalvägg</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_vinkelstod.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter med vinkelstöd</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_hojdstod.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Adapter med höjdstöd</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_kundanpassad1.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Exempel kundanpassning</p>
+</div>
+
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}adapter_kundanpassad2.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Exempel kundanpassning</p>
+</div>
+{% endif %}
+{% if product.name == 'Formbordsmagnet typ BR' %}
+	<br/>
+	<p class="floatLeft italic">Fler storlekar finns på förfrågan.</p>
+{% endif %}
+{% if product.name == 'Magnetlister' %}
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+		<img src="{{ url_for('static', filename='images/products/') }}76_trekantslist.jpg" />
+	</div>
+	<p class="pictureBoxCaption"></p>Trekantslist</p>
+</div>
+<div class="pictureBox">
+	<div class="pictureBoxImgWrapper">
+<img src="{{ url_for('static', filename='images/products/') }}77_blindfogslist.jpg" />
+</div>
+<p class="pictureBoxCaption"></p>Blindfogslist</p>
+</div>
+</div>
+{% endif %}
+
+{% if product.name == 'Multiform typ Flyframe' %}
+	<br/>
+	<p class="floatLeft italic">Andra höjder på förfrågan.</p>
+{% endif %}
+
+{% if product.name == 'Multiform typ 2' %}
+	<br/>
+	<p class="floatLeft italic">* Nyligen framtagna, uppgifter kommer att kompletteras senare</p>
+{% endif %}
+
+{% if product.productgroup.url == 'Igloo' %}
+<div class="row" style="margin-bottom: 50px;">
+	<a href="{{ url_for('static', filename='D2B_igloo_en_web.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Teknisk spec</h3>
+		</div>
+	</a>
+	<a href="{{ url_for('static', filename='D2B_igloo_certifikat.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Certifikat</h3>
+		</div>	
+	</a>
+</div>
+{% endif %}
+
+{% if product.productgroup.url == 'Magfly' %}
+<div class="row" style="margin-bottom: 50px;">
+	<!--<a href="{{ url_for('static', filename='D2B_K-Elast_katalog.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>K-elast katalog</h3>
+		</div>
+	</a>-->
+	<a href="{{ url_for('static', filename='D2B_MagFly_katalog.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Magfly-katalog</h3>
+		</div>	
+	</a>
+</div>
+{% endif %}
+
+{% if product.productgroup.url == 'Fjaril_batteriformar' %}
+<div class="row" style="margin-bottom: 50px;">
+	<a href="{{ url_for('static', filename='D2B_fjaril_batteriform.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Instruktionsflyer</h3>
+		</div>
+	</a>
+	<a href="{{ url_for('static', filename='D2B_infoblad_fjaril_EN.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Informationsblad</h3>
+		</div>	
+	</a>
+</div>
+{% endif %}
+{% if product.url == 'Tillbehor_multiform' %}
+<div class="row">
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_toppformstag.jpg" />
+		</div>
+		<p class="pictureBoxCaption"></p>Toppformstag</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_horn.jpg" />
+		</div>
+		<p class="pictureBoxCaption"></p>Hörn, ytter eller inner</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_skyddsskiva.png" />
+		</div>
+		<p class="pictureBoxCaption"></p>Skyddsskiva för magnet</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_fonster_dorr.png" />
+		</div>
+		<p class="pictureBoxCaption"></p>Fönster / dörrursparing</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_snabbkoppling.png" />
+		</div>
+		<p class="pictureBoxCaption"></p>Stålformssida med snabbkoppling</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_stall.png" />
+		</div>
+		<p class="pictureBoxCaption"></p>Mobilt ställ för multiform snabbkoppling</p>
+	</div>
+	<div class="pictureBox">
+		<div class="pictureBoxImgWrapper">
+			<img src="{{ url_for('static', filename='images/products/') }}multiform_lyftsystem.png" />
+		</div>
+		<p class="pictureBoxCaption"></p>Luftsystem för Multiform och Magpin</p>
+	</div>
+</div>
+{% endif %}
+{% if product.productgroup.url == 'Formsidesadaptrar' %}
+<div class="row" style="margin-bottom: 50px;">
+	<a href="{{ url_for('static', filename='D2B_fjaril_batteriform.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Instruktionsflyer</h3>
+		</div>
+	</a>
+	<a href="{{ url_for('static', filename='D2B_infoblad_fjaril_EN.pdf') }}">
+		<div class="unselectable green-button">
+			<h3>Informationsblad</h3>
+		</div>	
+	</a>
+</div>
+{% endif %}
+

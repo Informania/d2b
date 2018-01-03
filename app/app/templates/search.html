@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block header %}
+	{{ super() }}
+{% endblock %}
+{% block crumbs %}
+	{{ super() }}
+	/ Sök
+{% endblock %}
+
+{% block content %}
+
+
+<div class="entry">
+		<h2 class="textCenter">Sökresultat</h2>
+<!-- 	found product groups
+		{% if groups %}
+		<p>Hittade följande produktgrupper:</p>
+		{% for group in groups %}
+			<a href="#">{{ group.name }}</a>
+		{% endfor %}
+		{% endif %} 
+-->
+	{% if products %}
+		{% if products | length == 1 %}
+			<p>{{ products | length }} produkt
+		{% else %}
+			<p>{{ products | length }} produkter
+		{% endif %}
+		har "{{ query }}" i namnet eller beskrivningen.</p>	
+		{% for product in products %}
+			<div onclick="location.href='/produkter/Distanser/{{product.productgroup.url}}/{{product.url}}'" class="searchResult textLeft">
+				<img src="{{ url_for('static', filename='images/products/')}}{{product.image}}" />
+				<div class="searchResultText">
+					<h3>{{ product.name }}</h3>
+					<p class="textLeft">
+					{{ product.description | replace("<b>","") | replace("</b>","") | replace("<br/>", " ") | truncate(180) }}	
+					</p>
+				</div>
+			</div>
+		{% endfor %}
+	{% else %}
+		<p>Hittade inga produkter med "{{ query }}" i namnet eller beskrivningen.</p>
+	{% endif %}
+	{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}

@@ -1,74 +1,68 @@
 {% block header %}
-	<!DOCTYPE html>
-	<html lang="sv">
-		<head>
-			<meta http-equiv="refresh" content="" />
-			<meta charset="UTF-8" />
-			<link rel="stylesheet" media="screen, projection" href="{{ url_for('static', filename='css/screen.css') }}" type="text/css" />
-			<title>D2B Byggprodukter AB</title>
-			<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-			<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/d2b.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/header.js') }}"></script>
-
-		</head>
-		<body>
-		<div class="container">
-		<header>
-		  <div id="logo">
-			  <img src="{{ url_for('static', filename='images/logga_white.png') }}" alt="D2B logo"/>
-			  <p>D2B BYGGPRODUKTER AB</p>
-		  </div>
-		  <div id="search">
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="refresh" content="" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<link rel="stylesheet" media="screen, projection" href="{{ url_for('static', filename='css/screen.css') }}" type="text/css" />
+<link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/balloon.css') }}" type="text/css" />
+<link rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/lightbox.css') }}" type="text/css" />
+<link href="{{ url_for('static', filename='logga.gif') }}" rel="icon" type="image/x-icon" />			
+<title>D2B Byggprodukter AB</title>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
+<script src="{{ url_for('static', filename='js/d2b.js') }}"></script>
+</head>
+<body>
+<div class="container">
+	<header>
+		<a href="/" >
+			<div id="logo">
+				<img src="{{ url_for('static', filename='images/logga_white.png') }}" alt="D2B logo"/>
+				<p>D2B BYGGPRODUKTER AB</p>
+			</div>
+		</a>
+		<div id="search">
 			<input type="text" id="searchTextInput"
-					value="Sök på varg för bästa resultat..."
-					class="fadedText" 
-					onFocus="initSearch(this)" onBlur="checkSearchInput(this)" onKeyDown="searchClick(this, event)" />
-				<img id="searchImg" src="{{ url_for('static', filename='images/search.png') }}" onClick="search()"/>
-		  </div>
+			value="{% if query %}{{ query }}{% else %}Sök produkt{% endif %}"
+			class="{% if query %}{% else %}fadedText{% endif %}" 
+			onFocus="initSearch(this)" onBlur="checkSearchInput(this)" onKeyDown="searchClick(this, event)" />
+			<img id="searchImg" src="{{ url_for('static', filename='images/search.png') }}" onClick="search()"/>
+		</div>
 		<nav>
-			<a href="/">hem</a>
-			<a href="/produkter">produkter</a>
-			<a href="/om">om D2B</a>
-			<a href="#">kontakt</a>
-			<a href="#">nyheter</a>
+			<a {%- if request.path == "/" %} class="current-page" {% endif %} href="/">hem</a>
+			<a {%- if request.path.startswith("/produkter") %} class="current-page"{% endif %} href="/produkter">produkter</a>
+			<a {%- if request.path == "/om" %} class="current-page"{% endif %} href="/om">om D2B</a>
+			<a {%- if request.path == "/kontakt" %} class="current-page"{% endif %} href="/kontakt">kontakt</a>
+			<a href="https://www.facebook.com/D2BByggprodukter" target="_blank">nyheter</a>
 		</nav>
-		</header>
-		<div class="content">
-            <div id="crumbs" class="textLeft">
-                <p>Du är här: <a href="/">Start</a> {% block crumbs %}{% endblock %}</p>
-            </div>
+	</header>
+	<div class="content">
+		<div id="crumbs" class="textLeft">
+			<p>Du är här: <a href="/">Hem</a> {% block crumbs %}{% endblock %}</p>
+		</div>
 
-			{% block content %}{% endblock %}
-{% endblock %}
-{% block footer %}
-		</div>
-		</div>
+		{% block content %}{% endblock %}
+		{% endblock %}
+		{% block footer %}
+	</div>
+</div>
 <footer>
-    <h2>Kontakta oss:</h2>
-    <p>Ni når oss på tel: <a href="tel:031916301">031-916301</a> eller
-<script type="text/javascript">
-//<![CDATA[
-<!--
-var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
-"x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
-" r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!84{)rt{y+xx=l;=+;" +
-"lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
-"\"(5),9\\\"\\\\>+#78*-e1<02\\\\\\\\22\\\\00\\\\03\\\\\\\\32\\\\00\\\\02\\\\" +
-"\\\\0S02\\\\\\\\06\\\\03\\\\03\\\\\\\\KUt;\\\\\\\\\\\\n0\\\\00\\\\\\\\825y0" +
-"0\\\\\\\\0j%?9&kk33\\\\0 \\\\o0ZX[B32\\\\0W\\\\01\\\\0U\\\\BoGM7N03\\\\\\\\" +
-"ULtstzI5w.7j17\\\\\\\\)c9f)!20\\\\00\\\\02\\\\\\\\37\\\\04\\\\01\\\\\\\\37\\"+
-"\\06\\\\00\\\\\\\\05\\\\0^\\\\32\\\\02\\\\00\\\\\\\\17\\\\05\\\\00\\\\\\\\2" +
-"3\\\\07\\\\00\\\\\\\\\\\\r4\\\\00\\\\\\\\\\\"\\\\f(;} ornture;}))++(y)^(iAt" +
-"deCoarchx.e(odrChamCro.fngriSt+=;o27=1y%+;y+5)<9(iif){++;i<l;i=0(ior;fthngl" +
-"ex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")"                      ;
-while(x=eval(x));
-//-->
-//]]>
+	<h2>Kontakta oss:</h2>
+	<p>Ni når oss på tel: <a href="tel:031916301">031-916301</a> eller
+	<script type="text/javascript">eval(unescape("%77%6a%76%6d%77%38%35%3d%5b%27%25%36%38%25%36%31%25%36%62%25%36%31%25%36%65%25%32%65%25%37%33%25%37%34%25%36%35%25%36%65%25%36%38%25%36%66%25%36%63%25%36%64%27%2c%5b%27%25%37%33%25%36%35%27%2c%27%25%36%34%25%33%32%25%36%32%25%32%64%25%36%32%25%37%39%25%36%37%25%36%37%27%5d%2e%72%65%76%65%72%73%65%28%29%2e%6a%6f%69%6e%28%27%2e%27%29%5d%2e%6a%6f%69%6e%28%27%40%27%29%3b%67%72%79%76%6d%32%37%3d%27%6d%61%69%6c%27%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%67%72%79%76%6d%32%37%2e%6c%69%6e%6b%28%27%6d%61%69%27%2b%27%6c%74%6f%3a%27%2b%77%6a%76%6d%77%38%35%29%29%3b"));</script>
+</footer>
+<script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+<script src="{{ url_for('static', filename='js/header.js') }}"></script>
+<script>
+lightbox.option({
+		'resizeDuration': 200,
+		'fadeDuration': 300,
+		'disableScrolling': true
+		});
 </script>
-    </p>
-  </footer>
+
 </body>
-<script src="{{ url_for('static', filename='js/header.js') }}></script>
 </html>
-	{% endblock %}
+{% endblock %}
