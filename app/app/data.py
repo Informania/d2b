@@ -832,18 +832,6 @@ def CreateData():
     p = Product(u'Dinkihjul', u'Allroundhjul framtaget för att passa på era olika järndimensioner, 4-12 mm. Detta för att minska antalet hjul som behövs hållas i lager, framförallt hos användaren.<br/>Hjulet har vågformade toppar för att ligga bra i handen och gör inte ont i handen för den som monterar.<br/>Finns för de esta olika järndimensionerna och med olika täckskikt. Fråga gärna efter det hjul som just ni behöver. OBS: Vi har mycket bra priser på dessa, förmodligen det lägsta på hela marknaden. Höjderna 20 25 och 30 finns även i nymaterial (vita) och är lagervaror.', '15_dinkihjul.png', pg, 'Dinkhjul', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('4-12', 1, jarn, p),        
-        ProductInfo('4-12', 2, jarn, p), 
-        ProductInfo('4-12', 3, jarn, p),        
-        ProductInfo('4-12', 4, jarn, p),        
-        ProductInfo('4-12', 5, jarn, p),        
-        ProductInfo('4-12', 6, jarn, p),        
-        ProductInfo('4-12', 7, jarn, p),        
-        ProductInfo('8-20', 8, jarn, p),        
-        ProductInfo('8-20', 9, jarn, p),        
-        ProductInfo('8-20', 10, jarn, p),        
-        ProductInfo('8-20', 11, jarn, p),        
-        ProductInfo('8-20', 12, jarn, p),        
         ProductInfo('15', 1, tackskikt, p),
         ProductInfo('20', 2, tackskikt, p),
         ProductInfo('25', 3, tackskikt, p),
@@ -856,6 +844,18 @@ def CreateData():
         ProductInfo('35', 10, tackskikt, p),
         ProductInfo('40', 11, tackskikt, p),
         ProductInfo('50', 12, tackskikt, p),
+        ProductInfo('4-12', 1, jarn, p),        
+        ProductInfo('4-12', 2, jarn, p), 
+        ProductInfo('4-12', 3, jarn, p),        
+        ProductInfo('4-12', 4, jarn, p),        
+        ProductInfo('4-12', 5, jarn, p),        
+        ProductInfo('4-12', 6, jarn, p),        
+        ProductInfo('4-12', 7, jarn, p),        
+        ProductInfo('8-20', 8, jarn, p),        
+        ProductInfo('8-20', 9, jarn, p),        
+        ProductInfo('8-20', 10, jarn, p),        
+        ProductInfo('8-20', 11, jarn, p),        
+        ProductInfo('8-20', 12, jarn, p),        
         ProductInfo('1000', 1, antalforpSt, p),
         ProductInfo('1000', 2, antalforpSt, p),
         ProductInfo('500', 3, antalforpSt, p),
@@ -886,18 +886,6 @@ def CreateData():
     p = Product(u'SNOK', u'Snoken är vår modell av twisthjulet. <br/>Ett speciellt hjul, anpassat för mindre järn och låga täckskickt. <br/>Sitter mycket bra fast på järnen, speciellt lämplig vid gjutning där man gör armeringskorgarna innan, exempelvis kabelrännor och dyl. Speciell låsning, träs parallellt på järnen och vrids därefter 90 grader.', '4_snok.png', pg, 'Snok', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('4', 1, jarn, p),        
-        ProductInfo('5', 2, jarn, p), 
-        ProductInfo('6', 3, jarn, p),        
-        ProductInfo('5', 4, jarn, p),        
-        ProductInfo('6', 5, jarn, p),        
-        ProductInfo('8', 6, jarn, p),        
-        ProductInfo('12', 7, jarn, p),        
-        ProductInfo('5', 8, jarn, p),        
-        ProductInfo('6', 9, jarn, p),        
-        ProductInfo('8', 10, jarn, p),        
-        ProductInfo('4-6', 11, jarn, p),        
-        ProductInfo('4-6', 12, jarn, p),        
         ProductInfo('10', 1, tackskikt, p),
         ProductInfo('10', 2, tackskikt, p),
         ProductInfo('10', 3, tackskikt, p),
@@ -910,6 +898,18 @@ def CreateData():
         ProductInfo('20', 10, tackskikt, p),
         ProductInfo('25', 11, tackskikt, p),
         ProductInfo('30', 12, tackskikt, p),
+        ProductInfo('4', 1, jarn, p),        
+        ProductInfo('5', 2, jarn, p), 
+        ProductInfo('6', 3, jarn, p),        
+        ProductInfo('5', 4, jarn, p),        
+        ProductInfo('6', 5, jarn, p),        
+        ProductInfo('8', 6, jarn, p),        
+        ProductInfo('12', 7, jarn, p),        
+        ProductInfo('5', 8, jarn, p),        
+        ProductInfo('6', 9, jarn, p),        
+        ProductInfo('8', 10, jarn, p),        
+        ProductInfo('4-6', 11, jarn, p),        
+        ProductInfo('4-6', 12, jarn, p),        
         ProductInfo('15000', 1, antalforpSt, p),
         ProductInfo('15000', 2, antalforpSt, p),
         ProductInfo('15000', 3, antalforpSt, p),
@@ -943,18 +943,18 @@ def CreateData():
     p = Product(u'Änddistans', u'Änddistansen används för att hålla rätt täckskikt på armeringsjärnets ändar.<br/>Tillverkad i ljusgrå LD-Polyeten.', '11_anddistans.png', pg, 'Anddistans', False)
     db.session.add(p)
     db.session.add_all([
-        ProductInfo('4-8', 1, jarn, p),        
-        ProductInfo('4-8', 2, jarn, p), 
-        ProductInfo('4-8', 3, jarn, p),        
-        ProductInfo('8-12', 4, jarn, p),        
-        ProductInfo('8-12', 5, jarn, p),        
-        ProductInfo('8-12', 6, jarn, p),        
         ProductInfo('20', 1, tackskikt, p),
         ProductInfo('25', 2, tackskikt, p),
         ProductInfo('30', 3, tackskikt, p),
         ProductInfo('20', 4, tackskikt, p),
         ProductInfo('25', 5, tackskikt, p),
         ProductInfo('30', 6, tackskikt, p),
+        ProductInfo('4-8', 1, jarn, p),        
+        ProductInfo('4-8', 2, jarn, p), 
+        ProductInfo('4-8', 3, jarn, p),        
+        ProductInfo('8-12', 4, jarn, p),        
+        ProductInfo('8-12', 5, jarn, p),        
+        ProductInfo('8-12', 6, jarn, p),        
         ProductInfo('1000', 1, antalforpSt, p),
         ProductInfo('1000', 2, antalforpSt, p),
         ProductInfo('1000', 3, antalforpSt, p),
@@ -1916,9 +1916,107 @@ def CreateData():
        ])
 
     
-    p = Product(u'SPA-Byglar', u'Mer information kommer.', u'91_spa_byglar.png', pg, 'spa_byglar', False)
+    p = Product(u'SPA-Byglar', u' ', u'91_spa_byglar.png', pg, 'spa_byglar', False)
     db.session.add(p)
-
-
+    db.session.add_all([
+        ProductInfo(u'ÖVB4180A2', 1, artnr, p),
+        ProductInfo(u'ÖVB4300A2', 2, artnr, p),
+        ProductInfo(u'ÖVB4320A2', 3, artnr, p),
+        ProductInfo(u'ÖVB4230A4', 4, artnr, p),
+        ProductInfo(u'ÖVB4300A4', 5, artnr, p),
+        ProductInfo(u'ÖVB5320A4', 6, artnr, p),
+        ProductInfo(u'UVB4180A2', 7, artnr, p),
+        ProductInfo(u'UVB4260A2', 8, artnr, p),
+        ProductInfo(u'UVB4280A2', 9, artnr, p),
+        ProductInfo(u'UVB4300A2', 10, artnr, p),
+        ProductInfo(u'UVB4320A2', 11, artnr, p),
+        ProductInfo(u'UVB5300A2', 12, artnr, p),
+        ProductInfo(u'UVB5320A2', 13, artnr, p),
+        ProductInfo(u'UVBV4200A2', 14, artnr, p),
+        ProductInfo(u'UVBV4220A2', 15, artnr, p),
+        ProductInfo(u'UVBV4260A2', 16, artnr, p),
+        ProductInfo(u'UVBV4280A2', 17, artnr, p),
+        ProductInfo(u'Överbygel A2', 1, benamning, p),
+        ProductInfo(u'Överbygel A2', 2, benamning, p),
+        ProductInfo(u'Överbygel A2', 3, benamning, p),
+        ProductInfo(u'Överbygel A4', 4, benamning, p),
+        ProductInfo(u'Överbygel A4', 5, benamning, p),
+        ProductInfo(u'Överbygel A4', 6, benamning, p),
+        ProductInfo(u'Underbygel A2', 7, benamning, p),
+        ProductInfo(u'Underbygel A2', 8, benamning, p),
+        ProductInfo(u'Underbygel A2', 9, benamning, p),
+        ProductInfo(u'Underbygel A2', 10, benamning, p),
+        ProductInfo(u'Underbygel A2', 11, benamning, p),
+        ProductInfo(u'Underbygel A2', 12, benamning, p),
+        ProductInfo(u'Underbygel A2', 13, benamning, p),
+        ProductInfo(u'Underbygel A2', 14, benamning, p),
+        ProductInfo(u'Underbygel A2', 15, benamning, p),
+        ProductInfo(u'Underbygel A2', 16, benamning, p),
+        ProductInfo(u'Underbygel A2', 17, benamning, p),
+        ProductInfo(u'180', 1, langdMm, p),
+        ProductInfo(u'300', 2, langdMm, p),
+        ProductInfo(u'320', 3, langdMm, p),
+        ProductInfo(u'230', 4, langdMm, p),
+        ProductInfo(u'300', 5, langdMm, p),
+        ProductInfo(u'320', 6, langdMm, p),
+        ProductInfo(u'180', 7, langdMm, p),
+        ProductInfo(u'260', 8, langdMm, p),
+        ProductInfo(u'280', 9, langdMm, p),
+        ProductInfo(u'300', 10, langdMm, p),
+        ProductInfo(u'320', 11, langdMm, p),
+        ProductInfo(u'300', 12, langdMm, p),
+        ProductInfo(u'320', 13, langdMm, p),
+        ProductInfo(u'200', 14, langdMm, p),
+        ProductInfo(u'220', 15, langdMm, p),
+        ProductInfo(u'260', 16, langdMm, p),
+        ProductInfo(u'280', 17, langdMm, p),
+        ProductInfo(u'4', 1, diameter, p),
+        ProductInfo(u'4', 2, diameter, p),
+        ProductInfo(u'4', 3, diameter, p),
+        ProductInfo(u'4', 4, diameter, p),
+        ProductInfo(u'4', 5, diameter, p),
+        ProductInfo(u'5', 6, diameter, p),
+        ProductInfo(u'4', 7, diameter, p),
+        ProductInfo(u'4', 8, diameter, p),
+        ProductInfo(u'4', 9, diameter, p),
+        ProductInfo(u'4', 10, diameter, p),
+        ProductInfo(u'4', 11, diameter, p),
+        ProductInfo(u'5', 12, diameter, p),
+        ProductInfo(u'5', 13, diameter, p),
+        ProductInfo(u'4', 14, diameter, p),
+        ProductInfo(u'4', 15, diameter, p),
+        ProductInfo(u'4', 16, diameter, p),
+        ProductInfo(u'4', 17, diameter, p),
+        ProductInfo(u'SPA-N', 1, typ, p),
+        ProductInfo(u'SPA-N', 2, typ, p),
+        ProductInfo(u'SPA-N', 3, typ, p),
+        ProductInfo(u'SPA-N', 4, typ, p),
+        ProductInfo(u'SPA-N', 5, typ, p),
+        ProductInfo(u'SPA-N', 6, typ, p),
+        ProductInfo(u'SPA-AA', 7, typ, p),
+        ProductInfo(u'SPA-AA', 8, typ, p),
+        ProductInfo(u'SPA-AA', 9, typ, p),
+        ProductInfo(u'SPA-AA', 10, typ, p),
+        ProductInfo(u'SPA-AA', 11, typ, p),
+        ProductInfo(u'SPA-A', 12, typ, p),
+        ProductInfo(u'SPA-A', 13, typ, p),
+        ProductInfo(u'SPA-AA', 14, typ, p),
+        ProductInfo(u'SPA-AA', 15, typ, p),
+        ProductInfo(u'SPA-AA', 16, typ, p),
+        ProductInfo(u'SPA-AA', 17, typ, p),
+       ]) 
+          
+          
     db.session.commit()
-
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
